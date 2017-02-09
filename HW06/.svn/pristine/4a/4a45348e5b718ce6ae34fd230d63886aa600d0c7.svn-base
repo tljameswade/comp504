@@ -1,0 +1,45 @@
+/**
+ * 
+ */
+package model;
+
+import provided.util.ABCInstrument;
+
+/**
+ * @author qq287
+ *
+ */
+public interface IViewAdapter {
+	
+	/**
+	 * @param content
+	 */
+	void DisplayFileContent(String content);
+	
+	/**
+	 * @param instrument
+	 */
+	void addInstrument(ABCInstrument instrument);
+
+	/**
+	 * 
+	 */
+	public static final IViewAdapter NULL_OBJ = new IViewAdapter() {
+
+		@Override
+		public void DisplayFileContent(String content) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void addInstrument(ABCInstrument instrument) {
+			// TODO Auto-generated method stub
+			
+		}
+
+
+		
+		
+	};
+}

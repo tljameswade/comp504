@@ -1,0 +1,76 @@
+/**
+ * 
+ */
+package model;
+
+import model.visitor.ToStringVisitor;
+import provided.abcParser.ABCParser;
+import provided.music.IPhrase;
+import provided.music.IPhraseVisitor;
+import provided.music.NESeqList;
+import provided.util.ABCUtil;
+
+/**
+ *
+ */
+public class MusicPlayerModel {
+
+	private IPhrase host;
+	private IViewAdapter adptr = IViewAdapter.NULL_OBJ;
+	
+	/**
+	 * 
+	 */
+	public MusicPlayerModel(){
+		
+	}
+	
+	
+	/**
+	 * @param vadptr
+	 */
+	public MusicPlayerModel(IViewAdapter vadptr){
+		adptr = vadptr;
+	}
+	
+	
+	/**
+	 * @param filename
+	 */
+	public void LoadFile(String filename){
+		adptr.DisplayFileContent(ABCUtil.Singleton.getFileContents(filename));
+		host = new ABCParser(filename).parse();
+	}
+	
+	/**
+	 * @return Host
+	 */
+	public IPhrase getHost(){
+		return host;
+	}
+	
+	/**
+	 * @param algo visitor
+	 * @param params params
+	 */
+	public void Play(IPhraseVisitor algo, Object... params){
+		host.execute(algo, params);
+	}
+	
+	/**
+	 * @return String
+	 */
+	public String getParsed(){
+		IPhraseVisitor v = new ToStringVisitor();
+		NESeqList.setToStringAlgo(v);
+		
+		return "{" + (String) host.execute(v) + "}";
+	}
+	
+	/**
+	 * 
+	 */
+	public void start(){
+		
+	}
+}

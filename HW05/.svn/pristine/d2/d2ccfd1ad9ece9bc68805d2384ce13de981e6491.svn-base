@@ -1,0 +1,40 @@
+package model;
+
+import java.awt.Graphics;
+
+/**
+ * Top-level interface that represents a strategy used by a Ball 
+ * when asked to perform variant paint operations. 
+ * A Ball has only one IPaintStrategy
+ * @author Suozhi Qi, Zhou Liu
+ *
+ */
+public interface IPaintStrategy {
+
+	/**
+	 * Paints the host onto the given Graphics context. The image is translated, scaled 
+	 * and rotated as determined by the host's location, radius, and velocity
+	 * @param g the Graphics context
+	 * @param host the given ball
+	 */
+	public void paint(Graphics g, Ball host);
+
+	/**
+	 * Initializes the given ball. Called once 
+	 * by the ball when the strategy is first loaded.
+	 * @param context The given ball
+	 */
+	public void init(Ball context);
+
+	/**
+	 * 
+	 */
+	public static final IPaintStrategy NULL_OBJECT = new IPaintStrategy() {
+		public void paint(Graphics g, Ball host) {
+		}
+
+		public void init(Ball context) {
+		}
+	};
+
+}

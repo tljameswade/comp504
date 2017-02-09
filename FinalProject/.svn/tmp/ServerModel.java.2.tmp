@@ -1,0 +1,487 @@
+package sq6_kt21.server.model;
+
+import java.net.SocketException;
+import java.net.UnknownHostException;
+import java.rmi.AccessException;
+import java.rmi.NotBoundException;
+import java.rmi.RemoteException;
+import java.rmi.registry.Registry;
+import java.rmi.server.UnicastRemoteObject;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.UUID;
+
+import javax.swing.ImageIcon;
+
+import org.junit.experimental.theories.Theories;
+
+import common.AOurDataPacketAlgoCmd;
+import common.IChatServer;
+import common.IChatroom;
+import common.ICmd2ModelAdapter;
+import common.IComponentFactory;
+import common.IUser;
+import common.OurDataPacket;
+import common.msg.IChatMsg;
+import common.msg.chat.IAddCmdMsg;
+import common.msg.chat.IAddMeMsg;
+import common.msg.chat.ILeaveMsg;
+import common.msg.chat.INewCmdReqMsg;
+import common.msg.chat.ITextMsg;
+import gov.nasa.worldwind.geom.Position;
+import provided.datapacket.ADataPacket;
+import provided.datapacket.DataPacketAlgo;
+import provided.extvisitor.IExtVisitorCmd;
+import provided.mixedData.IMixedDataDictionary;
+import provided.mixedData.MixedDataDictionary;
+import provided.mixedData.MixedDataKey;
+import provided.rmiUtils.IRMIUtils;
+import provided.rmiUtils.IRMI_Defs;
+import provided.rmiUtils.RMIUtils;
+import provided.util.IVoidLambda;
+import sq6_kt21.client.chatapp.controller.IMain2MiniAdpt;
+import sq6_kt21.client.chatapp.model.ChatAppModel;
+import sq6_kt21.client.chatapp.model.IChatAppModelAdpt;
+import sq6_kt21.client.chatroom.model.GameCommand;
+import sq6_kt21.client.chatroom.model.GameInfo;
+import sq6_kt21.client.chatroom.model.ImageCommand;
+import sq6_kt21.client.chatroom.model.StringCommand;
+import sq6_kt21.concrete.ChatServer;
+import sq6_kt21.concrete.Chatroom;
+import sq6_kt21.concrete.User;
+import sq6_kt21.concrete.chat.AddCmdMsgCommand;
+import sq6_kt21.concrete.chat.AddMeMsgCommand;
+import sq6_kt21.concrete.chat.LeaveMsgCommand;
+import sq6_kt21.concrete.chat.NewCmdReqCmd;
+import sq6_kt21.concrete.chat.NewCmdReqMsg;
+import sq6_kt21.concrete.chat.TextMsg;
+import sq6_kt21.concrete.chat.TextMsgCmd;
+import sq6_kt21.server.game.model.StartGameFactory;
+import sq6_kt21.server.game.model.message.CityMsg;
+import sq6_kt21.server.game.model.message.CityMsgCmd;
+import sq6_kt21.server.game.model.message.ResultsMsg;
+import sq6_kt21.server.game.model.message.StartGame;
+import sq6_kt21.server.game.model.message.StartGameCommand;
+import sq6_kt21.server.game.model.message.TeamMsg;
+import sq6_kt21.server.game.model.message.TeamMsgCmd;
+
+public class ServerModel {
+	
+	public static final int BOUND_PORT = 2100;
+	
+	private IMixedDataDictionary cacheDict = new MixedDataDictionary();
+	
+	public static final UUID uuid = UUID.randomUUID();
+	
+	/**
+	 * The ip address of the server
+	 */
+	private String iP;
+	
+	User user;
+	
+	/**
+	 * The RMI Registry
+	 */
+	private Registry registry;
+	
+	/**
+	 * The chat lobby in which all the clients join 
+	 */
+	private IChatroom chatLobby;
+	
+	/**
+	 * The server stub
+	 */
+	public ChatServer serverStub;
+	
+	/**
+	 * The adapter for model to communicate with the view
+	 */
+	private IServerModel2ViewAdpt serverModel2ViewAdpt;
+	
+	private ICmd2ModelAdapter cmd2ModelAdapter;
+	
+	private DataPacketAlgo<Void, Object> dataPacketAlgo = new DataPacketAlgo<Void, Object>(null);
+	
+	/**
+	 * The list of all clients
+	 */
+	private List<IChatServer> clients = new ArrayList<>();
+	
+	public HashMap<Integer, List<IChatServer>> team2UserMap = new HashMap<>();
+	
+	public HashMap<IChatServer, Integer> user2TeamMap = new HashMap<>();
+	
+	private HashMap<Integer, Integer> teamTreasure = new HashMap<>();
+	
+	/**
+	 * The hashmap of all the target places.
+	 */
+	private HashMap<String, Position> cities = new HashMap<>();
+	
+	private HashMap<String, Integer> treasure = new HashMap<>();
+	
+	private int NumberSubmitted = 0;
+	
+	/**
+	 * The lambda to print the message out on the server view
+	 */
+	private IVoidLambda<String> outputCmd = new IVoidLambda<String> (){
+		public void apply(String... strs){
+			for(String s: strs)serverModel2ViewAdpt.appendView(s);
+		}
+	};
+	
+	private IRMIUtils rmiUtils = new RMIUtils(outputCmd);
+	
+	
+	
+	/**
+	 * Append info to the server riew
+	 * @param info the info to be printed
+	 */
+	public void appendString(String info) {
+		serverModel2ViewAdpt.appendView(info);
+	}
+	
+	public ServerModel(IServerModel2ViewAdpt adpt){
+		this.serverModel2ViewAdpt = adpt;
+		
+		try {
+			this.iP = rmiUtils.getLocalAddress();
+		} catch (SocketException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (UnknownHostException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		this.cmd2ModelAdapter = new ICmd2ModelAdapter() {
+			
+			@Override
+			public <T extends IChatMsg> void sendMsg2LocalChatroom(Class<T> index, T msg) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public <T> boolean putIntoLocalDict(MixedDataKey<T> key, T value) {
+				cacheDict.put(key, value);
+				return true;
+			}
+			
+			@Override
+			public <T> T getFromLocalDict(MixedDataKey<T> key) {
+				return cacheDict.get(key);
+			}
+			
+			@Override
+			public IChatServer getChatServer() {
+				return serverStub;
+			}
+			
+			@Override
+			public void buildComponentInScrollable(IComponentFactory fac) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void buildComponentInNonScrollable(IComponentFactory fac) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+		};
+		this.teamTreasure.put(1, 0);
+		this.teamTreasure.put(2, 0);
+		
+		MixedDataKey<ServerModel> serverModelKey = new MixedDataKey<ServerModel>(uuid, "serverModel", ServerModel.class);
+		cmd2ModelAdapter.putIntoLocalDict(serverModelKey, this);
+		
+
+	}
+	
+	
+	/**
+	 * Start the RMI and read in all the target places
+	 */
+	public void start() {
+		rmiUtils.startRMI(IRMI_Defs.CLASS_SERVER_PORT_SERVER);
+		try {
+			serverModel2ViewAdpt.setRemoteHost(rmiUtils.getLocalAddress()); //TODO Is this stored somewhere?
+			user = new User("default", rmiUtils.getLocalAddress());
+			
+			serverModel2ViewAdpt.appendView("Create User " + user.getName() + "\n");
+
+			registry = rmiUtils.getLocalRegistry();
+			
+			IUser stub = (IUser) UnicastRemoteObject.exportObject(user, IUser.BOUND_PORT_SERVER);
+			serverModel2ViewAdpt.appendView("Found registry: " + registry + "\n");
+
+			registry.rebind(IUser.BOUND_NAME, stub);
+			serverModel2ViewAdpt.appendView("IUser bound to " + IUser.BOUND_NAME + "\n");
+			
+
+		} catch (Exception e) {
+			System.err.println("Error getting local address: " + e);
+		}
+		init();
+		setCities();
+		//loadCities();
+		
+	}
+	
+	public void setCities() {
+		cities.put("Houston", Position.fromDegrees(29.7604, -95.3698));
+		cities.put("New York", Position.fromDegrees(40.7128, -74.0059));
+//		cities.put("Los Angeles", Position.fromDegrees(34.0522, -118.2437));
+//		cities.put("Chicago", Position.fromDegrees(41.8781, -87.6298));
+//		cities.put("Hong Kong", Position.fromDegrees(22.3964, 114.1095));
+//		cities.put("Paris", Position.fromDegrees(48.8566, 2.3522));
+//		cities.put("London", Position.fromDegrees(51.5074, -0.1278));
+//		cities.put("Vancouver", Position.fromDegrees(49.2827, -123.1207));
+//		cities.put("Auckland", Position.fromDegrees(-36.8485, 174.7633));
+		
+		treasure.put("Houston", 15);
+		treasure.put("New York", 20);
+//		treasure.put("Houston", 15);
+//		treasure.put("Houston", 15);
+//		treasure.put("Houston", 15);
+//		treasure.put("Houston", 15);
+//		treasure.put("Houston", 15);
+//		treasure.put("Houston", 15);
+//		treasure.put("Houston", 15);
+	}
+
+	
+	public void init(){
+		chatLobby = new Chatroom("Chat Lobby");
+		try {
+			IChatServer chatStub;
+			
+			// make a new chatserver stub for user in the newchatroom
+			serverStub = new ChatServer(user, chatLobby);
+			//get a chatstub for new chatserver 
+			
+			chatStub = (IChatServer) UnicastRemoteObject.exportObject(serverStub, IChatServer.BOUND_PORT_SERVER);
+
+			registry.rebind(IUser.BOUND_NAME + chatLobby.hashCode(), chatStub);
+			
+			//add chatstub to newRoom
+			chatLobby.addChatServer(chatStub);
+			
+			//add newchatroom to the user chatroom lists
+			user.addRoom(chatLobby);
+			serverModel2ViewAdpt.appendView("Chat Lobby created!");
+		}catch (Exception e) {
+			serverModel2ViewAdpt.appendView("Error: Creating Chat Lobby!");
+		}
+		
+		initDataPacketAlgo();
+		
+		try {
+			((ChatServer) serverStub).setDataPacketAlgo(dataPacketAlgo);
+		} catch (RemoteException e) {
+			e.printStackTrace();
+		}
+		
+	}
+	
+	public void initDataPacketAlgo() {
+
+		/**
+		 * Set default command. Handle Unknown data TYPE!!!!
+		 */
+		
+		dataPacketAlgo = new DataPacketAlgo<Void, Object>(new AOurDataPacketAlgoCmd<Object, IChatServer>() {
+
+			private static final long serialVersionUID = 8L;
+			private transient ICmd2ModelAdapter cmd2ModelAdapter;
+
+			@Override
+			public void setCmd2ModelAdpt(ICmd2ModelAdapter cmd2ModelAdpt) {
+				cmd2ModelAdapter = cmd2ModelAdpt;
+			}
+
+			@Override
+			public Void apply(Class<?> index, OurDataPacket<Object, IChatServer> host, Object... params) {
+				System.out.println("Meets unknown data packet!");
+
+				(new Thread() {
+					public void run() {
+						super.run();
+						UUID uuid = UUID.randomUUID();
+						MixedDataKey<Object> unknownMsgKey = new MixedDataKey<Object>(uuid, "", Object.class);
+						cacheDict.put(unknownMsgKey, (Object)host);
+						OurDataPacket<INewCmdReqMsg, IChatServer> dpDataPacket = new OurDataPacket<INewCmdReqMsg, IChatServer>
+							(INewCmdReqMsg.class, new NewCmdReqMsg(host.getData().getClass(), uuid), serverStub);
+						//System.out.println("aaaaaaaa");
+						// put in dict
+						
+						//OurDataPacket<INewCmdReqMsg, IChatServer> dataPacket = new OurDataPacket<INewCmdReqMsg, IChatServer>(INewCmdReqMsg.class, new NewCmdReqMsg(host.getData().getClass(),uuid), chatserver);
+						//AOurDataPacketAlgoCmd<?, IChatServer> unknownCmd = null;
+						try {
+							
+							host.getSender().receive(dpDataPacket);
+						} catch (RemoteException e) {
+							e.printStackTrace();
+						}
+					}
+				}).start();
+				return null;
+			}
+		});
+		
+		
+		/**
+		 * I ellude these code to test the handling of unknown data packet!
+		 */
+
+				ImageCommand imageCommand = new ImageCommand();
+				StringCommand stringCommand = new StringCommand();
+				GameCommand gameCommand = new GameCommand();
+				TextMsgCmd txtCmd = new TextMsgCmd();
+				CityMsgCmd cityMsgCmd = new CityMsgCmd(cmd2ModelAdapter);
+				TeamMsgCmd teamMsgCmd = new TeamMsgCmd(cmd2ModelAdapter);
+				imageCommand.setCmd2ModelAdpt(cmd2ModelAdapter);
+				stringCommand.setCmd2ModelAdpt(cmd2ModelAdapter);
+				gameCommand.setCmd2ModelAdpt(cmd2ModelAdapter);
+				txtCmd.setCmd2ModelAdpt(cmd2ModelAdapter);
+				cityMsgCmd.setCmd2ModelAdpt(cmd2ModelAdapter);
+				teamMsgCmd.setCmd2ModelAdpt(cmd2ModelAdapter);
+				dataPacketAlgo.setCmd(ImageIcon.class, (IExtVisitorCmd)imageCommand);
+				dataPacketAlgo.setCmd(String.class, (IExtVisitorCmd)stringCommand);
+				dataPacketAlgo.setCmd(StartGame.class, new StartGameCommand(cmd2ModelAdapter));
+				dataPacketAlgo.setCmd(ILeaveMsg.class, new LeaveMsgCommand(cmd2ModelAdapter));
+				dataPacketAlgo.setCmd(IAddMeMsg.class, new AddMeMsgCommand(cmd2ModelAdapter));
+				dataPacketAlgo.setCmd(ITextMsg.class, txtCmd);
+				dataPacketAlgo.setCmd(CityMsg.class, cityMsgCmd);
+				dataPacketAlgo.setCmd(TeamMsg.class, teamMsgCmd);
+				
+				NewCmdReqCmd newCmd = new NewCmdReqCmd(cmd2ModelAdapter, dataPacketAlgo);
+				dataPacketAlgo.setCmd(INewCmdReqMsg.class, newCmd);
+				AddCmdMsgCommand addCmdCmd = new AddCmdMsgCommand(cmd2ModelAdapter, dataPacketAlgo, cacheDict);
+				dataPacketAlgo.setCmd(IAddCmdMsg.class, addCmdCmd);
+<<<<<<< .mine
+=======
+				TeamMsgCmd teamMsgCmd = new TeamMsgCmd(cmd2ModelAdapter);
+				dataPacketAlgo.setCmd(TeamMsg.class,teamMsgCmd);
+				
+				clientAlgo.setCmd(TeamMsg.class,teamMsgCmd);
+>>>>>>> .r19983
+	}
+	
+	DataPacketAlgo<Void, Object> clientAlgo = new DataPacketAlgo<>(null);
+	
+	UUID gameId = UUID.randomUUID();
+	public void startGameView() {
+		
+		// Install all the client side algoCmds here
+//		clientAlgo.setCmd(UpdateImageMessage.class, new UpdateImageMessageCmd());
+//		clientAlgo.setCmd(StringMessage.class, new StringMessageCmd());
+//		clientAlgo.setCmd(HintMessage.class, new HintMessageCmd());
+		clientAlgo.setCmd(TeamMsg.class, new TeamMsgCmd(cmd2ModelAdapter));
+	
+		
+		StartGameFactory fac = new StartGameFactory(serverStub, chatLobby, clientAlgo);
+		StartGame startMsg = new StartGame(fac, gameId);
+		
+		for(IChatServer client:chatLobby.getChatServers())
+			try {
+				client.receive(new OurDataPacket<StartGame, IChatServer>(StartGame.class, startMsg, serverStub));
+			} catch (RemoteException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		serverModel2ViewAdpt.appendView("Game started.");
+	}
+	
+	
+	/**
+	 * Register the way the server model processes the model
+	 * @param <S>
+	 * 
+	 * @param message  The message to be processed
+	 */
+	public <S> void receiveMessage(OurDataPacket<? extends IChatMsg, S> message) {
+		message.execute(dataPacketAlgo);
+	}
+	
+	public void broadcast(String info){
+		TeamMsg infoMsg = new TeamMsg(info,gameId);
+		System.out.println(info);
+		//System.out.println(clients.size());
+		for (IChatServer chatserver : chatLobby.getChatServers()) {
+			try {
+				chatserver.receive(new OurDataPacket<TeamMsg, IChatServer>(TeamMsg.class, infoMsg, serverStub));
+			} catch (RemoteException e) {
+				e.printStackTrace();
+			}
+		}
+		serverModel2ViewAdpt.appendView("Broadcast: " + info);
+	}
+	
+	public void assignTeams(){
+		int numTeams = 2;
+		Collections.shuffle(this.clients);
+		int teamIndex = 1;
+		for (IChatServer chatserver : this.clients) {
+			this.user2TeamMap.put(chatserver, teamIndex);
+			if (this.team2UserMap.get(teamIndex) == null) {
+				ArrayList<IChatServer> tempList = new ArrayList<>();
+				tempList.add(chatserver);
+				this.team2UserMap.put(teamIndex, tempList);
+			} else {
+				this.team2UserMap.get(teamIndex).add(chatserver);
+			}
+			if (teamIndex > numTeams) {
+				teamIndex = 1;
+			} else {
+				teamIndex += 1;
+			}
+		}
+		
+		for (int idx = 1; idx <= numTeams; idx++) {
+			String teamMsg = "You have been assigned to Team " + idx + " with these peers: ";
+			for (IChatServer chatserver : this.team2UserMap.get(idx)) {
+				try {
+					teamMsg += chatserver.getUser().getIP() + "; ";
+				} catch (RemoteException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+			//TeamMessage tMsg = new TeamMessage(teamMsg);
+			//broadcastToTeam(new ChatAppDataPacket<TeamMessage>(TeamMessage.class, tMsg, serverStub), idx);
+			serverModel2ViewAdpt.appendView("Teams Assigned!");
+		}	
+	}
+
+	public void processCityList(List<String> cityList, IChatServer sender) {
+		// TODO Auto-generated method stub
+		if (user2TeamMap.containsKey(sender)) {
+			int teamNumber = user2TeamMap.get(sender);
+			int totalTreaure = treasure.get(cityList.get(0)) + treasure.get(cityList.get(1)) + treasure.get(cityList.get(2));
+			teamTreasure.put(teamNumber, teamTreasure.get(teamNumber) + totalTreaure);
+		}
+		NumberSubmitted++;
+	}
+
+	public void announceResults() {
+		// TODO Auto-generated method stub
+		if (NumberSubmitted == clients.size()) {
+			String s;
+			if (teamTreasure.get(1) > teamTreasure.get(2)) s = "Team 1 wins!";
+			else if (teamTreasure.get(1) > teamTreasure.get(2)) s = "Team 2 wins";
+			else s = "Tie game!";
+			this.broadcast(s);
+		}
+	}
+
+}

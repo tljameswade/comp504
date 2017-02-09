@@ -1,0 +1,17 @@
+package model.paint.shape;
+
+import java.awt.Shape;
+import java.awt.geom.Rectangle2D;
+
+public class RectangleShapeFactory implements IShapeFactory{
+	
+	public static RectangleShapeFactory Singleton = new RectangleShapeFactory();
+	
+	private RectangleShapeFactory() {}
+
+	@Override
+	public Shape makeShape(double x, double y, double xScale, double yScale) {
+		return new Rectangle2D.Double(x - xScale, y - yScale, 2 * xScale, 2 * yScale);
+	}
+
+}

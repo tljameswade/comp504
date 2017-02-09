@@ -1,0 +1,85 @@
+package controller;
+
+import java.awt.Component;
+import java.awt.EventQueue;
+import java.awt.Graphics;
+
+import model.BallModel;
+import view.BallGUI;
+import view.IView2ModelAdapter;
+import model.IModel2ViewAdapter;
+
+/**
+ * MVC Controller for the system
+ */
+public class Controller {
+
+	// Fields for the adapters to close over:
+	private BallModel model; // starts off null but will be fine when the constructor is finished.
+	private BallGUI view; // starts off null but will be fine when the constructor is finished.
+
+	/**
+	 * Controller constructor builds the system
+	 */
+	public Controller() {
+
+		// Here the model is shown being constructed first then the view but it could easily be the other way around if needs dictated it. 
+
+		// set the model field
+		model = new BallModel(new IModel2ViewAdapter() {
+			@Override
+			public Component getCanvas() {
+				return view.getCanvas();
+			}
+
+			@Override
+			public void update() {
+				view.update();
+			}
+		});
+
+		// set the view field
+		view = new BallGUI(new IView2ModelAdapter() {
+			public void paint(Graphics g) {
+				model.update(g);
+			}
+				
+			public void clearballs() {
+				model.clearballs();
+			}
+			
+			public void loadBall (String classname) {
+				model.makeballs(classname);
+			}
+		});
+
+		// At this point, both the model and view are instantiated as well as both adapters and both adapters reference non-null model and view fields. 
+
+		// NEITHER MODEL NOR VIEW SHOULD BE STARTED YET! 
+	}
+
+	/**
+	 * Start the system
+	 */
+	public void start() {
+		model.start(); // It is usually better to start the model first but not always.
+		view.start();
+	}
+
+	/**
+	 * Launch the application.
+	 * @param args Arguments given by the system or command line.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() { // Java specs say that the system must be constructed on the GUI event thread.
+			public void run() {
+				try {
+					Controller controller = new Controller(); // instantiate the system
+					controller.start(); // start the system
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+}

@@ -1,0 +1,54 @@
+Author: Suozhi Qi, Zhaohan Jia
+
+Overview: This simple program demonstrates a ball world that can make balls with abilities of changing color, radius, velocity, direction. 
+The type of strategies to move balls include String which moves straight and do not change ball state, Color which changes the color of balls, 
+Breathing which changes ball radius within a predefined range, Curve which changes the direction at which balls move. Besides, we have also added
+another function to these balls by allowing them to interact with each other. The ball can sense the existence of other balls by doing collision,
+killing, eating or freezing.
+
+There are also different paint strategies to paint different kinds of balls, SquarePaint Strategy will paint a Non-affine 
+transform-based rectangle, Ellipse will paint an affine transform-based Ellipse, Mario will paint a Mario that keeps up right, 
+Saturn will paint a Saturn that keeps up right, CompositeShape will paint a composite Shape using existing shapes and keeps up right.
+
+Available functions:
+1 Type the name of the strategy into the left text input frame. These strategies are available:
+	AngryShaking
+	Breathing
+	Collide: the balls can collide with each other during moving
+	Color
+	Curve
+	DareToDie: this strategy can be combined with strategies that detect interaction, such as Collide or DistanceSensor. Both the DareToDie ball and the other ball will disappear.
+	DistanceSensor: this strategy senses the other ball when it comes within distance of 50
+	Eat: this strategy can be combined with strategies that detect interaction, such as Collide or DistanceSensor. The Eat ball will swallow the other ball and grow bigger in size.
+	Freezing: this strategy can be combined with strategies that detect interaction, such as Collide or DistanceSensor. The Freezing ball is set to not move, and the balls interacting with it will also not move.
+	Kill: this strategy can be combined with strategies that detect interaction, such as Collide or DistanceSensor. The Kill ball will make the balls interacting with it disappear.
+	NoBallZone: this strategy can be combined with strategies that detect interaction, such as Collide or DistanceSensor. The NoBallZone ball is set not to move, and the balls interacting with it will disappear.
+	Spawn
+	Straight
+	Wander
+	
+2 Clicking the "Add to Lists" button will add the strategy input from the text frame to both of the drop lists
+
+3. Type the name of the paint strategy into the right text input frame. These strategies are available:
+	Ball: paints a ball
+	Bomb: paints a bomb
+	CompositeShape: paints a little human shape
+	Ellipse: paints a ellipse
+	Mario
+	Soccer
+	Polygon: paints a little star
+	Rectangle
+	Saturn
+	Square
+
+4. Clicking the "Add " button will add the paint strategy input from the text frame to the drop list on right side.
+
+5 Clicking "Make Selected Ball" will make a ball with the strategy selected on the top drop list
+
+6 Clicking "Combine!" will dynamically create a strategy that is the combination of the strategies selected on top and bottom lists.
+  The new generated strategy is then placed back into both drop lists and can be used again for combining.
+
+7 Clicking "Make Switcher" button will make a ball, initially, ones that go straight
+
+8 Clicking "Switch!" will cause all Switcher balls ever made to switch behaviors to whatever is the selected strategy on the top drop list. 
+  Switcher balls made later will have the same behavior as whatever the previously made Switchers have.

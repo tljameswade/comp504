@@ -1,0 +1,5 @@
+package model.Strategy;
+
+public class EatStrategy {
+
+}

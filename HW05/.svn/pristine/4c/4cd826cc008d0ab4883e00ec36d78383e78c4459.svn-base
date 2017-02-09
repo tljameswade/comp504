@@ -1,0 +1,20 @@
+package model.Strategy;
+
+import model.Ball;
+import util.Randomizer;
+
+/**
+ * this class will create a Breathingball on the basis of a default one
+ * @author SuozhiQi,HongyangZhang
+ *
+ */
+public class BreathingStrategy implements IUpdateStrategy {
+
+	/**
+	 * This method will update the radius of the ball to randomize
+	 * from 5 to 15
+	 */
+	public void updateSTATE(Ball ball) {
+		ball.setRadius(Randomizer.Singleton.randomInt(5, 15));
+	}
+}

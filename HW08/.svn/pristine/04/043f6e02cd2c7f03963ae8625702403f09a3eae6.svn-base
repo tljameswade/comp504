@@ -1,0 +1,7 @@
+package chatroom.view;
+
+import javax.swing.JPanel;
+
+public interface IChatRoomViewAdpt {
+	public void append(String user, String text);
+}

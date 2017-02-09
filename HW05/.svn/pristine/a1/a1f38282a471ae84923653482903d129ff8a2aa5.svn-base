@@ -1,0 +1,18 @@
+package model.paint.strategy;
+
+import model.paint.UprightImagePaintStrategy;
+
+/**
+ * @author zhou
+ *
+ */
+public class SaturnPaintStrategy extends UprightImagePaintStrategy{
+
+	/**
+	 * 
+	 */
+	public SaturnPaintStrategy() {
+		super("images/Saturn.png", 0.8);
+	}
+
+}

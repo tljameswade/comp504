@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="javadoc">
+    <target name="javadoc">
+        <javadoc access="private" author="true" classpath="." destdir="C:\Users\swong\Documents\My Web Sites\comp310\f12\demos\VisitorDemo" doctitle="Visitor Demo Documentation" nodeprecated="false" nodeprecatedlist="false" noindex="false" nonavbar="false" notree="false" packagenames="model,visitors.impl,controller,visitors,view" source="1.7" sourcepath="src" splitindex="true" use="true" version="true"/>
+    </target>
+</project>

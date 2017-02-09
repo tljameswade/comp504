@@ -1,0 +1,279 @@
+package view;
+
+import java.awt.BorderLayout;
+import java.awt.Component;
+import java.awt.Graphics;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+
+import javax.swing.JButton;
+import javax.swing.JTextField;
+
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.JSplitPane;
+import javax.swing.JComboBox;
+import java.awt.Color;
+import java.awt.GridBagLayout;
+import java.awt.GridBagConstraints;
+import java.awt.Insets;
+
+/**
+ * The view class that runs the GUI
+ * @author Suozhi Qi, HongyangZhang
+ * @version 1.0
+ */
+public class BallGUI<TDropListItem> extends JFrame {
+
+	/**
+	 * The serial version ID
+	 */
+	private static final long serialVersionUID = -2479160785166496395L;
+
+	/**
+	 * The content JPanel
+	 */
+	private JPanel contentPane;
+
+	/**
+	 * The north Panel
+	 */
+	private final JPanel Northpanel = new JPanel();
+
+	/**
+	 * The button to clear all balls
+	 */
+	private final JButton btnClearAll = new JButton("Clear All");
+
+	/**
+	 * Adapter back to the model for control tasks.
+	 */
+	private IModelControlAdapter<TDropListItem> _modelControlAdpt;
+
+	/**
+	 * The model adapter is initialized to a no-op to insure that system always has well-defined behavior
+	 */
+	private IModelPaintAdapter PaintAdpt = IModelPaintAdapter.NULL_OBJECT;
+
+	/**
+	 * Create a special panel with an overridden paintComponent method.
+	 */
+	private JPanel _pnlCanvas = new JPanel() {
+		private static final long serialVersionUID = 2;
+
+		public void paintComponent(Graphics g) {
+			super.paintComponent(g);
+			PaintAdpt.paint(g);
+		}
+	};
+	private final JSplitPane splitPane = new JSplitPane();
+	private final JButton MakeSwitcher = new JButton("Make Switcher");
+	private final JButton btnSwitch = new JButton("Switch!");
+	private final JSplitPane splitPane_1 = new JSplitPane();
+	private final JButton btnMakeSelectedBall = new JButton("Make Selected Ball");
+	private final JButton btnCombine = new JButton("Combine!");
+	private final JSplitPane splitPane_2 = new JSplitPane();
+	private final JTextField textInput = new JTextField();
+	private final JButton btnAddToLists = new JButton("Add to lists");
+	private final JSplitPane splitPane_3 = new JSplitPane();
+
+	/**
+	 * The top drop list, used to select what strategy to use in a new ball and
+	 * to switch the switcher to.
+	 */
+	private final JComboBox<TDropListItem> _list1DL = new JComboBox<TDropListItem>();
+
+	/**
+	 * Bottom drop list, used for combining with the top list selection.
+	 */
+	private final JComboBox<TDropListItem> _list2DL = new JComboBox<TDropListItem>();
+
+	/**
+	 * Launch the application.
+	 */
+	public void start() {
+		setVisible(true);
+	}
+
+	/**
+	 * Updates the view by repainting the canvas
+	 */
+	public void update() {
+		_pnlCanvas.repaint();
+	}
+
+	/**
+	 * Get the Component of the panel
+	 * @return The Component of the panel
+	 */
+	public Component getCanvas() {
+		return _pnlCanvas;
+	}
+
+	/**
+	 * The constructor of the view BallGUI
+	 * @param modelCtrlAdpt The view to model control adapter
+	 * @param modelPaintAdpt The view to model paint adapter
+	 */
+	public BallGUI(IModelControlAdapter<TDropListItem> modelCtrlAdpt, IModelPaintAdapter modelPaintAdpt) {
+		textInput.setToolTipText("Name of strategy, XXX, from model.Strategy.XXX");
+		textInput.setText("Straight");
+		textInput.setColumns(10);
+		this.PaintAdpt = modelPaintAdpt;
+		this._modelControlAdpt = modelCtrlAdpt;
+		initGUI();
+	}
+
+	/**
+	 * Initialize the GUI
+	 */
+	private void initGUI() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(200, 200, 900, 800);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(0, 0, 0, 0));
+		contentPane.setLayout(new BorderLayout(0, 0));
+		setContentPane(contentPane);
+		Northpanel.setBackground(Color.GREEN);
+
+		contentPane.add(Northpanel, BorderLayout.NORTH);
+		GridBagLayout gbl_Northpanel = new GridBagLayout();
+		gbl_Northpanel.columnWidths = new int[] { 146, 134, 134, 163, 138, 97, 0 };
+		gbl_Northpanel.rowHeights = new int[] { 71, 0 };
+		gbl_Northpanel.columnWeights = new double[] { 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE };
+		gbl_Northpanel.rowWeights = new double[] { 0.0, Double.MIN_VALUE };
+		Northpanel.setLayout(gbl_Northpanel);
+		btnClearAll.setToolTipText("Erase all balls in the canvas");
+
+		/**
+		 * when click on the clearball button,the clearballs function in IModelControlAdapter gets implemented
+		 */
+		btnClearAll.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				_modelControlAdpt.clearballs();
+			}
+		});
+		splitPane_2.setOrientation(JSplitPane.VERTICAL_SPLIT);
+
+		GridBagConstraints gbc_splitPane_2 = new GridBagConstraints();
+		gbc_splitPane_2.anchor = GridBagConstraints.WEST;
+		gbc_splitPane_2.insets = new Insets(0, 0, 0, 5);
+		gbc_splitPane_2.gridx = 1;
+		gbc_splitPane_2.gridy = 0;
+		Northpanel.add(splitPane_2, gbc_splitPane_2);
+
+		splitPane_2.setLeftComponent(textInput);
+		btnAddToLists.setToolTipText("Add strategy to both the droplists");
+
+		/**
+		 * addlists button will trigger the addStrategy function
+		 * also the return object will be added to the top and bottom droplists
+		 */
+		btnAddToLists.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				TDropListItem o = _modelControlAdpt.addStrategy(textInput.getText());
+				if (null == o)
+					return; // just in case
+
+				_list1DL.insertItemAt(o, 0);
+				_list2DL.insertItemAt(o, 0);
+			}
+		});
+
+		splitPane_2.setRightComponent(btnAddToLists);
+		splitPane_3.setOrientation(JSplitPane.VERTICAL_SPLIT);
+
+		GridBagConstraints gbc_splitPane_3 = new GridBagConstraints();
+		gbc_splitPane_3.fill = GridBagConstraints.HORIZONTAL;
+		gbc_splitPane_3.insets = new Insets(0, 0, 0, 5);
+		gbc_splitPane_3.gridx = 2;
+		gbc_splitPane_3.gridy = 0;
+		Northpanel.add(splitPane_3, gbc_splitPane_3);
+
+		splitPane_3.setRightComponent(_list2DL);
+
+		splitPane_3.setLeftComponent(_list1DL);
+		splitPane_1.setOrientation(JSplitPane.VERTICAL_SPLIT);
+
+		GridBagConstraints gbc_splitPane_1 = new GridBagConstraints();
+		gbc_splitPane_1.anchor = GridBagConstraints.NORTHWEST;
+		gbc_splitPane_1.insets = new Insets(0, 0, 0, 5);
+		gbc_splitPane_1.gridx = 3;
+		gbc_splitPane_1.gridy = 0;
+		Northpanel.add(splitPane_1, gbc_splitPane_1);
+		btnMakeSelectedBall.setToolTipText("Instantiate a ball with the selected strategy in the upper droplist");
+
+		/**
+		 * makeBall button will trigger the loadBall function in IModelControlAdapter
+		 */
+		btnMakeSelectedBall.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				_modelControlAdpt.loadBall(_list1DL.getItemAt(_list1DL.getSelectedIndex()));
+			}
+		});
+
+		splitPane_1.setLeftComponent(btnMakeSelectedBall);
+		btnCombine.setToolTipText(
+				"Combine the selected strategies in both of the droplists into a single strategy and add that strategy to both of the droplists");
+
+		/**
+		 * combine button will trigger the combineStrategy function in IModelControlAdapter
+		 * the return object will be added to the top and bottom droplists.
+		 */
+		btnCombine.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				TDropListItem o = _modelControlAdpt.combineStrategies(_list1DL.getItemAt(_list1DL.getSelectedIndex()),
+						_list2DL.getItemAt(_list2DL.getSelectedIndex()));
+				_list1DL.insertItemAt(o, 0);
+				_list2DL.insertItemAt(o, 0);
+			}
+		});
+
+		splitPane_1.setRightComponent(btnCombine);
+		splitPane.setOrientation(JSplitPane.VERTICAL_SPLIT);
+
+		GridBagConstraints gbc_splitPane = new GridBagConstraints();
+		gbc_splitPane.anchor = GridBagConstraints.NORTHWEST;
+		gbc_splitPane.insets = new Insets(0, 0, 0, 5);
+		gbc_splitPane.gridx = 4;
+		gbc_splitPane.gridy = 0;
+		Northpanel.add(splitPane, gbc_splitPane);
+
+		/**
+		 * MakeSwitcher button will trigger makeSwitcher function in ImodelControlAdapter
+		 */
+		MakeSwitcher.setToolTipText("Instantiate a ball that can switch strategies");
+		MakeSwitcher.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				_modelControlAdpt.makeSwitcher();
+			}
+		});
+
+		splitPane.setLeftComponent(MakeSwitcher);
+		btnSwitch.setToolTipText(
+				"Switch strategy on all the switcher balls with the selected strategy in the upper droplist");
+
+		/**
+		 * the switch button will trigger the SwitchStrategy function in IModelControlAdapter
+		 */
+		btnSwitch.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				_modelControlAdpt.SwitchStrategy(_list1DL.getItemAt(_list1DL.getSelectedIndex()));
+			}
+		});
+
+		splitPane.setRightComponent(btnSwitch);
+		GridBagConstraints gbc_btnClearAll = new GridBagConstraints();
+		gbc_btnClearAll.anchor = GridBagConstraints.WEST;
+		gbc_btnClearAll.gridx = 5;
+		gbc_btnClearAll.gridy = 0;
+		Northpanel.add(btnClearAll, gbc_btnClearAll);
+		_pnlCanvas.setBackground(Color.LIGHT_GRAY);
+
+		contentPane.add(_pnlCanvas, BorderLayout.CENTER);
+	}
+
+}

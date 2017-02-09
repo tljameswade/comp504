@@ -1,0 +1,24 @@
+package controller;
+
+import provided.abcParser.ABCParser;
+import provided.music.APhraseVisitor;
+import provided.music.IPhrase;
+import provided.music.IPhraseVisitor;
+import provided.music.Note;
+import provided.player.ISequencePlayerStatus;
+import provided.player.SequencePlayer;
+import provided.util.ABCUtil;
+
+public class ABCPlayer {
+	public static void main (String[] args) {
+		SequencePlayer sp = new SequencePlayer(16, 0);  // 16 = ticks per QUARTER note
+		sp.setTicksPerDefaultNote(16);  // 16 = ticks per DEFAULT note
+		sp.setTempo(140);   // 140 quarter notes (beats) per minute
+		Note g = new Note('G', 0, 0, 1.0, false);
+		sp.addNote(g, 10);   // 10 = start tick of note.  Tick of next note is returned.
+		sp.play(ISequencePlayerStatus.NULL);   // No-op end-of-song cmd supplied.
+		System.out.println(ABCUtil.Singleton.getFileContents("/songs/minuet.abc"));
+		ABCParser test = new ABCParser("/songs/minuet.abc");
+		test.parse();
+	}
+}

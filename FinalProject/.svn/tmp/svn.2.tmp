@@ -1,0 +1,130 @@
+package sq6_kt21.server.game.model;
+
+import java.io.Serializable;
+import java.rmi.RemoteException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.UUID;
+
+import org.junit.experimental.theories.Theories;
+
+import common.IChatServer;
+import common.OurDataPacket;
+
+import gov.nasa.worldwind.geom.Position;
+import gov.nasa.worldwind.render.Annotation;
+import map.MapLayer;
+import provided.datapacket.DataPacketAlgo;
+import sq6_kt21.server.game.model.message.CityMsg;
+import sq6_kt21.server.game.model.message.CityMsgCmd;
+import map.ToggleAnnotation;
+
+
+
+
+public class GameModel implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -3210917738510721660L;
+	
+	private IGameModel2ViewAdapter viewAdapter;
+	
+	private IChatServer serverStub;
+	
+	private IChatServer clientStub;
+	
+	private DataPacketAlgo<Void, Object> dataPacketAlgo;
+	
+	MapLayer _layer = new MapLayer();
+	
+	int numberOfSelected;
+	
+	int teamNumber = 0;
+	
+	public static final UUID uuid = UUID.randomUUID();
+	
+	ArrayList<String> cityList;
+	
+	HashMap<String, Integer> valueMap = new HashMap<>();
+	
+	public GameModel(IGameModel2ViewAdapter model2ViewAdpt) {
+		this.viewAdapter = model2ViewAdpt;
+	}
+	
+	public void start() {
+		Position willy = Position.fromDegrees(29.718550, -95.399068);
+		Position epcot = Position.fromDegrees(28.374454, -81.549363);
+		Position nyc   = Position.fromDegrees(40.748974, -73.990288);
+		Position london = Position.fromDegrees(51.503367, -0.119968);
+		_layer.addToggleAnnotation("Willy", "Willy Selected!", willy);
+		_layer.addToggleAnnotation("Epcot Center", "Epcot Selected!", epcot);
+		_layer.addToggleAnnotation("New York", "New York Selected", nyc);
+		_layer.addToggleAnnotation("London", "London Selected", london);
+		valueMap.put("Willy", 100);
+		valueMap.put("Epcot", 50);
+		valueMap.put("New York", 200);
+		valueMap.put("London", 80);
+		
+		viewAdapter.show(_layer);
+	}
+
+	public void setProperties(IChatServer server, DataPacketAlgo<Void, Object> dataPacketAlgo){
+		this.serverStub = server;
+		this.dataPacketAlgo = dataPacketAlgo;
+	}
+
+	public int countSelected() {
+		numberOfSelected = 0;
+		for (Annotation annotation: _layer.getAnnotations()) {
+			if(annotation instanceof ToggleAnnotation){  // must check this before GlobeAnnotation
+				if (((ToggleAnnotation) annotation).isSelected()) numberOfSelected++;
+			}
+		}
+		// TODO Auto-generated method stub
+		return numberOfSelected;
+	}
+	
+
+	public ArrayList<String> getSelected() {
+		cityList = new ArrayList<String>();
+		for (Annotation annotation: _layer.getAnnotations()) {
+			if(annotation instanceof ToggleAnnotation){
+				if (((ToggleAnnotation) annotation).isSelected()) {
+					String s = annotation.toString();
+					int num = s.indexOf("Selected");
+					cityList.add(s.substring(1, num - 1));
+				}
+			}
+		}
+		
+		return cityList;
+	}
+
+	public void submitToServer(List<String> list) {
+//		int sum = 0;
+//		for (String s : list) {
+//			if (valueMap.containsKey(s)) {
+//				sum += valueMap.get(s);
+//			}
+//		}
+//		System.out.println(sum);
+		CityMsg cityMsg = new CityMsg(list);
+		if (this.serverStub != null) {
+			try {
+				this.serverStub.receive(new OurDataPacket<CityMsg, IChatServer>(CityMsg.class, cityMsg, this.serverStub));
+			} catch (RemoteException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+	public void broadCasttoAll(String s) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+}

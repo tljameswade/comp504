@@ -1,0 +1,5 @@
+The steps of running the project:
+1)Open Eclipse
+2)Open the project folder with Eclipse
+3)Click "Run/Run" or "Ctrl+F11" to compile, build and run the application
+4)You will see a window open with buttons and options to draw shapes

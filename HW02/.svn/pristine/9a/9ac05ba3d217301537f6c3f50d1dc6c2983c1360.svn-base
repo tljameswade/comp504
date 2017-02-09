@@ -1,0 +1,32 @@
+package view;
+
+import java.awt.Graphics;
+
+/**
+ * The interface of the adapter from the view to the model that enables the view to talk to the model.
+ */
+public interface IView2ModelAdapter {
+
+	public void paint(Graphics g);
+
+	public void loadBall(String className);
+
+	public void clearballs();
+
+	/**
+	 * No-op singleton implementation of IView2ModelAdapter 
+	 * See the web page on the Null Object Design Pattern at http://cnx.org/content/m17227/latest/
+	 */
+	public static final IView2ModelAdapter NULL_OBJECT = new IView2ModelAdapter() {
+		public void paint(Graphics g) {
+		}
+
+		public void loadBall(String className) {
+		}
+
+		public void clearballs() {
+		}
+
+	};
+
+}

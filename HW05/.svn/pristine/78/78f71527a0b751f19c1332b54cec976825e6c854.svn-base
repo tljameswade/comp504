@@ -1,0 +1,44 @@
+package model.Strategy;
+
+import model.Ball;
+import model.IBallCmd;
+import model.IInteractStrategy;
+import model.IUpdateStrategy;
+import model.MultiInteractStrategy;
+import util.IDispatcher;
+
+/**
+ * The DareToDieStrategy of the ball, which kill itself and other ball when collides.
+ * Interaction criteria is when balls collide
+ * 
+ * @author Suozhi Qi
+ * @author Zhaohan Jia
+ * @version 1.0
+ * @since 1.0
+ * 
+ * @param <TDispMsg> The dispatcher message.
+ */
+public class DareToDieStrategy<TDispMsg> implements IUpdateStrategy<TDispMsg> {
+	/**
+	 * The init method no-op.
+	 * @param context The context ball.
+	 */
+	@Override
+	public void init(Ball context) {
+		context.setInteractStrategy(new MultiInteractStrategy(context.getInteractStrategy(), new IInteractStrategy() {
+			public void interact(Ball context, Ball target, IDispatcher<IBallCmd> disp) {
+				disp.deleteObserver(target);
+				disp.deleteObserver(context);
+			}
+		}));
+	}
+
+	/**
+	 * The update status method of DareToDie.
+	 * @param ball Current ball with the context.
+	 * @param dispatcher The dispatcher is used.
+	 */
+	@Override
+	public void updateState(Ball context, IDispatcher<TDispMsg> dispatcher) {
+	}
+}

@@ -1,0 +1,751 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:UMLLabProfile="http:///schemas/UMLLabProfile/NS/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/UMLLabProfile/NS/0 pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile">
+  <uml:Model xmi:id="_984PsG5zEeaNo-HhT7uuaA" name="HW01">
+    <eAnnotations xmi:id="_-YJPYG5zEeaNo-HhT7uuaA" source="http://ns.yatta.de/umllab">
+      <contents xmi:type="ecore:EAnnotation" xmi:id="_-YJPYW5zEeaNo-HhT7uuaA" source="codegen">
+        <details xmi:id="_-YJPYm5zEeaNo-HhT7uuaA" key="codegenDirectory" value="/HW01/src"/>
+        <details xmi:id="_CIxBUG50EeaNo-HhT7uuaA" key="AssociatedSourceCode" value="/HW01/src/shape/CompoundShape.java;4293981949/1;/HW01/src/shape/Arcshape.java;3253678998/1;/HW01/src/shape/Ashape.java;1997671257/1;/HW01/src/shape/Circle.java;2524874630/1;/HW01/src/shape/Rectangle.java;1238392404/1;/HW01/src/view/HW1mainframe.java;515567959/1;"/>
+      </contents>
+    </eAnnotations>
+    <elementImport xmi:id="_-iGcoG5zEeaNo-HhT7uuaA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+    </elementImport>
+    <elementImport xmi:id="_-iGcoW5zEeaNo-HhT7uuaA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#byte"/>
+    </elementImport>
+    <elementImport xmi:id="_-iGcom5zEeaNo-HhT7uuaA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+    </elementImport>
+    <elementImport xmi:id="_-iGco25zEeaNo-HhT7uuaA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+    </elementImport>
+    <elementImport xmi:id="_-iGcpG5zEeaNo-HhT7uuaA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+    </elementImport>
+    <elementImport xmi:id="_-iGcpW5zEeaNo-HhT7uuaA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    </elementImport>
+    <elementImport xmi:id="_-iGcpm5zEeaNo-HhT7uuaA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+    </elementImport>
+    <elementImport xmi:id="_-iHDsG5zEeaNo-HhT7uuaA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#short"/>
+    </elementImport>
+    <elementImport xmi:id="_-iHDsW5zEeaNo-HhT7uuaA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </elementImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_-iHDsm5zEeaNo-HhT7uuaA" name="java">
+      <packagedElement xmi:type="uml:Package" xmi:id="_-iHDs25zEeaNo-HhT7uuaA" name="awt">
+        <packagedElement xmi:type="uml:Class" xmi:id="_-i8KIG5zEeaNo-HhT7uuaA" name="Color"/>
+        <packagedElement xmi:type="uml:Package" xmi:id="_-iNxYW5zEeaNo-HhT7uuaA" name="event">
+          <packagedElement xmi:type="uml:Interface" xmi:id="_-jHwUW5zEeaNo-HhT7uuaA" name="ActionListener"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_-jIXYW5zEeaNo-HhT7uuaA" name="ActionEvent"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_-i8xMW5zEeaNo-HhT7uuaA" name="Graphics"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_-jEF8G5zEeaNo-HhT7uuaA" name="BorderLayout"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_-jEtAG5zEeaNo-HhT7uuaA" name="EventQueue"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_c_tdEG8NEeaA_aP7xnTqqA" name="SystemColor"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_-iLVIG5zEeaNo-HhT7uuaA" name="util">
+        <packagedElement xmi:type="uml:Class" xmi:id="_-jBCoG5zEeaNo-HhT7uuaA" name="HashSet"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_-jBpsG5zEeaNo-HhT7uuaA" name="Set"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_-iIR0G5zEeaNo-HhT7uuaA" name="shape">
+      <packagedElement xmi:type="uml:Class" xmi:id="_-iT4AG5zEeaNo-HhT7uuaA" name="Arcshape">
+        <ownedComment xmi:id="_Wq6kYG7wEeaA_aP7xnTqqA">
+          <body>This is a concrete class Arcshape that extends the Ashape abstract class
+@author Suozhi Qi, Yiqing Lu
+@version 1.0
+ *</body>
+        </ownedComment>
+        <generalization xmi:id="_-i9_UG5zEeaNo-HhT7uuaA" general="_-iW7UG5zEeaNo-HhT7uuaA"/>
+        <ownedAttribute xmi:id="_-jUkoG5zEeaNo-HhT7uuaA" name="colorRec" visibility="private" type="_-i8KIG5zEeaNo-HhT7uuaA" association="_-j6agG5zEeaNo-HhT7uuaA">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_-jVLsG5zEeaNo-HhT7uuaA" value="Color.cyan"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_-jVLsm5zEeaNo-HhT7uuaA" name="sAngle" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_-jVLs25zEeaNo-HhT7uuaA" value="30"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_-jVywW5zEeaNo-HhT7uuaA" name="arcAngle" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_-jVywm5zEeaNo-HhT7uuaA" value="60"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_-jVyxG5zEeaNo-HhT7uuaA" name="width" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_-jWZ0G5zEeaNo-HhT7uuaA" value="20"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_-jWZ0m5zEeaNo-HhT7uuaA" name="height" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_-jWZ025zEeaNo-HhT7uuaA" value="30"/>
+        </ownedAttribute>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_-jotsG5zEeaNo-HhT7uuaA" name="Arcshape" specification="_-iVGIG5zEeaNo-HhT7uuaA">
+          <ownedParameter xmi:id="_-jotsW5zEeaNo-HhT7uuaA" name="x">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_-jotsm5zEeaNo-HhT7uuaA" name="y">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_-jots25zEeaNo-HhT7uuaA" name="width">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_-jottG5zEeaNo-HhT7uuaA" name="height">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_-jottW5zEeaNo-HhT7uuaA" type="_-iT4AG5zEeaNo-HhT7uuaA" direction="return">
+            <name xsi:nil="true"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>this.xcord = x;
+		this.ycord = y;
+		this.width = width;
+		this.height = height;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_-jottm5zEeaNo-HhT7uuaA" name="paint" specification="_-jNP4G5zEeaNo-HhT7uuaA">
+          <ownedParameter xmi:id="_-jott25zEeaNo-HhT7uuaA" name="g" type="_-i8xMW5zEeaNo-HhT7uuaA"/>
+          <language>java</language>
+          <body>g.setColor(colorRec);
+		g.fillArc(xcord, ycord, width, height, sAngle, arcAngle);
+		;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_-iVGIG5zEeaNo-HhT7uuaA" name="Arcshape" method="_-jotsG5zEeaNo-HhT7uuaA">
+          <eAnnotations xmi:id="_-iVGJW5zEeaNo-HhT7uuaA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_-iVGJm5zEeaNo-HhT7uuaA" key="create"/>
+          </eAnnotations>
+          <ownedComment xmi:id="_Wq7LcG7wEeaA_aP7xnTqqA">
+            <body>This is a constructor implements an Arcshape that can be painted
+	 * @param x x-coordinate of the upper left corner of the Arcshape
+	 * @param y y-coordinate of the upper left corner of the Arcshape
+	 * @param width the width of the Arcshape
+	 * @param height the height of the Arcshape</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_-iVGIW5zEeaNo-HhT7uuaA" name="x">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_-iVGIm5zEeaNo-HhT7uuaA" name="y">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_-iVGI25zEeaNo-HhT7uuaA" name="width">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_-iVGJG5zEeaNo-HhT7uuaA" name="height">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_-iVGJ25zEeaNo-HhT7uuaA" type="_-iT4AG5zEeaNo-HhT7uuaA" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_-jNP4G5zEeaNo-HhT7uuaA" name="paint" method="_-jottm5zEeaNo-HhT7uuaA">
+          <ownedComment xmi:id="_Wq7LcW7wEeaA_aP7xnTqqA">
+            <body>This paints an Arcshape
+	 * @param g is an instance of the Graphics class</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_-jNP4W5zEeaNo-HhT7uuaA" name="g" type="_-i8xMW5zEeaNo-HhT7uuaA"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_-iW7UG5zEeaNo-HhT7uuaA" name="Ashape" isAbstract="true">
+        <ownedComment xmi:id="_2QA9gG8qEeaUdu13gA2lPw">
+          <body>This is an abstract class that other concrete shape classes
+can extends on
+@author Suozhi Qi, Yiqing Lu
+@version 1.0
+ *</body>
+        </ownedComment>
+        <ownedAttribute xmi:id="_-jaEMG5zEeaNo-HhT7uuaA" name="xcord" visibility="protected">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_-jarQG5zEeaNo-HhT7uuaA" value="50"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_-jbSUG5zEeaNo-HhT7uuaA" name="ycord" visibility="protected">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_-jbSUW5zEeaNo-HhT7uuaA" value="60"/>
+        </ownedAttribute>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_-jpUwG5zEeaNo-HhT7uuaA" name="setYcord" specification="_-iXiYG5zEeaNo-HhT7uuaA">
+          <ownedParameter xmi:id="_-jpUwW5zEeaNo-HhT7uuaA" name="value">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>this.ycord = value;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_-j1iAG5zEeaNo-HhT7uuaA" name="getYcord" specification="_-iXiYm5zEeaNo-HhT7uuaA">
+          <ownedParameter xmi:id="_-j1iAW5zEeaNo-HhT7uuaA" direction="return">
+            <name xsi:nil="true"/>
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>return this.ycord;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_-j1iAm5zEeaNo-HhT7uuaA" name="setXcord" specification="_-iYJcW5zEeaNo-HhT7uuaA">
+          <ownedParameter xmi:id="_-j1iA25zEeaNo-HhT7uuaA" name="value">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>this.xcord = value;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_-j1iBG5zEeaNo-HhT7uuaA" name="getXcord" specification="_-iYwgG5zEeaNo-HhT7uuaA">
+          <ownedParameter xmi:id="_-j1iBW5zEeaNo-HhT7uuaA" direction="return">
+            <name xsi:nil="true"/>
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>return this.xcord;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_-iXiYG5zEeaNo-HhT7uuaA" name="setYcord" visibility="package" method="_-jpUwG5zEeaNo-HhT7uuaA">
+          <ownedComment xmi:id="_2QA9gm8qEeaUdu13gA2lPw">
+            <body>This sets the y coordinate
+	 * @param value is the value of y coordinate</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_-iXiYW5zEeaNo-HhT7uuaA" name="value">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_-iXiYm5zEeaNo-HhT7uuaA" name="getYcord" visibility="package" method="_-j1iAG5zEeaNo-HhT7uuaA">
+          <ownedComment xmi:id="_2QA9g28qEeaUdu13gA2lPw">
+            <body>This returns the y coordinate
+	 * @return returns the value of the y coordinate</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_-iYJcG5zEeaNo-HhT7uuaA" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_-iYJcW5zEeaNo-HhT7uuaA" name="setXcord" visibility="package" method="_-j1iAm5zEeaNo-HhT7uuaA">
+          <ownedComment xmi:id="_STLE4G7sEeaA_aP7xnTqqA">
+            <body>This sets the x coordinate
+	 * @param value is the value of x coordinate</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_-iYJcm5zEeaNo-HhT7uuaA" name="value">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_-iYwgG5zEeaNo-HhT7uuaA" name="getXcord" visibility="package" method="_-j1iBG5zEeaNo-HhT7uuaA">
+          <ownedComment xmi:id="_2QA9gW8qEeaUdu13gA2lPw">
+            <body>This returns the x coordinate
+	 * @return returns the value of the x coordinate</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_-iYwgW5zEeaNo-HhT7uuaA" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_-jOeAG5zEeaNo-HhT7uuaA" name="paint" isAbstract="true">
+          <ownedComment xmi:id="_STLE4W7sEeaA_aP7xnTqqA">
+            <body>This is an abstract painting method that can be overwritten
+	 * in concrete sub classes
+	 * @param g is an instance of the Graphics class</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_-jOeAW5zEeaNo-HhT7uuaA" name="g" type="_-i8xMW5zEeaNo-HhT7uuaA"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_-iZ-oG5zEeaNo-HhT7uuaA" name="Circle">
+        <ownedComment xmi:id="_Ynz2QG7tEeaA_aP7xnTqqA">
+          <body>This is a concrete class Circle that extends the Ashape abstract class
+@author Suozhi Qi, Yiqing Lu
+@version 1.0
+ *</body>
+        </ownedComment>
+        <generalization xmi:id="_-i_0gG5zEeaNo-HhT7uuaA" general="_-iW7UG5zEeaNo-HhT7uuaA"/>
+        <ownedAttribute xmi:id="_-jcgcG5zEeaNo-HhT7uuaA" name="radius" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_-jcgcW5zEeaNo-HhT7uuaA" value="10"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_-jdHgW5zEeaNo-HhT7uuaA" name="colorCircle" visibility="private" type="_-i8KIG5zEeaNo-HhT7uuaA" association="_-j7BkW5zEeaNo-HhT7uuaA">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_-jdukG5zEeaNo-HhT7uuaA" value="Color.MAGENTA"/>
+        </ownedAttribute>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_-j2JEG5zEeaNo-HhT7uuaA" name="Circle" specification="_-ialsG5zEeaNo-HhT7uuaA">
+          <ownedParameter xmi:id="_-j2JEW5zEeaNo-HhT7uuaA" name="x">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_-j2JEm5zEeaNo-HhT7uuaA" name="y">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_-j2JE25zEeaNo-HhT7uuaA" name="radius">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_-j2JFG5zEeaNo-HhT7uuaA" type="_-iZ-oG5zEeaNo-HhT7uuaA" direction="return">
+            <name xsi:nil="true"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>this.xcord = x;
+		this.ycord = y;
+		this.radius = radius;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_-j2JFW5zEeaNo-HhT7uuaA" name="paint" specification="_-jPsIG5zEeaNo-HhT7uuaA">
+          <ownedParameter xmi:id="_-j2JFm5zEeaNo-HhT7uuaA" name="g" type="_-i8xMW5zEeaNo-HhT7uuaA"/>
+          <language>java</language>
+          <body>g.setColor(colorCircle);
+		g.fillOval(xcord, ycord, radius, radius);
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_-ialsG5zEeaNo-HhT7uuaA" name="Circle" method="_-j2JEG5zEeaNo-HhT7uuaA">
+          <eAnnotations xmi:id="_-ibMwW5zEeaNo-HhT7uuaA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_-ibMwm5zEeaNo-HhT7uuaA" key="create"/>
+          </eAnnotations>
+          <ownedComment xmi:id="_Ynz2QW7tEeaA_aP7xnTqqA">
+            <body>This is a constructor implements a circle that can be painted
+	 * @param x x-coordinate of the upper left corner of the circle
+	 * @param y y-coordinate of the upper left corner of the circle
+	 * @param radius radius of the circle</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_-ialsW5zEeaNo-HhT7uuaA" name="x">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_-ialsm5zEeaNo-HhT7uuaA" name="y">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_-ibMwG5zEeaNo-HhT7uuaA" name="radius">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_-ibMw25zEeaNo-HhT7uuaA" type="_-iZ-oG5zEeaNo-HhT7uuaA" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_-jPsIG5zEeaNo-HhT7uuaA" name="paint" method="_-j2JFW5zEeaNo-HhT7uuaA">
+          <ownedComment xmi:id="_Ynz2Qm7tEeaA_aP7xnTqqA">
+            <body>This paints a circle
+	 * @param g is an instance of the Graphics class</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_-jPsIW5zEeaNo-HhT7uuaA" name="g" type="_-i8xMW5zEeaNo-HhT7uuaA"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_-ica4G5zEeaNo-HhT7uuaA" name="CompoundShape">
+        <ownedComment xmi:id="_hpQMIG7uEeaA_aP7xnTqqA">
+          <body>This is a composite class CompoundShape that extends and has Ashape instances
+@author Suozhi Qi, Yiqing Lu
+@version 1.0
+ *</body>
+        </ownedComment>
+        <generalization xmi:id="_-jCQxm5zEeaNo-HhT7uuaA" general="_-iW7UG5zEeaNo-HhT7uuaA"/>
+        <ownedAttribute xmi:id="_WFRx0W8eEea7eeVxYt-oDw" name="binaryShape" visibility="private" type="_-iW7UG5zEeaNo-HhT7uuaA" aggregation="shared">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WFRx028eEea7eeVxYt-oDw" value="*"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_sDeugW8eEea7eeVxYt-oDw" value="new Ashape[2]"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_v-cIMW8eEea7eeVxYt-oDw" name="ashape" type="_-iW7UG5zEeaNo-HhT7uuaA" aggregation="shared" association="_v-a6EG8eEea7eeVxYt-oDw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_v-cvQG8eEea7eeVxYt-oDw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_v-cvQW8eEea7eeVxYt-oDw" value="*"/>
+        </ownedAttribute>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_-j2JF25zEeaNo-HhT7uuaA" name="CompoundShape" specification="_-jCQwG5zEeaNo-HhT7uuaA">
+          <ownedParameter xmi:id="_-j2JGG5zEeaNo-HhT7uuaA" name="firstShape" type="_-iW7UG5zEeaNo-HhT7uuaA"/>
+          <ownedParameter xmi:id="_-j2JGW5zEeaNo-HhT7uuaA" name="secondShape" type="_-iW7UG5zEeaNo-HhT7uuaA"/>
+          <ownedParameter xmi:id="_-j2JGm5zEeaNo-HhT7uuaA" type="_-ica4G5zEeaNo-HhT7uuaA" direction="return">
+            <name xsi:nil="true"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>this.binaryShape[0] = firstShape;
+		this.binaryShape[1] = secondShape;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_-j2JG25zEeaNo-HhT7uuaA" name="paint" specification="_-jQTMG5zEeaNo-HhT7uuaA">
+          <ownedParameter xmi:id="_-j2JHG5zEeaNo-HhT7uuaA" name="g" type="_-i8xMW5zEeaNo-HhT7uuaA"/>
+          <language>java</language>
+          <body>for (Ashape shape : binaryShape) {
+			shape.paint(g);
+		}
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_-jCQwG5zEeaNo-HhT7uuaA" name="CompoundShape" method="_-j2JF25zEeaNo-HhT7uuaA">
+          <eAnnotations xmi:id="_-jCQw25zEeaNo-HhT7uuaA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_-jCQxG5zEeaNo-HhT7uuaA" key="create"/>
+          </eAnnotations>
+          <ownedComment xmi:id="_sEQKkG8eEea7eeVxYt-oDw">
+            <body>This is the CompoundShape constructor implementing
+	* 	 * a CompoundShape that can be painted
+	* 	 * @param firstShape is an instance of an Ashape
+	* 	 * @param secondShape is another instance of an Ashape</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_-jCQwW5zEeaNo-HhT7uuaA" name="firstShape" type="_-iW7UG5zEeaNo-HhT7uuaA"/>
+          <ownedParameter xmi:id="_-jCQwm5zEeaNo-HhT7uuaA" name="secondShape" type="_-iW7UG5zEeaNo-HhT7uuaA"/>
+          <ownedParameter xmi:id="_-jCQxW5zEeaNo-HhT7uuaA" type="_-ica4G5zEeaNo-HhT7uuaA" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_-jQTMG5zEeaNo-HhT7uuaA" name="paint" method="_-j2JG25zEeaNo-HhT7uuaA">
+          <ownedParameter xmi:id="_-jQTMW5zEeaNo-HhT7uuaA" name="g" type="_-i8xMW5zEeaNo-HhT7uuaA"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_-igFQG5zEeaNo-HhT7uuaA" name="Rectangle">
+        <ownedComment xmi:id="_WXIFsG7wEeaA_aP7xnTqqA">
+          <body>This is a concrete class Rectangle that extends
+the abstract class Ashape
+@author Suozhi Qi, Yiqing Lu
+@version 1.0
+ *</body>
+        </ownedComment>
+        <generalization xmi:id="_-jC30G5zEeaNo-HhT7uuaA" general="_-iW7UG5zEeaNo-HhT7uuaA"/>
+        <ownedAttribute xmi:id="_-jfjwG5zEeaNo-HhT7uuaA" name="colorRec" visibility="private" type="_-i8KIG5zEeaNo-HhT7uuaA" association="_-j8PsW5zEeaNo-HhT7uuaA">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_-jfjwW5zEeaNo-HhT7uuaA" value="Color.orange"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_-jgK0W5zEeaNo-HhT7uuaA" name="height" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_-jgx4G5zEeaNo-HhT7uuaA" value="20"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_-jhY8G5zEeaNo-HhT7uuaA" name="width" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_-jhY8W5zEeaNo-HhT7uuaA" value="30"/>
+        </ownedAttribute>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_-j2wIG5zEeaNo-HhT7uuaA" name="Rectangle" specification="_-igsUG5zEeaNo-HhT7uuaA">
+          <ownedParameter xmi:id="_-j2wIW5zEeaNo-HhT7uuaA" name="x">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_-j2wIm5zEeaNo-HhT7uuaA" name="y">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_-j2wI25zEeaNo-HhT7uuaA" name="width">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_-j2wJG5zEeaNo-HhT7uuaA" name="height">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_-j2wJW5zEeaNo-HhT7uuaA" type="_-igFQG5zEeaNo-HhT7uuaA" direction="return">
+            <name xsi:nil="true"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>this.xcord = x;
+		this.ycord = y;
+		this.width = width;
+		this.height = height;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_-j2wJm5zEeaNo-HhT7uuaA" name="paint" specification="_-jQ6QW5zEeaNo-HhT7uuaA">
+          <ownedParameter xmi:id="_-j2wJ25zEeaNo-HhT7uuaA" name="g" type="_-i8xMW5zEeaNo-HhT7uuaA"/>
+          <language>java</language>
+          <body>g.setColor(colorRec);
+		g.fillRect(xcord, ycord, width, height);
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_-igsUG5zEeaNo-HhT7uuaA" name="Rectangle" method="_-j2wIG5zEeaNo-HhT7uuaA">
+          <eAnnotations xmi:id="_-igsVW5zEeaNo-HhT7uuaA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_-igsVm5zEeaNo-HhT7uuaA" key="create"/>
+          </eAnnotations>
+          <ownedComment xmi:id="_WXIswG7wEeaA_aP7xnTqqA">
+            <body>This is a constructor implements a Rectangle that
+	 * can be painted
+	 * @param x is the x coordinate of the upper left corner of a Rectangle
+	 * @param y is the y coordinate of the upper left corner of a Rectangle
+	 * @param width is the width of a Rectangle
+	 * @param height is the height of a Rectangle</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_-igsUW5zEeaNo-HhT7uuaA" name="x">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_-igsUm5zEeaNo-HhT7uuaA" name="y">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_-igsU25zEeaNo-HhT7uuaA" name="width">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_-igsVG5zEeaNo-HhT7uuaA" name="height">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_-igsV25zEeaNo-HhT7uuaA" type="_-igFQG5zEeaNo-HhT7uuaA" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_-jQ6QW5zEeaNo-HhT7uuaA" name="paint" method="_-j2wJm5zEeaNo-HhT7uuaA">
+          <ownedComment xmi:id="_WXIswW7wEeaA_aP7xnTqqA">
+            <body>This paints a Rectangle
+	 * @param g is an instance of the Graphics class</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_-jQ6Qm5zEeaNo-HhT7uuaA" name="g" type="_-i8xMW5zEeaNo-HhT7uuaA"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_-j6agG5zEeaNo-HhT7uuaA" name="" memberEnd="_-j6agW5zEeaNo-HhT7uuaA _-jUkoG5zEeaNo-HhT7uuaA">
+        <ownedEnd xmi:id="_-j6agW5zEeaNo-HhT7uuaA" name="" type="_-iT4AG5zEeaNo-HhT7uuaA" association="_-j6agG5zEeaNo-HhT7uuaA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_-j7BkW5zEeaNo-HhT7uuaA" name="" memberEnd="_-j7Bkm5zEeaNo-HhT7uuaA _-jdHgW5zEeaNo-HhT7uuaA">
+        <ownedEnd xmi:id="_-j7Bkm5zEeaNo-HhT7uuaA" name="" type="_-iZ-oG5zEeaNo-HhT7uuaA" association="_-j7BkW5zEeaNo-HhT7uuaA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_-j8PsW5zEeaNo-HhT7uuaA" name="" memberEnd="_-j8Psm5zEeaNo-HhT7uuaA _-jfjwG5zEeaNo-HhT7uuaA">
+        <ownedEnd xmi:id="_-j8Psm5zEeaNo-HhT7uuaA" name="" type="_-igFQG5zEeaNo-HhT7uuaA" association="_-j8PsW5zEeaNo-HhT7uuaA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_v-a6EG8eEea7eeVxYt-oDw" name="" memberEnd="_v-bhIG8eEea7eeVxYt-oDw _v-cIMW8eEea7eeVxYt-oDw">
+        <ownedEnd xmi:id="_v-bhIG8eEea7eeVxYt-oDw" name="compoundShape" type="_-ica4G5zEeaNo-HhT7uuaA" association="_v-a6EG8eEea7eeVxYt-oDw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_v-bhIW8eEea7eeVxYt-oDw"/>
+        </ownedEnd>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_-iNKUG5zEeaNo-HhT7uuaA" name="javax">
+      <packagedElement xmi:type="uml:Package" xmi:id="_-iNKUW5zEeaNo-HhT7uuaA" name="swing">
+        <packagedElement xmi:type="uml:Class" xmi:id="_-jEtAm5zEeaNo-HhT7uuaA" name="JFrame"/>
+        <packagedElement xmi:type="uml:Package" xmi:id="_-iNxYG5zEeaNo-HhT7uuaA" name="border">
+          <packagedElement xmi:type="uml:Class" xmi:id="_-jF7IW5zEeaNo-HhT7uuaA" name="EmptyBorder"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_-jFUEW5zEeaNo-HhT7uuaA" name="JPanel"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_-jGiMW5zEeaNo-HhT7uuaA" name="JLabel"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_-jHJQW5zEeaNo-HhT7uuaA" name="JButton"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_-jI-cW5zEeaNo-HhT7uuaA" name="JTextField"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_-iO_gG5zEeaNo-HhT7uuaA" name="view">
+      <packagedElement xmi:type="uml:Class" xmi:id="_-ih6cG5zEeaNo-HhT7uuaA" name="HW1mainframe">
+        <ownedComment xmi:id="_czyO0G7qEeaA_aP7xnTqqA">
+          <body>
+@author Suozhi Qi, Yiqing Lu
+The class Frame for showing different shapes
+@version 1.0
+ *</body>
+        </ownedComment>
+        <generalization xmi:id="_-jSvcG5zEeaNo-HhT7uuaA" general="_-jEtAm5zEeaNo-HhT7uuaA"/>
+        <ownedAttribute xmi:id="_-jiAAG5zEeaNo-HhT7uuaA" name="serialVersionUID" visibility="private" isLeaf="true" isStatic="true" isReadOnly="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_-jinEG5zEeaNo-HhT7uuaA" value="-7860162863458021026L"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_-jinEW5zEeaNo-HhT7uuaA" name="contentPane" visibility="private" type="_-jFUEW5zEeaNo-HhT7uuaA" association="_-j82wW5zEeaNo-HhT7uuaA"/>
+        <ownedAttribute xmi:id="_-jjOIG5zEeaNo-HhT7uuaA" name="oneShape" visibility="private" type="_-iW7UG5zEeaNo-HhT7uuaA" association="_-j9d0W5zEeaNo-HhT7uuaA">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_-jjOIW5zEeaNo-HhT7uuaA" value="new Rectangle(100, 100, 20, 20)"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_-jj1MG5zEeaNo-HhT7uuaA" name="CenterPan" visibility="private" isLeaf="true" type="_-jFUEW5zEeaNo-HhT7uuaA" isReadOnly="true" association="_-j-E4W5zEeaNo-HhT7uuaA">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_-jj1MW5zEeaNo-HhT7uuaA" value="new JPanel() {&#xA;&#xA;&#x9;&#x9;private static final long serialVersionUID = -2285134665659669016L;&#xA;&#xA;&#x9;&#x9;/**&#xA;&#x9;&#x9; * Overridden paintComponent method to paint a shape in the panel.&#xA;&#x9;&#x9; * @param g The Graphics object to paint on.&#xA;&#x9;&#x9; **/&#xA;&#x9;&#x9;public void paintComponent(Graphics g) {&#xA;&#x9;&#x9;&#x9;super.paintComponent(g);&#xA;&#x9;&#x9;&#x9;g.setColor(Color.RED);&#xA;&#x9;&#x9;&#x9;g.fillOval(75, 100, 20, 40);&#xA;&#x9;&#x9;&#x9;oneShape.paint(g);&#xA;&#x9;&#x9;}&#xA;&#x9;}"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_-jkcQG5zEeaNo-HhT7uuaA" name="NorthPan" visibility="private" isLeaf="true" type="_-jFUEW5zEeaNo-HhT7uuaA" isReadOnly="true" association="_-j-r8W5zEeaNo-HhT7uuaA">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_-jkcQW5zEeaNo-HhT7uuaA" value="new JPanel()"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_-jlDUG5zEeaNo-HhT7uuaA" name="NorthLabel" visibility="private" isLeaf="true" type="_-jGiMW5zEeaNo-HhT7uuaA" isReadOnly="true" association="_-j_TAW5zEeaNo-HhT7uuaA">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_-jlDUW5zEeaNo-HhT7uuaA" value="new JLabel(&quot;504 Rocks!&quot;)"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_-jlqYG5zEeaNo-HhT7uuaA" name="NorthButton" visibility="private" isLeaf="true" type="_-jHJQW5zEeaNo-HhT7uuaA" isReadOnly="true" association="_-j_6EW5zEeaNo-HhT7uuaA">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_-jlqYW5zEeaNo-HhT7uuaA" value="new JButton(&quot;Click me&quot;)"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_-jlqY25zEeaNo-HhT7uuaA" name="textField" visibility="private" isLeaf="true" type="_-jI-cW5zEeaNo-HhT7uuaA" isReadOnly="true" association="_-kAhIW5zEeaNo-HhT7uuaA">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_-jmRcG5zEeaNo-HhT7uuaA" value="new JTextField()"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_-jm4gG5zEeaNo-HhT7uuaA" name="SouthPanel" visibility="private" isLeaf="true" type="_-jFUEW5zEeaNo-HhT7uuaA" isReadOnly="true" association="_-kBIMW5zEeaNo-HhT7uuaA">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_-jm4gW5zEeaNo-HhT7uuaA" value="new JPanel()"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_-jm4g25zEeaNo-HhT7uuaA" name="btnCircle" visibility="private" isLeaf="true" type="_-jHJQW5zEeaNo-HhT7uuaA" isReadOnly="true" association="_-kBvQG5zEeaNo-HhT7uuaA">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_-jm4hG5zEeaNo-HhT7uuaA" value="new JButton(&quot;Circle&quot;)"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_-jnfkW5zEeaNo-HhT7uuaA" name="btnArc" visibility="private" isLeaf="true" type="_-jHJQW5zEeaNo-HhT7uuaA" isReadOnly="true" association="_-kBvQ25zEeaNo-HhT7uuaA">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_-jnfkm5zEeaNo-HhT7uuaA" value="new JButton(&quot;Arc&quot;)"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_-jnflG5zEeaNo-HhT7uuaA" name="btnCompound" visibility="private" isLeaf="true" type="_-jHJQW5zEeaNo-HhT7uuaA" isReadOnly="true" association="_-kCWUW5zEeaNo-HhT7uuaA">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_-jnflW5zEeaNo-HhT7uuaA" value="new JButton(&quot;Compound&quot;)"/>
+        </ownedAttribute>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_-j3XMG5zEeaNo-HhT7uuaA" name="main" specification="_-ijIkG5zEeaNo-HhT7uuaA">
+          <ownedParameter xmi:id="_-j3XMW5zEeaNo-HhT7uuaA" name="args">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-j3XMm5zEeaNo-HhT7uuaA" value="*"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					HW1mainframe frame = new HW1mainframe();
+					frame.start();
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_-j3XM25zEeaNo-HhT7uuaA" name="start" specification="_-ijvom5zEeaNo-HhT7uuaA">
+          <language>java</language>
+          <body>setVisible(true);
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_-j3XNG5zEeaNo-HhT7uuaA" name="HW1mainframe" specification="_-ijvo25zEeaNo-HhT7uuaA">
+          <ownedParameter xmi:id="_-j3XNW5zEeaNo-HhT7uuaA" type="_-ih6cG5zEeaNo-HhT7uuaA" direction="return">
+            <name xsi:nil="true"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>textField.setToolTipText(&quot;the textArea people could write text here&quot;);
+		textField.setColumns(10);
+		initGUI();
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_-j3-QG5zEeaNo-HhT7uuaA" name="initGUI" specification="_-ikWs25zEeaNo-HhT7uuaA">
+          <language>java</language>
+          <body>setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		contentPane.setLayout(new BorderLayout(0, 0));
+		setContentPane(contentPane);
+		CenterPan.setBackground(SystemColor.inactiveCaption);
+
+		contentPane.add(CenterPan, BorderLayout.CENTER);
+		btnCircle.setToolTipText(&quot;paint a magenta circle on the center panel if the \&quot;Circle\&quot; button is pressed&quot;);
+
+		btnCircle.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				oneShape = new Circle(50, 50, 30);
+				CenterPan.repaint();
+			}
+		});
+		SouthPanel.add(btnCircle);
+		btnArc.setToolTipText(&quot;paint a cyan Arc on the center panel if the \&quot;Arc\&quot; button is pressed&quot;);
+
+		btnArc.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				oneShape = new Arcshape(100, 150, 40, 40);
+				CenterPan.repaint();
+			}
+		});
+		SouthPanel.add(btnArc);
+		btnCompound.setToolTipText(
+				&quot;a orange rectangle and a cyan Arc appear together on the panel if the \&quot;Compound\&quot; button is pressed&quot;);
+
+		btnCompound.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Ashape first = new Rectangle(200, 100, 40, 40);
+				Ashape second = new Arcshape(230, 100, 80, 80);
+				oneShape = new CompoundShape(first, second);
+				CenterPan.repaint();
+			}
+		});
+		SouthPanel.add(btnCompound);
+
+		NorthPan.setBackground(SystemColor.activeCaption);
+		contentPane.add(NorthPan, BorderLayout.NORTH);
+		NorthButton.setToolTipText(
+				&quot;press the \&quot;Click me\&quot; button to change the label text to the text written in the testArea&quot;);
+
+		NorthButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String text = textField.getText();
+				NorthLabel.setText(text);
+			}
+		});
+
+		NorthPan.add(NorthButton);
+		NorthLabel.setToolTipText(
+				&quot;The label orginally has the string \&quot;504 Rocks!\&quot; and it will be substituded for the text in the textArea if the \&quot;Click me\&quot; button is pressed &quot;);
+		NorthPan.add(NorthLabel);
+		NorthPan.add(textField);
+
+		SouthPanel.setBackground(new Color(95, 158, 160));
+		contentPane.add(SouthPanel, BorderLayout.SOUTH);
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_-ijIkG5zEeaNo-HhT7uuaA" name="main" isStatic="true" method="_-j3XMG5zEeaNo-HhT7uuaA">
+          <ownedComment xmi:id="_-j4lUG5zEeaNo-HhT7uuaA">
+            <body>Launch the application.
+	 * @param args works as the default argument in the main method in Java</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_-ijIkW5zEeaNo-HhT7uuaA" name="args">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-ijvoG5zEeaNo-HhT7uuaA" value="*"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_-ijvom5zEeaNo-HhT7uuaA" name="start" method="_-j3XM25zEeaNo-HhT7uuaA">
+          <ownedComment xmi:id="_-j4lUW5zEeaNo-HhT7uuaA">
+            <body>start() method to start the frame</body>
+          </ownedComment>
+        </ownedOperation>
+        <ownedOperation xmi:id="_-ijvo25zEeaNo-HhT7uuaA" name="HW1mainframe" method="_-j3XNG5zEeaNo-HhT7uuaA">
+          <eAnnotations xmi:id="_-ikWsG5zEeaNo-HhT7uuaA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_-ikWsW5zEeaNo-HhT7uuaA" key="create"/>
+          </eAnnotations>
+          <ownedComment xmi:id="_-j4lUm5zEeaNo-HhT7uuaA">
+            <body>Constructor to initiate the GUI and set columns
+	 * in the textField</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_-ikWsm5zEeaNo-HhT7uuaA" type="_-ih6cG5zEeaNo-HhT7uuaA" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_-ikWs25zEeaNo-HhT7uuaA" name="initGUI" method="_-j3-QG5zEeaNo-HhT7uuaA">
+          <ownedComment xmi:id="_-j4lU25zEeaNo-HhT7uuaA">
+            <body>iniGUI() method to initialize the GUI components but do not start the frame</body>
+          </ownedComment>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_-j82wW5zEeaNo-HhT7uuaA" name="" memberEnd="_-j82wm5zEeaNo-HhT7uuaA _-jinEW5zEeaNo-HhT7uuaA">
+        <ownedEnd xmi:id="_-j82wm5zEeaNo-HhT7uuaA" name="" type="_-ih6cG5zEeaNo-HhT7uuaA" association="_-j82wW5zEeaNo-HhT7uuaA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_-j9d0W5zEeaNo-HhT7uuaA" name="" memberEnd="_-j9d0m5zEeaNo-HhT7uuaA _-jjOIG5zEeaNo-HhT7uuaA">
+        <ownedEnd xmi:id="_-j9d0m5zEeaNo-HhT7uuaA" name="" type="_-ih6cG5zEeaNo-HhT7uuaA" association="_-j9d0W5zEeaNo-HhT7uuaA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_-j-E4W5zEeaNo-HhT7uuaA" name="" memberEnd="_-j-E4m5zEeaNo-HhT7uuaA _-jj1MG5zEeaNo-HhT7uuaA">
+        <ownedEnd xmi:id="_-j-E4m5zEeaNo-HhT7uuaA" name="" type="_-ih6cG5zEeaNo-HhT7uuaA" association="_-j-E4W5zEeaNo-HhT7uuaA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_-j-r8W5zEeaNo-HhT7uuaA" name="" memberEnd="_-j-r8m5zEeaNo-HhT7uuaA _-jkcQG5zEeaNo-HhT7uuaA">
+        <ownedEnd xmi:id="_-j-r8m5zEeaNo-HhT7uuaA" name="" type="_-ih6cG5zEeaNo-HhT7uuaA" association="_-j-r8W5zEeaNo-HhT7uuaA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_-j_TAW5zEeaNo-HhT7uuaA" name="" memberEnd="_-j_TAm5zEeaNo-HhT7uuaA _-jlDUG5zEeaNo-HhT7uuaA">
+        <ownedEnd xmi:id="_-j_TAm5zEeaNo-HhT7uuaA" name="" type="_-ih6cG5zEeaNo-HhT7uuaA" association="_-j_TAW5zEeaNo-HhT7uuaA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_-j_6EW5zEeaNo-HhT7uuaA" name="" memberEnd="_-j_6Em5zEeaNo-HhT7uuaA _-jlqYG5zEeaNo-HhT7uuaA">
+        <ownedEnd xmi:id="_-j_6Em5zEeaNo-HhT7uuaA" name="" type="_-ih6cG5zEeaNo-HhT7uuaA" association="_-j_6EW5zEeaNo-HhT7uuaA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_-kAhIW5zEeaNo-HhT7uuaA" name="" memberEnd="_-kAhIm5zEeaNo-HhT7uuaA _-jlqY25zEeaNo-HhT7uuaA">
+        <ownedEnd xmi:id="_-kAhIm5zEeaNo-HhT7uuaA" name="" type="_-ih6cG5zEeaNo-HhT7uuaA" association="_-kAhIW5zEeaNo-HhT7uuaA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_-kBIMW5zEeaNo-HhT7uuaA" name="" memberEnd="_-kBIMm5zEeaNo-HhT7uuaA _-jm4gG5zEeaNo-HhT7uuaA">
+        <ownedEnd xmi:id="_-kBIMm5zEeaNo-HhT7uuaA" name="" type="_-ih6cG5zEeaNo-HhT7uuaA" association="_-kBIMW5zEeaNo-HhT7uuaA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_-kBvQG5zEeaNo-HhT7uuaA" name="" memberEnd="_-kBvQW5zEeaNo-HhT7uuaA _-jm4g25zEeaNo-HhT7uuaA">
+        <ownedEnd xmi:id="_-kBvQW5zEeaNo-HhT7uuaA" name="" type="_-ih6cG5zEeaNo-HhT7uuaA" association="_-kBvQG5zEeaNo-HhT7uuaA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_-kBvQ25zEeaNo-HhT7uuaA" name="" memberEnd="_-kBvRG5zEeaNo-HhT7uuaA _-jnfkW5zEeaNo-HhT7uuaA">
+        <ownedEnd xmi:id="_-kBvRG5zEeaNo-HhT7uuaA" name="" type="_-ih6cG5zEeaNo-HhT7uuaA" association="_-kBvQ25zEeaNo-HhT7uuaA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_-kCWUW5zEeaNo-HhT7uuaA" name="" memberEnd="_-kCWUm5zEeaNo-HhT7uuaA _-jnflG5zEeaNo-HhT7uuaA">
+        <ownedEnd xmi:id="_-kCWUm5zEeaNo-HhT7uuaA" name="" type="_-ih6cG5zEeaNo-HhT7uuaA" association="_-kCWUW5zEeaNo-HhT7uuaA"/>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:id="_-YKdgG5zEeaNo-HhT7uuaA">
+      <eAnnotations xmi:id="_-YKdgW5zEeaNo-HhT7uuaA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile"/>
+    </profileApplication>
+  </uml:Model>
+  <UMLLabProfile:TargetLanguage xmi:id="_-YKdgm5zEeaNo-HhT7uuaA" base_Package="_984PsG5zEeaNo-HhT7uuaA">
+    <languageName>java</languageName>
+  </UMLLabProfile:TargetLanguage>
+  <UMLLabProfile:Reference xmi:id="_-i8xMG5zEeaNo-HhT7uuaA" base_Element="_-i8KIG5zEeaNo-HhT7uuaA"/>
+  <UMLLabProfile:Reference xmi:id="_-i9YQG5zEeaNo-HhT7uuaA" base_Element="_-i8xMW5zEeaNo-HhT7uuaA"/>
+  <UMLLabProfile:Reference xmi:id="_-jBCoW5zEeaNo-HhT7uuaA" base_Element="_-jBCoG5zEeaNo-HhT7uuaA"/>
+  <UMLLabProfile:Reference xmi:id="_-jBpsW5zEeaNo-HhT7uuaA" base_Element="_-jBpsG5zEeaNo-HhT7uuaA"/>
+  <UMLLabProfile:Reference xmi:id="_-jEF8W5zEeaNo-HhT7uuaA" base_Element="_-jEF8G5zEeaNo-HhT7uuaA"/>
+  <UMLLabProfile:Reference xmi:id="_-jEtAW5zEeaNo-HhT7uuaA" base_Element="_-jEtAG5zEeaNo-HhT7uuaA"/>
+  <UMLLabProfile:Reference xmi:id="_-jFUEG5zEeaNo-HhT7uuaA" base_Element="_-jEtAm5zEeaNo-HhT7uuaA"/>
+  <UMLLabProfile:Reference xmi:id="_-jF7IG5zEeaNo-HhT7uuaA" base_Element="_-jFUEW5zEeaNo-HhT7uuaA"/>
+  <UMLLabProfile:Reference xmi:id="_-jGiMG5zEeaNo-HhT7uuaA" base_Element="_-jF7IW5zEeaNo-HhT7uuaA"/>
+  <UMLLabProfile:Reference xmi:id="_-jHJQG5zEeaNo-HhT7uuaA" base_Element="_-jGiMW5zEeaNo-HhT7uuaA"/>
+  <UMLLabProfile:Reference xmi:id="_-jHwUG5zEeaNo-HhT7uuaA" base_Element="_-jHJQW5zEeaNo-HhT7uuaA"/>
+  <UMLLabProfile:Reference xmi:id="_-jIXYG5zEeaNo-HhT7uuaA" base_Element="_-jHwUW5zEeaNo-HhT7uuaA"/>
+  <UMLLabProfile:Reference xmi:id="_-jI-cG5zEeaNo-HhT7uuaA" base_Element="_-jIXYW5zEeaNo-HhT7uuaA"/>
+  <UMLLabProfile:Reference xmi:id="_-jJlgG5zEeaNo-HhT7uuaA" base_Element="_-jI-cW5zEeaNo-HhT7uuaA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_-jQTMm5zEeaNo-HhT7uuaA" base_Element="_-jQTMG5zEeaNo-HhT7uuaA"/>
+  <UMLLabProfile:Annotations xmi:id="_-jQTM25zEeaNo-HhT7uuaA" base_Element="_-jQTMG5zEeaNo-HhT7uuaA">
+    <annotations xmi:id="_-jQ6QG5zEeaNo-HhT7uuaA" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_-jVLsW5zEeaNo-HhT7uuaA" base_Element="_-jUkoG5zEeaNo-HhT7uuaA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_-jVywG5zEeaNo-HhT7uuaA" base_Element="_-jVLsm5zEeaNo-HhT7uuaA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_-jVyw25zEeaNo-HhT7uuaA" base_Element="_-jVywW5zEeaNo-HhT7uuaA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_-jWZ0W5zEeaNo-HhT7uuaA" base_Element="_-jVyxG5zEeaNo-HhT7uuaA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_-jWZ1G5zEeaNo-HhT7uuaA" base_Element="_-jWZ0m5zEeaNo-HhT7uuaA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_-jarQW5zEeaNo-HhT7uuaA" base_Element="_-jaEMG5zEeaNo-HhT7uuaA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_-jbSUm5zEeaNo-HhT7uuaA" base_Element="_-jbSUG5zEeaNo-HhT7uuaA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_-jdHgG5zEeaNo-HhT7uuaA" base_Element="_-jcgcG5zEeaNo-HhT7uuaA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_-jdukW5zEeaNo-HhT7uuaA" base_Element="_-jdHgW5zEeaNo-HhT7uuaA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_-jgK0G5zEeaNo-HhT7uuaA" base_Element="_-jfjwG5zEeaNo-HhT7uuaA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_-jgx4W5zEeaNo-HhT7uuaA" base_Element="_-jgK0W5zEeaNo-HhT7uuaA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_-jhY8m5zEeaNo-HhT7uuaA" base_Element="_-jhY8G5zEeaNo-HhT7uuaA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_-jinEm5zEeaNo-HhT7uuaA" base_Element="_-jinEW5zEeaNo-HhT7uuaA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_-jjOIm5zEeaNo-HhT7uuaA" base_Element="_-jjOIG5zEeaNo-HhT7uuaA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_-jj1Mm5zEeaNo-HhT7uuaA" base_Element="_-jj1MG5zEeaNo-HhT7uuaA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_-jkcQm5zEeaNo-HhT7uuaA" base_Element="_-jkcQG5zEeaNo-HhT7uuaA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_-jlDUm5zEeaNo-HhT7uuaA" base_Element="_-jlDUG5zEeaNo-HhT7uuaA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_-jlqYm5zEeaNo-HhT7uuaA" base_Element="_-jlqYG5zEeaNo-HhT7uuaA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_-jmRcW5zEeaNo-HhT7uuaA" base_Element="_-jlqY25zEeaNo-HhT7uuaA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_-jm4gm5zEeaNo-HhT7uuaA" base_Element="_-jm4gG5zEeaNo-HhT7uuaA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_-jnfkG5zEeaNo-HhT7uuaA" base_Element="_-jm4g25zEeaNo-HhT7uuaA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_-jnfk25zEeaNo-HhT7uuaA" base_Element="_-jnfkW5zEeaNo-HhT7uuaA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_-joGoG5zEeaNo-HhT7uuaA" base_Element="_-jnflG5zEeaNo-HhT7uuaA"/>
+  <UMLLabProfile:Reference xmi:id="_-j7BkG5zEeaNo-HhT7uuaA" base_Element="_-j6agG5zEeaNo-HhT7uuaA"/>
+  <UMLLabProfile:Reference xmi:id="_-j7ooG5zEeaNo-HhT7uuaA" base_Element="_-j7BkW5zEeaNo-HhT7uuaA"/>
+  <UMLLabProfile:Reference xmi:id="_-j82wG5zEeaNo-HhT7uuaA" base_Element="_-j8PsW5zEeaNo-HhT7uuaA"/>
+  <UMLLabProfile:Reference xmi:id="_-j9d0G5zEeaNo-HhT7uuaA" base_Element="_-j82wW5zEeaNo-HhT7uuaA"/>
+  <UMLLabProfile:Reference xmi:id="_-j-E4G5zEeaNo-HhT7uuaA" base_Element="_-j9d0W5zEeaNo-HhT7uuaA"/>
+  <UMLLabProfile:Reference xmi:id="_-j-r8G5zEeaNo-HhT7uuaA" base_Element="_-j-E4W5zEeaNo-HhT7uuaA"/>
+  <UMLLabProfile:Reference xmi:id="_-j_TAG5zEeaNo-HhT7uuaA" base_Element="_-j-r8W5zEeaNo-HhT7uuaA"/>
+  <UMLLabProfile:Reference xmi:id="_-j_6EG5zEeaNo-HhT7uuaA" base_Element="_-j_TAW5zEeaNo-HhT7uuaA"/>
+  <UMLLabProfile:Reference xmi:id="_-kAhIG5zEeaNo-HhT7uuaA" base_Element="_-j_6EW5zEeaNo-HhT7uuaA"/>
+  <UMLLabProfile:Reference xmi:id="_-kBIMG5zEeaNo-HhT7uuaA" base_Element="_-kAhIW5zEeaNo-HhT7uuaA"/>
+  <UMLLabProfile:Reference xmi:id="_-kBIM25zEeaNo-HhT7uuaA" base_Element="_-kBIMW5zEeaNo-HhT7uuaA"/>
+  <UMLLabProfile:Reference xmi:id="_-kBvQm5zEeaNo-HhT7uuaA" base_Element="_-kBvQG5zEeaNo-HhT7uuaA"/>
+  <UMLLabProfile:Reference xmi:id="_-kCWUG5zEeaNo-HhT7uuaA" base_Element="_-kBvQ25zEeaNo-HhT7uuaA"/>
+  <UMLLabProfile:Reference xmi:id="_-kC9YG5zEeaNo-HhT7uuaA" base_Element="_-kCWUW5zEeaNo-HhT7uuaA"/>
+  <UMLLabProfile:Reference xmi:id="_c_urMG8NEeaA_aP7xnTqqA" base_Element="_c_tdEG8NEeaA_aP7xnTqqA"/>
+  <UMLLabProfile:Array xmi:id="_sDeugG8eEea7eeVxYt-oDw" dimensions="1" base_Element="_WFRx0W8eEea7eeVxYt-oDw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_sECIIG8eEea7eeVxYt-oDw" base_Element="_WFRx0W8eEea7eeVxYt-oDw"/>
+  <UMLLabProfile:Array xmi:id="_MMAKIG8fEea7eeVxYt-oDw" dimensions="1" base_Element="_-ijIkW5zEeaNo-HhT7uuaA"/>
+</xmi:XMI>

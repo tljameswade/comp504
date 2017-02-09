@@ -1,0 +1,107 @@
+/**
+ * 
+ */
+package model;
+
+import model.visitor.PlayMusicVisitor;
+import model.visitor.ToStringVisitor;
+import provided.abcParser.ABCParser;
+
+import provided.music.IPhrase;
+import provided.music.IPhraseVisitor;
+import provided.music.ISeqList;
+import provided.music.MTSeqList;
+import provided.music.NESeqList;
+import provided.music.Note;
+import provided.player.ISequencePlayerStatus;
+import provided.player.SequencePlayer;
+import provided.util.ABCInstrument;
+import provided.util.ABCUtil;
+
+/**
+ *
+ */
+public class MusicPlayerModel {
+
+	private IPhrase host;
+	private IViewAdapter adptr = IViewAdapter.NULL_OBJ;
+	
+	private SequencePlayer player;
+	
+	private Note note1 = new Note('A', 1, 1, 1.0, false);
+	private Note note2 = new Note('A', 0, 2, 2.0, false);
+	private Note note3 = new Note('A', 2, 1, 2.5, false);
+	private Note note4 = new Note('A', 1, 1, 0.5, false);
+	private Note note5 = new Note('G', 2, 2, 3.5, false);
+	private Note note6 = new Note('F', 0, 2, 1.5, false);
+	private Note note7 = new Note('C', 1, 2, 5.5, false);
+	
+	private IPhrase list1 = new NESeqList(note1, MTSeqList.Singleton);
+	private IPhrase list2 = new NESeqList(note2, (ISeqList) list1);
+	private IPhrase list3 = new NESeqList(note3, (ISeqList) list2);	
+	private IPhrase list4 = new NESeqList(note4, (ISeqList) list3);
+	private IPhrase list5 = new NESeqList(note5, (ISeqList) list4);
+	private IPhrase list6 = new NESeqList(note6, (ISeqList) list5);
+	private IPhrase list7 = new NESeqList(note7, (ISeqList) list6);
+	
+	/**
+	 * 
+	 */
+	public MusicPlayerModel(){
+		
+	}
+	
+	
+	/**
+	 * @param vadptr
+	 */
+	public MusicPlayerModel(IViewAdapter vadptr){
+		adptr = vadptr;
+	}
+	
+	
+	/**
+	 * @param filename
+	 */
+	public void LoadFile(String filename){
+		adptr.DisplayFileContent(ABCUtil.Singleton.getFileContents(filename));
+		host = new ABCParser(filename).parse();
+	}
+	
+	/**
+	 * @return Host
+	 */
+	public IPhrase getHost(){
+		return host;
+	}
+	
+	/**
+	 * @param algo visitor
+	 * @param params params
+	 */
+	public void Play(ABCInstrument instrument){
+		player = new SequencePlayer(16, instrument.getValue());
+		list7.execute(new PlayMusicVisitor(), player, 0);
+		player.play(ISequencePlayerStatus.NULL);
+	}
+	
+	/**
+	 * @return String
+	 */
+	public String getParsed(){
+		IPhraseVisitor v = new ToStringVisitor();
+		NESeqList.setToStringAlgo(v);
+
+		return host.toString();
+	}
+	
+	/**
+	 * 
+	 */
+	public void start(){		
+	}
+	
+	public void stop(){
+		player.stop();
+	}
+}

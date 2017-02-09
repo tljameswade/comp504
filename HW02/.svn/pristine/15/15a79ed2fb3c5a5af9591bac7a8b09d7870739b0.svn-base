@@ -1,0 +1,59 @@
+package shape;
+
+import java.awt.Color;
+import java.awt.Graphics;
+
+/**
+ * 
+ * Circle class
+ * extends the AShape class
+ * represent a circle with radius
+ * implemented the concrete paint methods that draws a circle
+ * @author qw12 and xl68
+ *
+ */
+public class Circle extends AShape {
+
+	private int radius;
+
+	/**
+	 * Constructor of a circle
+	 * @param x location of the circle -- x coordinate
+	 * @param y location of the circle -- y coordinate
+	 * @param radius radius of the circle
+	 * @param c color of the circle
+	 */
+	public Circle(int x, int y, int radius, Color c) {
+		setLocationX(x);
+		setLocationY(y);
+		setRadius(radius);
+		setShapeColor(c);
+	}
+
+	/**
+	 * Dedicated paint method for painting a circle
+	 */
+	@Override
+	public void paint(Graphics g) {
+		// TODO Auto-generated method stub
+		g.setColor(getShapeColor());
+		g.fillOval(super.getLocationX(), super.getLocationY(), this.getRadius(), this.getRadius());
+	}
+
+	/**
+	 * 
+	 * @return radius of the circle
+	 */
+	public int getRadius() {
+		return radius;
+	}
+
+	/**
+	 * setter of radius
+	 * @param r radius
+	 */
+	public void setRadius(int r) {
+		radius = r;
+	}
+
+}

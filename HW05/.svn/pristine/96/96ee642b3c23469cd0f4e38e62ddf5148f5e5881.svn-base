@@ -1,0 +1,31 @@
+package model.paint;
+
+import java.awt.Graphics;
+import java.awt.geom.AffineTransform;
+
+import model.Ball;
+
+public class AnimatePaintStrategy extends APaintStrategy{
+	
+	private int count;
+	
+	private APaintStrategy[] paintStrats;
+
+	public AnimatePaintStrategy(AffineTransform at, APaintStrategy... pstrats) {
+		super(at);
+		this.paintStrats = pstrats;
+	}
+
+	public AnimatePaintStrategy(APaintStrategy...pstrats) {
+		this(new AffineTransform(), pstrats);
+	}
+	
+	@Override
+	public void paintXfrm(Graphics g, Ball host, AffineTransform at) {
+		paintStrats[count++].paintXfrm(g, host, at);
+		if (count == paintStrats.length) {
+			count = 0;
+		}
+	}
+
+}

@@ -1,0 +1,14 @@
+package sq6_kt21.client.chatroom.view;
+
+import java.awt.Container;
+import java.rmi.RemoteException;
+
+public interface IChatRoomViewAdpt {
+	public void append(String user, String text);
+
+	public Container getMiniGUI();
+	
+	public Container getmapPanel();
+	
+	public void closeRoom() throws RemoteException;
+}

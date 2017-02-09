@@ -1,0 +1,16 @@
+chatapp.controller
+chatapp.iconnect
+chatapp.model
+chatapp.view
+chatroom.controller
+chatroom.model
+chatroom.view
+common
+provided.datapacket
+provided.datapacket.test
+provided.extvisitor
+provided.mixedData
+provided.mixedData.test
+provided.rmiUtils
+provided.rmiUtils.classServer
+provided.util

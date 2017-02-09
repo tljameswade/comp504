@@ -1,0 +1,22 @@
+package model.Strategy;
+
+import model.Ball;
+import model.IUpdateStrategy;
+import util.Dispatcher;
+import util.Randomizer;
+
+/**
+ * this class will create a colorball on the basis of a default one
+ * @author SuozhiQi,HongyangZhang
+ *
+ */
+public class ColorStrategy implements IUpdateStrategy {
+
+	/**
+	 * This method will randomize the color of the ball
+	 */
+	@Override
+	public void updateState(Ball ball, Dispatcher dispatcher) {
+		ball.setColor(Randomizer.Singleton.randomColor());
+	}
+}

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="WWJ_Demo/libs/WWJ"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="libs/WWJ/code/gdal.jar"/>
+	<classpathentry kind="lib" path="libs/WWJ/code/gluegen-rt.jar">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="WWJ_Demo/libs/WWJ/code"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="libs/WWJ/code/jogl-all.jar">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="WWJ_Demo/libs/WWJ/code"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="libs/WWJ/code/worldwind.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:platform:/resource/WWJ_Demo/libs/WWJ/doc/worldwind-docs-2.0.0.zip!/api"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="libs/WWJ/code/worldwindx.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:platform:/resource/WWJ_Demo/libs/WWJ/doc/worldwind-docs-2.0.0.zip!/api"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

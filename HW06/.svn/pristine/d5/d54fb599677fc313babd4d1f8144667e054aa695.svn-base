@@ -1,0 +1,93 @@
+/**
+ * 
+ */
+package controller;
+
+import java.awt.EventQueue;
+
+import model.IViewAdapter;
+import model.MusicPlayerModel;
+import provided.music.IPhraseVisitorCmd;
+import view.IModelAdapter;
+import view.MusicPlayerFrame;
+
+/**
+ *
+ */
+public class MusicPlayerController {
+
+	private MusicPlayerModel model;
+	private MusicPlayerFrame<IPhraseVisitorCmd> view;
+	
+	
+	/**
+	 * 
+	 */
+	public MusicPlayerController(){
+		
+		model = new MusicPlayerModel(new IViewAdapter() {
+
+			@Override
+			public void DisplayFileContent(String content) {
+				// TODO Auto-generated method stub
+				view.getTxtpnFileContent().setText(content);
+			}
+			
+
+		});
+		
+		view = new MusicPlayerFrame<IPhraseVisitorCmd>(new IModelAdapter<IPhraseVisitorCmd>() {
+
+			@Override
+			public void Open(String filename) {
+				// TODO Auto-generated method stub
+				model.LoadFile(filename);
+				
+			}
+
+			@Override
+			public void Parse() {
+				// TODO Auto-generated method stub
+				view.getTxtpnParsedFile().setText(model.getParsed());
+			}
+
+			@Override
+			public void Play() {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public void Stop() {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+		
+	}
+	
+	/**
+	 * 
+	 */
+	public void start(){
+		model.start();
+		view.start();
+	}
+	
+	
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() { // Java specs say that the system must be constructed on the GUI event thread.
+			public void run() {
+				try {
+					MusicPlayerController controller = new MusicPlayerController(); // instantiate the system
+					controller.start(); // start the system
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+}

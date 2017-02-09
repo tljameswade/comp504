@@ -1,0 +1,23 @@
+package model.paint.strategy;
+
+import java.awt.Graphics;
+
+import model.Ball;
+import model.IPaintStrategy;
+
+public class SquarePaintStrategy implements IPaintStrategy{
+	
+	public SquarePaintStrategy() {}
+
+	@Override
+	public void paint(Graphics g, Ball host) {
+		int halfSide = host.getRadius();
+		g.setColor(host.getColor());
+		g.fillRect(host.getLocation().x - halfSide, host.getLocation().y - halfSide, 2 * halfSide, 2 * halfSide);		
+	}
+
+	@Override
+	public void init(Ball context) {
+	}
+
+}

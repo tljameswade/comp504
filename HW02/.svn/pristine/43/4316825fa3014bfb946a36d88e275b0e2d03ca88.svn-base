@@ -1,0 +1,19 @@
+ReadMe HW02:
+
+This GUI app will load different kinds of balls as you wanted onto the canvas.
+The balls are loaded onto the canvas from randomized initial locations with randomized initial colors.
+
+We provide 4 kinds of balls here to choose:
+1 StraightBall: This is the kind of ball type that will not change color or the way they move
+2 ColorChangingBall: This kind of ball will change its color during movement
+3 BreathingBall: This kind of ball will change its radius during movement
+4 CurveBall: This kind of ball will rotate its direction during movement
+
+All you need to do is to input the type of the ball you would like to load into the text frame in this format:
+model.ball.XXX
+
+XXX stands for any of the 4 kinds of balls
+
+Then click the "Make Ball" button to initiate your ball loading process.
+
+If you want to erase all of the balls on the canvas, just click "Clear All".

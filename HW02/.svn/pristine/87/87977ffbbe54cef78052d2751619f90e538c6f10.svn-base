@@ -1,0 +1,71 @@
+package model.ball;
+
+import java.awt.Point;
+import java.util.Observable;
+import java.util.Observer;
+import java.awt.Color;
+import java.awt.Component;
+import java.awt.Graphics;
+
+public abstract class ABall implements Observer {
+	Point location;
+
+	int radius;
+
+	Point velocity;
+
+	Color color;
+
+	Component Canvas;
+
+	public ABall(Point StartLoc, int startRadius, Point startVel, Color startColor, Component theCanvas) {
+		this.location = StartLoc;
+		this.radius = startRadius;
+		this.velocity = startVel;
+		this.color = startColor;
+		this.Canvas = theCanvas;
+	}
+
+	public void update(Observable o, Object arg) {
+		paint((Graphics) arg);
+		move();
+		differentBalls();
+		bounce();
+	}
+
+	void paint(Graphics g) {
+		g.setColor(color);
+		g.fillOval(location.x - radius, location.y - radius, 2 * radius, 2 * radius);
+	}
+
+	void move() {
+		location.x += velocity.x;
+		location.y += velocity.y;
+	}
+
+	void differentBalls() {
+	}
+
+	void bounce() {
+		if (location.x - radius < 0) {
+			velocity.x = -velocity.x;
+			location.x = radius * 2 - location.x;
+		}
+
+		if (location.y - radius < 0) {
+			velocity.y = -velocity.y;
+			location.y = radius * 2 - location.y;
+		}
+
+		if (location.x + radius > Canvas.getWidth()) {
+			velocity.x = -velocity.x;
+			location.x = 2 * (Canvas.getWidth() - radius) - location.x;
+		}
+
+		if (location.y + radius > Canvas.getHeight()) {
+			velocity.y = -velocity.y;
+			location.y = 2 * (Canvas.getHeight() - radius) - location.y;
+		}
+	}
+
+}

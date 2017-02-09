@@ -1,0 +1,8 @@
+package sq6_kt21.client.chatroom.model;
+
+import java.io.Serializable;
+
+public class GameInfo implements Serializable {
+
+	private static final long serialVersionUID = -6257059058860921686L;
+}

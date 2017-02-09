@@ -1,0 +1,17 @@
+package sq6_kt21.server.game.model.message;
+
+import common.msg.IChatMsg;
+
+public class TeamMsg implements IChatMsg{
+	
+	private String msg;
+	
+	public TeamMsg(String str){
+		msg = str;
+	}
+	
+	public String getTeamMsg(){
+		return msg;
+	}
+	
+}

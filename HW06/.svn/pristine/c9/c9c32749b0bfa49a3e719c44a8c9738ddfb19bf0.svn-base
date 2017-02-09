@@ -1,0 +1,19 @@
+This application is used to load, parse and play music abc files.
+
+First input the name of one of the songs provided:
+	beethoven_fav_waltz
+	fur_elise
+	happy_birthday
+	joy_to_the_world
+	little_night_music
+	ode_to_joy
+	paddy
+	prelude
+	scale
+	star_spangled
+	twinkle
+
+Then clicking the "load" button will load the music file and display the file content to the view. 
+Now if you click the "parse" button, the parsed content of the music will be displayed in the view.
+
+Clicking the "play" button will play the music file, and clicking "stop" button will stop the music.

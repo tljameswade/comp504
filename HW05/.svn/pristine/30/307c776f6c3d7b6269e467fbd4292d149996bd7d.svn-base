@@ -1,0 +1,39 @@
+package model.Strategy;
+
+import model.Ball;
+import model.IBallCmd;
+import model.IUpdateStrategy;
+import util.IDispatcher;
+
+/**
+ * A distance sensor strategy that will interact with a surrounding ball
+ * that is within 50
+ * @author Suozhi Qi, Zhaohan Jia
+ *
+ * @param <TDispMsg>
+ */
+public class DistanceSensorStrategy<TDispMsg> implements IUpdateStrategy<IBallCmd> {
+
+	@Override
+	public void init(Ball context) {
+	}
+
+	/**
+	 * Interact with the other ball within 30 distance
+	 */
+	@Override
+	public void updateState(Ball context, IDispatcher<IBallCmd> dispatcher) {
+		dispatcher.dispatch(new IBallCmd() {
+			public void apply(Ball other, IDispatcher<IBallCmd> dispatcher) {
+				if (context != other) {
+					double distance = context.getLocation().distance(other.getLocation());
+					if (distance <= (context.getRadius() + other.getRadius() + 50)) {
+						context.interactWith(other, dispatcher);
+						other.interactWith(context, dispatcher);
+					}
+				}
+			}
+		});
+	}
+
+}

@@ -1,0 +1,26 @@
+package sq6_kt21.server.game.model.message;
+
+import java.util.UUID;
+
+import common.msg.IChatMsg;
+
+public class TeamMsg implements IChatMsg{
+	
+	private String msg;
+	
+	private UUID uuid;
+	
+	public TeamMsg(String str, UUID id){
+		msg = str;
+		uuid = id;
+	}
+	
+	public String getTeamMsg(){
+		return msg;
+	}
+	
+	public UUID getID(){
+		return uuid;
+	}
+	
+}

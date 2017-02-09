@@ -1,0 +1,236 @@
+package sq6_kt21.client.chatroom.view;
+
+import javax.swing.JFrame;
+import java.awt.BorderLayout;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.DefaultListModel;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JScrollPane;
+import javax.swing.border.TitledBorder;
+
+import gov.nasa.worldwind.geom.Position;
+import gov.nasa.worldwind.globes.Earth;
+import map.MapPanel;
+import sq6_kt21.client.chatroom.model.GameInfo;
+import sq6_kt21.client.chatroom.model.IChatRoomModelAdpt;
+
+import javax.swing.border.EtchedBorder;
+import java.awt.Color;
+import java.awt.Container;
+
+import javax.swing.JList;
+import java.awt.GridBagConstraints;
+import java.awt.Insets;
+
+import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.rmi.RemoteException;
+import java.util.HashSet;
+import java.awt.event.ActionEvent;
+
+import javax.swing.BoxLayout;
+
+public class ChatRoomGUI<TList> extends JFrame {
+	/**
+	 * The serial ID
+	 */
+	private static final long serialVersionUID = -2185492575918668148L;
+
+	/**
+	 * The listmodel to display
+	 */
+	private DefaultListModel<TList> listModel = new DefaultListModel<TList>();
+
+	/**
+	 * Title of chatroom
+	 */
+	private String title;
+	private final JPanel pnlController = new JPanel();
+	private final JTextField tfMsg = new JTextField();
+	private final JButton btnSend = new JButton("Send");
+	private final JButton btnSendImage = new JButton("Image");
+	private JTextField         _latField;
+	private JButton            _goLatLong;
+	private JTextField         _longField;
+	private IChatRoomModelAdpt<TList> modelAdpt;
+	private final JButton btnRefresh = new JButton("Refresh");
+	private final JPanel panel = new JPanel();
+	private final JPanel panel_1 = new JPanel();
+	private final JScrollPane scrollPane = new JScrollPane();
+	private final JScrollPane scrollPane_1 = new JScrollPane();
+	private final JList<TList> list = new JList<TList>(listModel);
+	private final JPanel txtPanel = new JPanel();
+	private final JButton btnGame = new JButton("Start Game");
+	private JPanel mapPanel = new JPanel();
+	private final JPanel panel_2 = new JPanel();
+	private final JPanel panel_3 = new JPanel();
+	private final JPanel panel_4 = new JPanel();
+	private final JPanel panel_5 = new JPanel();
+	private final JButton btnQuit = new JButton("Quit");
+
+	public ChatRoomGUI(IChatRoomModelAdpt<TList> modelAdpt) {
+		//textField.setColumns(10);
+		tfMsg.setColumns(10);
+		initGUI();
+		this.modelAdpt = modelAdpt;
+	}
+
+	private void initGUI() {
+		setBounds(400, 280, 986, 548);
+		setTitle(this.title);
+		getContentPane().setLayout(new BorderLayout(0, 0));
+		
+		getContentPane().add(panel, BorderLayout.CENTER);
+		panel.setLayout(new BorderLayout(0, 0));
+		
+		panel.add(panel_1, BorderLayout.WEST);
+		panel_1.setLayout(new BorderLayout(0, 0));
+		
+		panel_1.add(scrollPane_1, BorderLayout.CENTER);
+		
+		scrollPane_1.setViewportBorder(new TitledBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null),"Dialog", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(0, 0, 0)));
+
+
+		scrollPane_1.setViewportView(txtPanel);
+		txtPanel.setLayout(new BoxLayout(txtPanel, BoxLayout.Y_AXIS));
+		panel_1.add(pnlController, BorderLayout.SOUTH);
+		pnlController.setBorder(null);
+		
+		pnlController.add(tfMsg);
+		btnSend.setToolTipText("send text msg");
+		btnSend.addActionListener(new ActionListener() {
+		public void actionPerformed(ActionEvent e) {
+			modelAdpt.send(tfMsg.getText());
+			tfMsg.setText("");
+			}
+		});
+		btnSendImage.setToolTipText("send a specified image");
+		btnSendImage.addActionListener(new ActionListener() {
+		public void actionPerformed(ActionEvent e) {
+			modelAdpt.sendImg();
+			}
+		});
+				
+		pnlController.add(btnSend);
+						
+		pnlController.add(btnSendImage);
+												
+		panel_1.add(panel_4, BorderLayout.NORTH);
+		panel_4.setLayout(new BorderLayout(0, 0));
+		panel_4.add(scrollPane, BorderLayout.NORTH);
+												
+		scrollPane.setViewportBorder(new TitledBorder(null, "Members", TitledBorder.LEADING, TitledBorder.TOP, null, null));
+														
+		list.setToolTipText("User list");
+		scrollPane.setViewportView(list);
+		
+		panel_4.add(panel_5, BorderLayout.SOUTH);
+		panel_5.add(btnRefresh);
+		
+		btnRefresh.setToolTipText("Refresh to get the update of the members list");
+		btnQuit.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				try {
+					modelAdpt.leaveRoom();
+				} catch (RemoteException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+			}
+		});
+		
+		panel_5.add(btnQuit);
+										
+		btnRefresh.addActionListener(new ActionListener() {
+		public void actionPerformed(ActionEvent e) {
+			listModel.clear();
+			refresh();
+			}
+		});
+		
+		panel.add(panel_2, BorderLayout.CENTER);
+		panel_2.setLayout(new BorderLayout(0, 0));
+		panel_2.add(mapPanel, BorderLayout.CENTER);
+		mapPanel.setLayout(new BorderLayout(0, 0));
+		
+		panel_2.add(panel_3, BorderLayout.SOUTH);
+		panel_3.add(btnGame);
+		btnGame.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				GameInfo g = new GameInfo();
+				modelAdpt.startGame(g);
+			}
+		});
+		
+		panel_3.setPreferredSize(new java.awt.Dimension(390, 43));
+		panel_3.setBackground(new java.awt.Color(128,255,128));
+
+		_latField = new JTextField();
+		panel_3.add(_latField);
+		_latField.setText("latitude");
+		_latField.setPreferredSize(new java.awt.Dimension(88, 22));
+
+		_longField = new JTextField();
+		panel_3.add(_longField);
+		_longField.setText("longitude");
+
+		_goLatLong = new JButton();
+		panel_3.add(_goLatLong);
+		_goLatLong.setText("Go!");
+		_goLatLong.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent evt) {
+				MapPanel mappanel = (MapPanel) mapPanel.getComponent(0);
+				modelAdpt.goLatLong(_latField.getText(), _longField.getText());
+				mappanel.repaint();
+			}
+		});
+
+	}
+
+	public void start(HashSet<TList> chatServerProxys) {
+		
+		listModel.removeAllElements();
+		chatServerProxys = modelAdpt.getChatStubs();
+		for (TList chatserver : chatServerProxys) {
+			listModel.addElement(chatserver);
+		}
+		System.out.println(chatServerProxys);
+		
+		setVisible(true);
+	}
+
+	/**
+	 * Append the text to text field
+	 * @param user the user
+	 * @param text the string text
+	 */
+	/*
+	public void append(String user, String text) {
+		taDialog.append(user + ":" + text + "\n");
+		taDialog.setCaretPosition(taDialog.getText().length());
+	}*/
+	public void refresh() {
+		start(modelAdpt.getChatStubs());
+	}
+
+	public void closeView() {
+
+	}
+
+	public JPanel getJPanel() {
+		return txtPanel;
+	}
+
+	public Container getMapPanel() {
+		return mapPanel;
+	}
+	
+	public void setPosition(Position pos)
+	{
+		((MapPanel)mapPanel.getComponent(0)).setPosition(pos, true);
+	}
+
+}

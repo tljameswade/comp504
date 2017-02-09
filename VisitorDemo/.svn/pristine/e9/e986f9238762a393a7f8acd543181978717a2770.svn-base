@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.yattasolutions.uml.diagrams.classifier:ClassDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.yattasolutions.diagrams="http://ns.yatta-solutions.com/umllab/diagrams/1.1.0" xmlns:com.yattasolutions.uml.diagrams.classifier="http://ns.yatta-solutions.com/umllab/diagrams/classifier/1.1.0" xmi:id="_R8bSAAxSEeK_iMlKBWzZbA">
+  <modelElement href="VisitorDemo.uml#_TQPDQAxSEeK_iMlKBWzZbA"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_TkjtcQxSEeK_iMlKBWzZbA" targetItem="_TkjtcgxSEeK_iMlKBWzZbA" sourceItem="_TkjtcAxSEeK_iMlKBWzZbA"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_Tkp0EQxSEeK_iMlKBWzZbA" targetItem="_Tkp0EgxSEeK_iMlKBWzZbA" sourceItem="_Tkp0EAxSEeK_iMlKBWzZbA"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_Tkv6sQxSEeK_iMlKBWzZbA" targetItem="_Tkv6sgxSEeK_iMlKBWzZbA" sourceItem="_Tkv6sAxSEeK_iMlKBWzZbA"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_Tk2BUAxSEeK_iMlKBWzZbA" targetItem="_Tk2BVAxSEeK_iMlKBWzZbA" sourceItem="_Tkv6wwxSEeK_iMlKBWzZbA"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_Tk2BUQxSEeK_iMlKBWzZbA" sourceAnchor="335.0,37.0" targetAnchor="0.0,36.0" dashed="true" superClass="_Tk2BVAxSEeK_iMlKBWzZbA" subClass="_TkjtcgxSEeK_iMlKBWzZbA">
+    <modelElement href="VisitorDemo.uml#_TSVVAAxSEeK_iMlKBWzZbA"/>
+    <bendpoints xmi:id="_j6dk4AxSEeK_iMlKBWzZbA" sourceX="31" targetX="-36" targetY="-85"/>
+    <bendpoints xmi:id="_j6dk4QxSEeK_iMlKBWzZbA" sourceX="31" sourceY="85" targetX="-36"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_Tk2BUgxSEeK_iMlKBWzZbA" sourceAnchor="335.0,22.0" targetAnchor="0.0,36.0" dashed="true" superClass="_Tk2BVAxSEeK_iMlKBWzZbA" subClass="_Tkp0EgxSEeK_iMlKBWzZbA">
+    <modelElement href="VisitorDemo.uml#_TSbboAxSEeK_iMlKBWzZbA"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_Tk2BUwxSEeK_iMlKBWzZbA" sourceAnchor="335.0,36.0" targetAnchor="0.0,36.0" dashed="true" superClass="_Tk2BVAxSEeK_iMlKBWzZbA" subClass="_Tkv6sgxSEeK_iMlKBWzZbA">
+    <modelElement href="VisitorDemo.uml#_TSbboQxSEeK_iMlKBWzZbA"/>
+    <bendpoints xmi:id="_j6dk4gxSEeK_iMlKBWzZbA" sourceX="31" targetX="-36" targetY="122"/>
+    <bendpoints xmi:id="_j6dk4wxSEeK_iMlKBWzZbA" sourceX="31" sourceY="-122" targetX="-36"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_Tk8H8AxSEeK_iMlKBWzZbA" sourceAnchor="301.0,47.0" targetAnchor="188.0,7.0" target="_Tk8H-wxSEeK_iMlKBWzZbA" source="_Tk8H-wxSEeK_iMlKBWzZbA">
+    <modelElement href="VisitorDemo.uml#_TTqxwQxSEeK_iMlKBWzZbA"/>
+    <bendpoints xmi:id="_r0li0AxSEeK_iMlKBWzZbA" sourceX="57" sourceY="-30" targetX="170" targetY="10"/>
+    <bendpoints xmi:id="_r0li0QxSEeK_iMlKBWzZbA" sourceX="57" sourceY="-95" targetX="170" targetY="-55"/>
+    <bendpoints xmi:id="_r0li0gxSEeK_iMlKBWzZbA" sourceX="-100" sourceY="-95" targetX="13" targetY="-55"/>
+    <stereotypes xmi:id="_Tk8H9gxSEeK_iMlKBWzZbA" name="Reference">
+      <modelElement href="VisitorDemo.uml#_TTqxwwxSEeK_iMlKBWzZbA"/>
+    </stereotypes>
+    <nameVisual xmi:id="_Tk8H8wxSEeK_iMlKBWzZbA" text="">
+      <visualProperties xmi:id="_ToLpNAxSEeK_iMlKBWzZbA" position="194.0,-8.0"/>
+    </nameVisual>
+    <sourceRole xmi:id="_Tk8H9AxSEeK_iMlKBWzZbA" aggregationKind="NONE" name="">
+      <modelElement href="VisitorDemo.uml#_TTqxwgxSEeK_iMlKBWzZbA"/>
+      <visualProperties xmi:id="_ToLpMwxSEeK_iMlKBWzZbA" position="-21.0,-40.0"/>
+      <visibility xmi:id="_Tk8H-AxSEeK_iMlKBWzZbA" label="+"/>
+      <cardinality xmi:id="_Tk8H9wxSEeK_iMlKBWzZbA" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_Tk8H9QxSEeK_iMlKBWzZbA" aggregationKind="NONE" name="NULL_VISITOR" navigable="true">
+      <modelElement href="VisitorDemo.uml#_TRSMIAxSEeK_iMlKBWzZbA"/>
+      <visualProperties xmi:id="_ToLpNQxSEeK_iMlKBWzZbA" position="-97.0,8.000000000000014"/>
+      <visibility xmi:id="_Tk8H-gxSEeK_iMlKBWzZbA" label="+"/>
+      <cardinality xmi:id="_Tk8H-QxSEeK_iMlKBWzZbA" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_Tk8H8gxSEeK_iMlKBWzZbA" targetItem="_Tk8H-wxSEeK_iMlKBWzZbA" sourceItem="_Tk8H8QxSEeK_iMlKBWzZbA"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_TlCOkAxSEeK_iMlKBWzZbA" sourceAnchor="0.0,27.0" targetAnchor="325.0,55.0" dashed="true" superClass="_Tk8H-wxSEeK_iMlKBWzZbA" subClass="_TlIVMAxSEeK_iMlKBWzZbA">
+    <modelElement href="VisitorDemo.uml#_TSno4AxSEeK_iMlKBWzZbA"/>
+    <bendpoints xmi:id="_j6dk6QxSEeK_iMlKBWzZbA" sourceX="-34" targetX="73" targetY="-85"/>
+    <bendpoints xmi:id="_j6dk6gxSEeK_iMlKBWzZbA" sourceX="-34" sourceY="85" targetX="73"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_TlCOkgxSEeK_iMlKBWzZbA" targetItem="_TlIVMAxSEeK_iMlKBWzZbA" sourceItem="_TlCOkQxSEeK_iMlKBWzZbA"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_TlIVUQxSEeK_iMlKBWzZbA" sourceAnchor="0.0,48.0" targetAnchor="325.0,55.0" dashed="true" superClass="_Tk8H-wxSEeK_iMlKBWzZbA" subClass="_TlOb0AxSEeK_iMlKBWzZbA">
+    <modelElement href="VisitorDemo.uml#_TStvgwxSEeK_iMlKBWzZbA"/>
+    <bendpoints xmi:id="_j6dk5wxSEeK_iMlKBWzZbA" sourceX="-30" targetX="73" targetY="101"/>
+    <bendpoints xmi:id="_j6dk6AxSEeK_iMlKBWzZbA" sourceX="-30" sourceY="-101" targetX="73"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_TlIVUwxSEeK_iMlKBWzZbA" targetItem="_TlOb0AxSEeK_iMlKBWzZbA" sourceItem="_TlIVUgxSEeK_iMlKBWzZbA"/>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_TkjtcAxSEeK_iMlKBWzZbA" sourceConnectionVisual="_TkjtcQxSEeK_iMlKBWzZbA" text="A concrete host type&#xD;&#xA;@author swong&#xD;&#xA; *" item="_TkjtcgxSEeK_iMlKBWzZbA">
+    <modelElement href="VisitorDemo.uml#_TTkrTAxSEeK_iMlKBWzZbA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_Tkp0EAxSEeK_iMlKBWzZbA" sourceConnectionVisual="_Tkp0EQxSEeK_iMlKBWzZbA" text="A concrete host type&#xD;&#xA;@author swong&#xD;&#xA; *" item="_Tkp0EgxSEeK_iMlKBWzZbA">
+    <modelElement href="VisitorDemo.uml#_TTkrTQxSEeK_iMlKBWzZbA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_Tkv6sAxSEeK_iMlKBWzZbA" sourceConnectionVisual="_Tkv6sQxSEeK_iMlKBWzZbA" text="A concrete host type&#xD;&#xA;@author swong&#xD;&#xA; *" item="_Tkv6sgxSEeK_iMlKBWzZbA">
+    <modelElement href="VisitorDemo.uml#_TTkrTgxSEeK_iMlKBWzZbA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_Tkv6wwxSEeK_iMlKBWzZbA" sourceConnectionVisual="_Tk2BUAxSEeK_iMlKBWzZbA" text="Interface that represents the abstract host type&#xD;&#xA;@author swong&#xD;&#xA; *" item="_Tk2BVAxSEeK_iMlKBWzZbA">
+    <modelElement href="VisitorDemo.uml#_TTkrTwxSEeK_iMlKBWzZbA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_Tk8H8QxSEeK_iMlKBWzZbA" sourceConnectionVisual="_Tk8H8gxSEeK_iMlKBWzZbA" text="An abstract visitor to an IHost object.  Provides cases for each IHost subclass type.&#xD;&#xA;@author swong&#xD;&#xA; *" item="_Tk8H-wxSEeK_iMlKBWzZbA">
+    <modelElement href="VisitorDemo.uml#_TTkrUAxSEeK_iMlKBWzZbA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_TlCOkQxSEeK_iMlKBWzZbA" sourceConnectionVisual="_TlCOkgxSEeK_iMlKBWzZbA" text="A visitor that returns a String that says &quot;This is the result from HostX,&#xD;&#xA;where HostX is the type of the IHost object executing this visitor. &#xD;&#xA;@author swong&#xD;&#xA; *" item="_TlIVMAxSEeK_iMlKBWzZbA">
+    <modelElement href="VisitorDemo.uml#_TTkrUQxSEeK_iMlKBWzZbA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_TlIVUgxSEeK_iMlKBWzZbA" sourceConnectionVisual="_TlIVUwxSEeK_iMlKBWzZbA" text="A visitor that sets the paint cmd in the VisitorDemoModel to a cmd that draws various shapes.&#xD;&#xA;The params is assumed to be a single value, a reference to the VisitorDemoModel.&#xD;&#xA;When the host is a HostA, the installed IPaintCmd draws a blue oval on the screen.&#xD;&#xA;When the host is a HostB, the installed IPaintCmd draws a red rectangle on the screen.    &#xD;&#xA;When the host is a HostC, the installed IPaintCmd draws a green rounded rectangle on the screen.  &#xD;&#xA;Returns a string saying what it did.&#xD;&#xA;@author swong&#xD;&#xA; *" item="_TlOb0AxSEeK_iMlKBWzZbA">
+    <modelElement href="VisitorDemo.uml#_TTqxwAxSEeK_iMlKBWzZbA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_TkjtcgxSEeK_iMlKBWzZbA" comments="_TkjtcAxSEeK_iMlKBWzZbA" targetConnectionVisual="_TkjtcQxSEeK_iMlKBWzZbA" name="HostA" generalizations="_Tk2BUQxSEeK_iMlKBWzZbA">
+    <modelElement href="VisitorDemo.uml#_TQzrAAxSEeK_iMlKBWzZbA"/>
+    <visualProperties xmi:id="_TkjtcwxSEeK_iMlKBWzZbA" position="0.0,-153.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_TkjtdAxSEeK_iMlKBWzZbA" label="+"/>
+    <operations xmi:id="_TkjtdQxSEeK_iMlKBWzZbA" name="toString">
+      <modelElement href="VisitorDemo.uml#_TQ5xoAxSEeK_iMlKBWzZbA"/>
+      <visibility xmi:id="_TkjtdgxSEeK_iMlKBWzZbA" label="+"/>
+      <outParameters xmi:id="_TkjtdwxSEeK_iMlKBWzZbA">
+        <modelElement href="VisitorDemo.uml#_TQ5xoQxSEeK_iMlKBWzZbA"/>
+        <type xmi:id="_TkjteAxSEeK_iMlKBWzZbA" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_TkjteQxSEeK_iMlKBWzZbA" name="execute">
+      <modelElement href="VisitorDemo.uml#_TS58wQxSEeK_iMlKBWzZbA"/>
+      <stereotypes xmi:id="_TkjtegxSEeK_iMlKBWzZbA" name="LegacyStyledElement">
+        <modelElement href="VisitorDemo.uml#_TS58xQxSEeK_iMlKBWzZbA"/>
+      </stereotypes>
+      <stereotypes xmi:id="_TkjtewxSEeK_iMlKBWzZbA" name="Annotations">
+        <modelElement href="VisitorDemo.uml#_TS58yAxSEeK_iMlKBWzZbA"/>
+      </stereotypes>
+      <visibility xmi:id="_TkjtfAxSEeK_iMlKBWzZbA" label="+"/>
+      <outParameters xmi:id="_TkjtfQxSEeK_iMlKBWzZbA">
+        <modelElement href="VisitorDemo.uml#_TS58xAxSEeK_iMlKBWzZbA"/>
+        <type xmi:id="_TkjtfgxSEeK_iMlKBWzZbA" name="Object">
+          <modelElement href="VisitorDemo.uml#_TSz2IQxSEeK_iMlKBWzZbA"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_TkjtfwxSEeK_iMlKBWzZbA" name="algo">
+        <modelElement href="VisitorDemo.uml#_TS58wgxSEeK_iMlKBWzZbA"/>
+        <type xmi:id="_TkjtgAxSEeK_iMlKBWzZbA" name="IVisitor">
+          <modelElement href="VisitorDemo.uml#_TRMFgQxSEeK_iMlKBWzZbA"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_TkjtgQxSEeK_iMlKBWzZbA" name="params">
+        <modelElement href="VisitorDemo.uml#_TS58wwxSEeK_iMlKBWzZbA"/>
+        <type xmi:id="_TkjtggxSEeK_iMlKBWzZbA" name="Object">
+          <modelElement href="VisitorDemo.uml#_TSz2IQxSEeK_iMlKBWzZbA"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_Tkp0EgxSEeK_iMlKBWzZbA" comments="_Tkp0EAxSEeK_iMlKBWzZbA" targetConnectionVisual="_Tkp0EQxSEeK_iMlKBWzZbA" name="HostB" generalizations="_Tk2BUgxSEeK_iMlKBWzZbA">
+    <modelElement href="VisitorDemo.uml#_TQ_4QAxSEeK_iMlKBWzZbA"/>
+    <visualProperties xmi:id="_Tkp0EwxSEeK_iMlKBWzZbA" position="1.0,-53.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_Tkp0FAxSEeK_iMlKBWzZbA" label="+"/>
+    <operations xmi:id="_Tkp0FQxSEeK_iMlKBWzZbA" name="toString">
+      <modelElement href="VisitorDemo.uml#_TQ_4QQxSEeK_iMlKBWzZbA"/>
+      <visibility xmi:id="_Tkp0FgxSEeK_iMlKBWzZbA" label="+"/>
+      <outParameters xmi:id="_Tkp0FwxSEeK_iMlKBWzZbA">
+        <modelElement href="VisitorDemo.uml#_TQ_4QgxSEeK_iMlKBWzZbA"/>
+        <type xmi:id="_Tkp0GAxSEeK_iMlKBWzZbA" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_Tkp0GQxSEeK_iMlKBWzZbA" name="execute">
+      <modelElement href="VisitorDemo.uml#_TS58ygxSEeK_iMlKBWzZbA"/>
+      <stereotypes xmi:id="_Tkp0GgxSEeK_iMlKBWzZbA" name="LegacyStyledElement">
+        <modelElement href="VisitorDemo.uml#_TTADYgxSEeK_iMlKBWzZbA"/>
+      </stereotypes>
+      <stereotypes xmi:id="_Tkp0GwxSEeK_iMlKBWzZbA" name="Annotations">
+        <modelElement href="VisitorDemo.uml#_TTADZQxSEeK_iMlKBWzZbA"/>
+      </stereotypes>
+      <visibility xmi:id="_Tkp0HAxSEeK_iMlKBWzZbA" label="+"/>
+      <outParameters xmi:id="_Tkp0HQxSEeK_iMlKBWzZbA">
+        <modelElement href="VisitorDemo.uml#_TTADYQxSEeK_iMlKBWzZbA"/>
+        <type xmi:id="_Tkp0HgxSEeK_iMlKBWzZbA" name="Object">
+          <modelElement href="VisitorDemo.uml#_TSz2IQxSEeK_iMlKBWzZbA"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_Tkp0HwxSEeK_iMlKBWzZbA" name="algo">
+        <modelElement href="VisitorDemo.uml#_TS58ywxSEeK_iMlKBWzZbA"/>
+        <type xmi:id="_Tkp0IAxSEeK_iMlKBWzZbA" name="IVisitor">
+          <modelElement href="VisitorDemo.uml#_TRMFgQxSEeK_iMlKBWzZbA"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_Tkp0IQxSEeK_iMlKBWzZbA" name="params">
+        <modelElement href="VisitorDemo.uml#_TTADYAxSEeK_iMlKBWzZbA"/>
+        <type xmi:id="_Tkp0IgxSEeK_iMlKBWzZbA" name="Object">
+          <modelElement href="VisitorDemo.uml#_TSz2IQxSEeK_iMlKBWzZbA"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_Tkv6sgxSEeK_iMlKBWzZbA" comments="_Tkv6sAxSEeK_iMlKBWzZbA" targetConnectionVisual="_Tkv6sQxSEeK_iMlKBWzZbA" name="HostC" generalizations="_Tk2BUwxSEeK_iMlKBWzZbA">
+    <modelElement href="VisitorDemo.uml#_TRF-4AxSEeK_iMlKBWzZbA"/>
+    <visualProperties xmi:id="_Tkv6swxSEeK_iMlKBWzZbA" position="0.0,55.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_Tkv6tAxSEeK_iMlKBWzZbA" label="+"/>
+    <operations xmi:id="_Tkv6tQxSEeK_iMlKBWzZbA" name="toString">
+      <modelElement href="VisitorDemo.uml#_TRF-4QxSEeK_iMlKBWzZbA"/>
+      <visibility xmi:id="_Tkv6tgxSEeK_iMlKBWzZbA" label="+"/>
+      <outParameters xmi:id="_Tkv6twxSEeK_iMlKBWzZbA">
+        <modelElement href="VisitorDemo.uml#_TRF-4gxSEeK_iMlKBWzZbA"/>
+        <type xmi:id="_Tkv6uAxSEeK_iMlKBWzZbA" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_Tkv6uQxSEeK_iMlKBWzZbA" name="execute">
+      <modelElement href="VisitorDemo.uml#_TTADZwxSEeK_iMlKBWzZbA"/>
+      <stereotypes xmi:id="_Tkv6ugxSEeK_iMlKBWzZbA" name="LegacyStyledElement">
+        <modelElement href="VisitorDemo.uml#_TTADawxSEeK_iMlKBWzZbA"/>
+      </stereotypes>
+      <stereotypes xmi:id="_Tkv6uwxSEeK_iMlKBWzZbA" name="Annotations">
+        <modelElement href="VisitorDemo.uml#_TTGKAAxSEeK_iMlKBWzZbA"/>
+      </stereotypes>
+      <visibility xmi:id="_Tkv6vAxSEeK_iMlKBWzZbA" label="+"/>
+      <outParameters xmi:id="_Tkv6vQxSEeK_iMlKBWzZbA">
+        <modelElement href="VisitorDemo.uml#_TTADagxSEeK_iMlKBWzZbA"/>
+        <type xmi:id="_Tkv6vgxSEeK_iMlKBWzZbA" name="Object">
+          <modelElement href="VisitorDemo.uml#_TSz2IQxSEeK_iMlKBWzZbA"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_Tkv6vwxSEeK_iMlKBWzZbA" name="algo">
+        <modelElement href="VisitorDemo.uml#_TTADaAxSEeK_iMlKBWzZbA"/>
+        <type xmi:id="_Tkv6wAxSEeK_iMlKBWzZbA" name="IVisitor">
+          <modelElement href="VisitorDemo.uml#_TRMFgQxSEeK_iMlKBWzZbA"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_Tkv6wQxSEeK_iMlKBWzZbA" name="params">
+        <modelElement href="VisitorDemo.uml#_TTADaQxSEeK_iMlKBWzZbA"/>
+        <type xmi:id="_Tkv6wgxSEeK_iMlKBWzZbA" name="Object">
+          <modelElement href="VisitorDemo.uml#_TSz2IQxSEeK_iMlKBWzZbA"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:InterfaceVisual" xmi:id="_Tk8H-wxSEeK_iMlKBWzZbA" comments="_Tk8H8QxSEeK_iMlKBWzZbA" targetConnectionVisual="_Tk8H8gxSEeK_iMlKBWzZbA" name="IVisitor" associationsIn="_Tk8H8AxSEeK_iMlKBWzZbA" associationsOut="_Tk8H8AxSEeK_iMlKBWzZbA" subclassedBy="_TlCOkAxSEeK_iMlKBWzZbA _TlIVUQxSEeK_iMlKBWzZbA">
+    <modelElement href="VisitorDemo.uml#_TRMFgQxSEeK_iMlKBWzZbA"/>
+    <visualProperties xmi:id="_Tk8H_AxSEeK_iMlKBWzZbA" position="923.0,-86.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_Tk8H_QxSEeK_iMlKBWzZbA" label="+"/>
+    <attributes xmi:id="_Tk8H_gxSEeK_iMlKBWzZbA" defaultValue="new IVisitor() {&#xD;&#xA;&#xD;&#xA;&#x9;&#x9;@Override&#xD;&#xA;&#x9;&#x9;public Object caseHostA(HostA host, Object... params) {&#xD;&#xA;&#x9;&#x9;&#x9;return &quot;NULL_VISITOR.caseHostA&quot;;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#xD;&#xA;&#x9;&#x9;@Override&#xD;&#xA;&#x9;&#x9;public Object caseHostB(HostB host, Object... params) {&#xD;&#xA;&#x9;&#x9;&#x9;return &quot;NULL_VISITOR.caseHostB&quot;;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#xD;&#xA;&#x9;&#x9;@Override&#xD;&#xA;&#x9;&#x9;public Object caseHostC(HostC host, Object... params) {&#xD;&#xA;&#x9;&#x9;&#x9;return &quot;NULL_VISITOR.caseHostC&quot;;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#xD;&#xA;&#x9;}" name="NULL_VISITOR" staticAttribute="true">
+      <modelElement href="VisitorDemo.uml#_TRSMIAxSEeK_iMlKBWzZbA"/>
+      <visibility xmi:id="_Tk8H_wxSEeK_iMlKBWzZbA" label="+"/>
+      <cardinality xmi:id="_Tk8IAAxSEeK_iMlKBWzZbA" label="1" max="1" min="1"/>
+      <type xmi:id="_Tk8IAQxSEeK_iMlKBWzZbA" name="IVisitor">
+        <modelElement href="VisitorDemo.uml#_TRMFgQxSEeK_iMlKBWzZbA"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_Tk8IAgxSEeK_iMlKBWzZbA" name="caseHostA">
+      <modelElement href="VisitorDemo.uml#_TTGKCQxSEeK_iMlKBWzZbA"/>
+      <stereotypes xmi:id="_Tk8IAwxSEeK_iMlKBWzZbA" name="LegacyStyledElement">
+        <modelElement href="VisitorDemo.uml#_TTGKDQxSEeK_iMlKBWzZbA"/>
+      </stereotypes>
+      <visibility xmi:id="_Tk8IBAxSEeK_iMlKBWzZbA" label="+"/>
+      <outParameters xmi:id="_Tk8IBQxSEeK_iMlKBWzZbA">
+        <modelElement href="VisitorDemo.uml#_TTGKDAxSEeK_iMlKBWzZbA"/>
+        <type xmi:id="_Tk8IBgxSEeK_iMlKBWzZbA" name="Object">
+          <modelElement href="VisitorDemo.uml#_TSz2IQxSEeK_iMlKBWzZbA"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_Tk8IBwxSEeK_iMlKBWzZbA" name="host">
+        <modelElement href="VisitorDemo.uml#_TTGKCgxSEeK_iMlKBWzZbA"/>
+        <type xmi:id="_Tk8ICAxSEeK_iMlKBWzZbA" name="HostA">
+          <modelElement href="VisitorDemo.uml#_TQzrAAxSEeK_iMlKBWzZbA"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_Tk8ICQxSEeK_iMlKBWzZbA" name="params">
+        <modelElement href="VisitorDemo.uml#_TTGKCwxSEeK_iMlKBWzZbA"/>
+        <type xmi:id="_Tk8ICgxSEeK_iMlKBWzZbA" name="Object">
+          <modelElement href="VisitorDemo.uml#_TSz2IQxSEeK_iMlKBWzZbA"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_Tk8ICwxSEeK_iMlKBWzZbA" name="caseHostB">
+      <modelElement href="VisitorDemo.uml#_TTGKEAxSEeK_iMlKBWzZbA"/>
+      <stereotypes xmi:id="_Tk8IDAxSEeK_iMlKBWzZbA" name="LegacyStyledElement">
+        <modelElement href="VisitorDemo.uml#_TTMQoAxSEeK_iMlKBWzZbA"/>
+      </stereotypes>
+      <visibility xmi:id="_Tk8IDQxSEeK_iMlKBWzZbA" label="+"/>
+      <outParameters xmi:id="_Tk8IDgxSEeK_iMlKBWzZbA">
+        <modelElement href="VisitorDemo.uml#_TTGKEwxSEeK_iMlKBWzZbA"/>
+        <type xmi:id="_Tk8IDwxSEeK_iMlKBWzZbA" name="Object">
+          <modelElement href="VisitorDemo.uml#_TSz2IQxSEeK_iMlKBWzZbA"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_Tk8IEAxSEeK_iMlKBWzZbA" name="host">
+        <modelElement href="VisitorDemo.uml#_TTGKEQxSEeK_iMlKBWzZbA"/>
+        <type xmi:id="_Tk8IEQxSEeK_iMlKBWzZbA" name="HostB">
+          <modelElement href="VisitorDemo.uml#_TQ_4QAxSEeK_iMlKBWzZbA"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_Tk8IEgxSEeK_iMlKBWzZbA" name="params">
+        <modelElement href="VisitorDemo.uml#_TTGKEgxSEeK_iMlKBWzZbA"/>
+        <type xmi:id="_Tk8IEwxSEeK_iMlKBWzZbA" name="Object">
+          <modelElement href="VisitorDemo.uml#_TSz2IQxSEeK_iMlKBWzZbA"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_Tk8IFAxSEeK_iMlKBWzZbA" name="caseHostC">
+      <modelElement href="VisitorDemo.uml#_TTMQowxSEeK_iMlKBWzZbA"/>
+      <stereotypes xmi:id="_Tk8IFQxSEeK_iMlKBWzZbA" name="LegacyStyledElement">
+        <modelElement href="VisitorDemo.uml#_TTMQpwxSEeK_iMlKBWzZbA"/>
+      </stereotypes>
+      <visibility xmi:id="_Tk8IFgxSEeK_iMlKBWzZbA" label="+"/>
+      <outParameters xmi:id="_Tk8IFwxSEeK_iMlKBWzZbA">
+        <modelElement href="VisitorDemo.uml#_TTMQpgxSEeK_iMlKBWzZbA"/>
+        <type xmi:id="_Tk8IGAxSEeK_iMlKBWzZbA" name="Object">
+          <modelElement href="VisitorDemo.uml#_TSz2IQxSEeK_iMlKBWzZbA"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_Tk8IGQxSEeK_iMlKBWzZbA" name="host">
+        <modelElement href="VisitorDemo.uml#_TTMQpAxSEeK_iMlKBWzZbA"/>
+        <type xmi:id="_Tk8IGgxSEeK_iMlKBWzZbA" name="HostC">
+          <modelElement href="VisitorDemo.uml#_TRF-4AxSEeK_iMlKBWzZbA"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_Tk8IGwxSEeK_iMlKBWzZbA" name="params">
+        <modelElement href="VisitorDemo.uml#_TTMQpQxSEeK_iMlKBWzZbA"/>
+        <type xmi:id="_Tk8IHAxSEeK_iMlKBWzZbA" name="Object">
+          <modelElement href="VisitorDemo.uml#_TSz2IQxSEeK_iMlKBWzZbA"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_TlOb0AxSEeK_iMlKBWzZbA" comments="_TlIVUgxSEeK_iMlKBWzZbA" targetConnectionVisual="_TlIVUwxSEeK_iMlKBWzZbA" name="Visitor2" generalizations="_TlIVUQxSEeK_iMlKBWzZbA">
+    <modelElement href="VisitorDemo.uml#_TRkgAAxSEeK_iMlKBWzZbA"/>
+    <visualProperties xmi:id="_TlOb0QxSEeK_iMlKBWzZbA" position="1351.0,22.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_TlOb0gxSEeK_iMlKBWzZbA" label="+"/>
+    <operations xmi:id="_TlOb0wxSEeK_iMlKBWzZbA" name="caseHostA">
+      <modelElement href="VisitorDemo.uml#_TTYd5wxSEeK_iMlKBWzZbA"/>
+      <stereotypes xmi:id="_TlOb1AxSEeK_iMlKBWzZbA" name="LegacyStyledElement">
+        <modelElement href="VisitorDemo.uml#_TTYd6wxSEeK_iMlKBWzZbA"/>
+      </stereotypes>
+      <stereotypes xmi:id="_TlOb1QxSEeK_iMlKBWzZbA" name="Annotations">
+        <modelElement href="VisitorDemo.uml#_TTYd7gxSEeK_iMlKBWzZbA"/>
+      </stereotypes>
+      <visibility xmi:id="_TlOb1gxSEeK_iMlKBWzZbA" label="+"/>
+      <outParameters xmi:id="_TlOb1wxSEeK_iMlKBWzZbA">
+        <modelElement href="VisitorDemo.uml#_TTYd6gxSEeK_iMlKBWzZbA"/>
+        <type xmi:id="_TlOb2AxSEeK_iMlKBWzZbA" name="Object">
+          <modelElement href="VisitorDemo.uml#_TSz2IQxSEeK_iMlKBWzZbA"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_TlOb2QxSEeK_iMlKBWzZbA" name="host">
+        <modelElement href="VisitorDemo.uml#_TTYd6AxSEeK_iMlKBWzZbA"/>
+        <type xmi:id="_TlOb2gxSEeK_iMlKBWzZbA" name="HostA">
+          <modelElement href="VisitorDemo.uml#_TQzrAAxSEeK_iMlKBWzZbA"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_TlOb2wxSEeK_iMlKBWzZbA" name="params">
+        <modelElement href="VisitorDemo.uml#_TTYd6QxSEeK_iMlKBWzZbA"/>
+        <type xmi:id="_TlOb3AxSEeK_iMlKBWzZbA" name="Object">
+          <modelElement href="VisitorDemo.uml#_TSz2IQxSEeK_iMlKBWzZbA"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_TlOb3QxSEeK_iMlKBWzZbA" name="caseHostB">
+      <modelElement href="VisitorDemo.uml#_TTekgAxSEeK_iMlKBWzZbA"/>
+      <stereotypes xmi:id="_TlOb3gxSEeK_iMlKBWzZbA" name="LegacyStyledElement">
+        <modelElement href="VisitorDemo.uml#_TTekhAxSEeK_iMlKBWzZbA"/>
+      </stereotypes>
+      <stereotypes xmi:id="_TlOb3wxSEeK_iMlKBWzZbA" name="Annotations">
+        <modelElement href="VisitorDemo.uml#_TTekhwxSEeK_iMlKBWzZbA"/>
+      </stereotypes>
+      <visibility xmi:id="_TlOb4AxSEeK_iMlKBWzZbA" label="+"/>
+      <outParameters xmi:id="_TlOb4QxSEeK_iMlKBWzZbA">
+        <modelElement href="VisitorDemo.uml#_TTekgwxSEeK_iMlKBWzZbA"/>
+        <type xmi:id="_TlOb4gxSEeK_iMlKBWzZbA" name="Object">
+          <modelElement href="VisitorDemo.uml#_TSz2IQxSEeK_iMlKBWzZbA"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_TlOb4wxSEeK_iMlKBWzZbA" name="host">
+        <modelElement href="VisitorDemo.uml#_TTekgQxSEeK_iMlKBWzZbA"/>
+        <type xmi:id="_TlOb5AxSEeK_iMlKBWzZbA" name="HostB">
+          <modelElement href="VisitorDemo.uml#_TQ_4QAxSEeK_iMlKBWzZbA"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_TlOb5QxSEeK_iMlKBWzZbA" name="params">
+        <modelElement href="VisitorDemo.uml#_TTekggxSEeK_iMlKBWzZbA"/>
+        <type xmi:id="_TlOb5gxSEeK_iMlKBWzZbA" name="Object">
+          <modelElement href="VisitorDemo.uml#_TSz2IQxSEeK_iMlKBWzZbA"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_TlOb5wxSEeK_iMlKBWzZbA" name="caseHostC">
+      <modelElement href="VisitorDemo.uml#_TTekiQxSEeK_iMlKBWzZbA"/>
+      <stereotypes xmi:id="_TlOb6AxSEeK_iMlKBWzZbA" name="LegacyStyledElement">
+        <modelElement href="VisitorDemo.uml#_TTekjQxSEeK_iMlKBWzZbA"/>
+      </stereotypes>
+      <stereotypes xmi:id="_TlOb6QxSEeK_iMlKBWzZbA" name="Annotations">
+        <modelElement href="VisitorDemo.uml#_TTekkAxSEeK_iMlKBWzZbA"/>
+      </stereotypes>
+      <visibility xmi:id="_TlOb6gxSEeK_iMlKBWzZbA" label="+"/>
+      <outParameters xmi:id="_TlOb6wxSEeK_iMlKBWzZbA">
+        <modelElement href="VisitorDemo.uml#_TTekjAxSEeK_iMlKBWzZbA"/>
+        <type xmi:id="_TlOb7AxSEeK_iMlKBWzZbA" name="Object">
+          <modelElement href="VisitorDemo.uml#_TSz2IQxSEeK_iMlKBWzZbA"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_TlOb7QxSEeK_iMlKBWzZbA" name="host">
+        <modelElement href="VisitorDemo.uml#_TTekigxSEeK_iMlKBWzZbA"/>
+        <type xmi:id="_TlOb7gxSEeK_iMlKBWzZbA" name="HostC">
+          <modelElement href="VisitorDemo.uml#_TRF-4AxSEeK_iMlKBWzZbA"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_TlOb7wxSEeK_iMlKBWzZbA" name="params">
+        <modelElement href="VisitorDemo.uml#_TTekiwxSEeK_iMlKBWzZbA"/>
+        <type xmi:id="_TlOb8AxSEeK_iMlKBWzZbA" name="Object">
+          <modelElement href="VisitorDemo.uml#_TSz2IQxSEeK_iMlKBWzZbA"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_TlIVMAxSEeK_iMlKBWzZbA" comments="_TlCOkQxSEeK_iMlKBWzZbA" targetConnectionVisual="_TlCOkgxSEeK_iMlKBWzZbA" name="Visitor1" generalizations="_TlCOkAxSEeK_iMlKBWzZbA">
+    <modelElement href="VisitorDemo.uml#_TRYSwAxSEeK_iMlKBWzZbA"/>
+    <visualProperties xmi:id="_TlIVMQxSEeK_iMlKBWzZbA" position="1355.0,-143.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_TlIVMgxSEeK_iMlKBWzZbA" label="+"/>
+    <operations xmi:id="_TlIVMwxSEeK_iMlKBWzZbA" name="caseHostA">
+      <modelElement href="VisitorDemo.uml#_TTMQqgxSEeK_iMlKBWzZbA"/>
+      <stereotypes xmi:id="_TlIVNAxSEeK_iMlKBWzZbA" name="LegacyStyledElement">
+        <modelElement href="VisitorDemo.uml#_TTMQrgxSEeK_iMlKBWzZbA"/>
+      </stereotypes>
+      <stereotypes xmi:id="_TlIVNQxSEeK_iMlKBWzZbA" name="Annotations">
+        <modelElement href="VisitorDemo.uml#_TTSXQQxSEeK_iMlKBWzZbA"/>
+      </stereotypes>
+      <visibility xmi:id="_TlIVNgxSEeK_iMlKBWzZbA" label="+"/>
+      <outParameters xmi:id="_TlIVNwxSEeK_iMlKBWzZbA">
+        <modelElement href="VisitorDemo.uml#_TTMQrQxSEeK_iMlKBWzZbA"/>
+        <type xmi:id="_TlIVOAxSEeK_iMlKBWzZbA" name="Object">
+          <modelElement href="VisitorDemo.uml#_TSz2IQxSEeK_iMlKBWzZbA"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_TlIVOQxSEeK_iMlKBWzZbA" name="host">
+        <modelElement href="VisitorDemo.uml#_TTMQqwxSEeK_iMlKBWzZbA"/>
+        <type xmi:id="_TlIVOgxSEeK_iMlKBWzZbA" name="HostA">
+          <modelElement href="VisitorDemo.uml#_TQzrAAxSEeK_iMlKBWzZbA"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_TlIVOwxSEeK_iMlKBWzZbA" name="params">
+        <modelElement href="VisitorDemo.uml#_TTMQrAxSEeK_iMlKBWzZbA"/>
+        <type xmi:id="_TlIVPAxSEeK_iMlKBWzZbA" name="Object">
+          <modelElement href="VisitorDemo.uml#_TSz2IQxSEeK_iMlKBWzZbA"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_TlIVPQxSEeK_iMlKBWzZbA" name="caseHostB">
+      <modelElement href="VisitorDemo.uml#_TTSXQwxSEeK_iMlKBWzZbA"/>
+      <stereotypes xmi:id="_TlIVPgxSEeK_iMlKBWzZbA" name="LegacyStyledElement">
+        <modelElement href="VisitorDemo.uml#_TTSXRwxSEeK_iMlKBWzZbA"/>
+      </stereotypes>
+      <stereotypes xmi:id="_TlIVPwxSEeK_iMlKBWzZbA" name="Annotations">
+        <modelElement href="VisitorDemo.uml#_TTSXSgxSEeK_iMlKBWzZbA"/>
+      </stereotypes>
+      <visibility xmi:id="_TlIVQAxSEeK_iMlKBWzZbA" label="+"/>
+      <outParameters xmi:id="_TlIVQQxSEeK_iMlKBWzZbA">
+        <modelElement href="VisitorDemo.uml#_TTSXRgxSEeK_iMlKBWzZbA"/>
+        <type xmi:id="_TlIVQgxSEeK_iMlKBWzZbA" name="Object">
+          <modelElement href="VisitorDemo.uml#_TSz2IQxSEeK_iMlKBWzZbA"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_TlIVQwxSEeK_iMlKBWzZbA" name="host">
+        <modelElement href="VisitorDemo.uml#_TTSXRAxSEeK_iMlKBWzZbA"/>
+        <type xmi:id="_TlIVRAxSEeK_iMlKBWzZbA" name="HostB">
+          <modelElement href="VisitorDemo.uml#_TQ_4QAxSEeK_iMlKBWzZbA"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_TlIVRQxSEeK_iMlKBWzZbA" name="params">
+        <modelElement href="VisitorDemo.uml#_TTSXRQxSEeK_iMlKBWzZbA"/>
+        <type xmi:id="_TlIVRgxSEeK_iMlKBWzZbA" name="Object">
+          <modelElement href="VisitorDemo.uml#_TSz2IQxSEeK_iMlKBWzZbA"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_TlIVRwxSEeK_iMlKBWzZbA" name="caseHostC">
+      <modelElement href="VisitorDemo.uml#_TTSXTAxSEeK_iMlKBWzZbA"/>
+      <stereotypes xmi:id="_TlIVSAxSEeK_iMlKBWzZbA" name="LegacyStyledElement">
+        <modelElement href="VisitorDemo.uml#_TTYd4gxSEeK_iMlKBWzZbA"/>
+      </stereotypes>
+      <stereotypes xmi:id="_TlIVSQxSEeK_iMlKBWzZbA" name="Annotations">
+        <modelElement href="VisitorDemo.uml#_TTYd5QxSEeK_iMlKBWzZbA"/>
+      </stereotypes>
+      <visibility xmi:id="_TlIVSgxSEeK_iMlKBWzZbA" label="+"/>
+      <outParameters xmi:id="_TlIVSwxSEeK_iMlKBWzZbA">
+        <modelElement href="VisitorDemo.uml#_TTYd4QxSEeK_iMlKBWzZbA"/>
+        <type xmi:id="_TlIVTAxSEeK_iMlKBWzZbA" name="Object">
+          <modelElement href="VisitorDemo.uml#_TSz2IQxSEeK_iMlKBWzZbA"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_TlIVTQxSEeK_iMlKBWzZbA" name="host">
+        <modelElement href="VisitorDemo.uml#_TTSXTQxSEeK_iMlKBWzZbA"/>
+        <type xmi:id="_TlIVTgxSEeK_iMlKBWzZbA" name="HostC">
+          <modelElement href="VisitorDemo.uml#_TRF-4AxSEeK_iMlKBWzZbA"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_TlIVTwxSEeK_iMlKBWzZbA" name="params">
+        <modelElement href="VisitorDemo.uml#_TTYd4AxSEeK_iMlKBWzZbA"/>
+        <type xmi:id="_TlIVUAxSEeK_iMlKBWzZbA" name="Object">
+          <modelElement href="VisitorDemo.uml#_TSz2IQxSEeK_iMlKBWzZbA"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:InterfaceVisual" xmi:id="_Tk2BVAxSEeK_iMlKBWzZbA" comments="_Tkv6wwxSEeK_iMlKBWzZbA" targetConnectionVisual="_Tk2BUAxSEeK_iMlKBWzZbA" name="IHost" subclassedBy="_Tk2BUQxSEeK_iMlKBWzZbA _Tk2BUgxSEeK_iMlKBWzZbA _Tk2BUwxSEeK_iMlKBWzZbA">
+    <modelElement href="VisitorDemo.uml#_TRMFgAxSEeK_iMlKBWzZbA"/>
+    <visualProperties xmi:id="_Tk2BVQxSEeK_iMlKBWzZbA" position="403.0,-67.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_Tk2BVgxSEeK_iMlKBWzZbA" label="+"/>
+    <operations xmi:id="_Tk2BVwxSEeK_iMlKBWzZbA" name="execute">
+      <modelElement href="VisitorDemo.uml#_TTGKAgxSEeK_iMlKBWzZbA"/>
+      <stereotypes xmi:id="_Tk2BWAxSEeK_iMlKBWzZbA" name="LegacyStyledElement">
+        <modelElement href="VisitorDemo.uml#_TTGKBgxSEeK_iMlKBWzZbA"/>
+      </stereotypes>
+      <visibility xmi:id="_Tk2BWQxSEeK_iMlKBWzZbA" label="+"/>
+      <outParameters xmi:id="_Tk2BWgxSEeK_iMlKBWzZbA">
+        <modelElement href="VisitorDemo.uml#_TTGKBQxSEeK_iMlKBWzZbA"/>
+        <type xmi:id="_Tk2BWwxSEeK_iMlKBWzZbA" name="Object">
+          <modelElement href="VisitorDemo.uml#_TSz2IQxSEeK_iMlKBWzZbA"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_Tk2BXAxSEeK_iMlKBWzZbA" name="algo">
+        <modelElement href="VisitorDemo.uml#_TTGKAwxSEeK_iMlKBWzZbA"/>
+        <type xmi:id="_Tk2BXQxSEeK_iMlKBWzZbA" name="IVisitor">
+          <modelElement href="VisitorDemo.uml#_TRMFgQxSEeK_iMlKBWzZbA"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_Tk2BXgxSEeK_iMlKBWzZbA" name="params">
+        <modelElement href="VisitorDemo.uml#_TTGKBAxSEeK_iMlKBWzZbA"/>
+        <type xmi:id="_Tk2BXwxSEeK_iMlKBWzZbA" name="Object">
+          <modelElement href="VisitorDemo.uml#_TSz2IQxSEeK_iMlKBWzZbA"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+</com.yattasolutions.uml.diagrams.classifier:ClassDiagram>

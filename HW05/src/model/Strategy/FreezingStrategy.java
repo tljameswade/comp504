@@ -1,0 +1,45 @@
+package model.Strategy;
+
+import java.awt.Point;
+
+import model.Ball;
+import model.IBallCmd;
+import model.IInteractStrategy;
+import model.IUpdateStrategy;
+import model.MultiInteractStrategy;
+import util.IDispatcher;
+
+/**
+ * This strategy interacts with the distance sensor strategy
+ * The context ball will be sent on a random location on canvas, and its loation is set with
+ * velocity set to zero
+ * When the target ball moves into the distance of 50 of the context ball
+ * The velocity of the target ball will be set to zero
+ * @author Suozhi Qi, Zhaohan Jia
+ *
+ * @param <TDispMsg> The generic parameter of IUpdateStrategy
+ */
+public class FreezingStrategy<TDispMsg> implements IUpdateStrategy<TDispMsg> {
+	/**
+	 * Use the interact strategy to set the no ball zone strategy
+	 * When the ball moves into the area within 50 of the context ball,
+	 * the target ball will be stopped and velocity set to 0
+	 * @param context The context ball.
+	 */
+	@Override
+	public void init(Ball context) {
+		context.setInteractStrategy(new MultiInteractStrategy(context.getInteractStrategy(), new IInteractStrategy() {
+			public void interact(Ball context, Ball target, IDispatcher<IBallCmd> disp) {
+				target.setVelocity(new Point(0, 0));
+			}
+		}));
+	}
+
+	/**
+	 * No-op
+	 */
+	@Override
+	public void updateState(Ball context, IDispatcher<TDispMsg> dispatcher) {
+		context.setVelocity(new Point(0, 0));
+	}
+}

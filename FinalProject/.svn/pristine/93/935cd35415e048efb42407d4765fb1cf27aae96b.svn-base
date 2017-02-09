@@ -1,0 +1,7 @@
+package sq6_kt21.server.game.model;
+
+public interface IServer2GameAdpt {
+	
+	public void sentTextToGame(String text);
+	
+}

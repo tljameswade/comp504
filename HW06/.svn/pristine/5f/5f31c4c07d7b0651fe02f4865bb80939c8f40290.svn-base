@@ -1,0 +1,67 @@
+package model.visitor;
+
+import provided.music.APhraseVisitor;
+import provided.music.Chord;
+import provided.music.IPhrase;
+import provided.music.IPhraseVisitorCmd;
+import provided.music.MTSeqList;
+import provided.music.NESeqList;
+import provided.music.Note;
+import provided.music.Triplet;
+import provided.player.SequencePlayer;
+
+
+public class PlayMusicVisitor extends APhraseVisitor{
+
+	public PlayMusicVisitor() {
+		
+		this.addCmd(Note.ID, new IPhraseVisitorCmd() {
+			public Object apply(String id, IPhrase host, Object... params) {
+				SequencePlayer musicPlayer = (SequencePlayer)params[0];
+				return musicPlayer.addNote((Note)host, (int)params[1]);
+			}
+		});
+		
+		this.addCmd(Chord.ID, new IPhraseVisitorCmd() {
+			public Object apply(String id, IPhrase host, Object...params) {
+				Note[] notes = ((Chord)host).getNotes();
+				int firstTick = (int)params[1];
+				for (Note note : notes) {
+					firstTick = (int)note.execute(PlayMusicVisitor.this, params);
+				}
+				return firstTick;
+			}
+		});
+		
+		this.addCmd(Triplet.ID, new IPhraseVisitorCmd() {
+			public Object apply(String id, IPhrase host, Object...params) {
+				Note[] notes = ((Triplet)host).getNotes();
+				int firstTick = (int)params[1];
+				for (Note note : notes) {
+					note.setDuration(note.getDuration() * 2 / 3);
+					firstTick = (int)note.execute(PlayMusicVisitor.this, params);
+				}
+				return firstTick;
+			}
+		});
+		
+		this.addCmd(MTSeqList.ID, new IPhraseVisitorCmd() {
+
+			@Override
+			public Object apply(String id, IPhrase host, Object... params) {
+				return params[1];
+			}			
+		});
+		
+		this.addCmd(NESeqList.ID, new IPhraseVisitorCmd() {
+
+			@Override
+			public Object apply(String id, IPhrase host, Object... params) {
+				int firstTick = (int)((NESeqList)host).getFirst().execute(PlayMusicVisitor.this, params);
+				firstTick = (int)((NESeqList)host).getRest().execute(PlayMusicVisitor.this, params[0], firstTick);
+				return firstTick;
+			}
+			
+		});
+	}
+}

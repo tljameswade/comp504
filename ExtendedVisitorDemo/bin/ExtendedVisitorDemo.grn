@@ -1,0 +1,39 @@
+<uml>
+   <greenVersion="30500"/>
+   <type>
+      <name="=ExtendedVisitorDemo/src<extVisitor{IExtVisitorCmd.java[IExtVisitorCmd"/>
+      <height="-1"/>
+      <width="-1"/>
+      <x="750"/>
+      <y="333"/>
+   </type>
+   <type>
+      <name="=ExtendedVisitorDemo/src<extVisitor{ExtVisitor.java[ExtVisitor"/>
+      <height="-1"/>
+      <width="-1"/>
+      <x="745"/>
+      <y="134"/>
+   </type>
+   <type>
+      <name="=ExtendedVisitorDemo/src<extVisitor{IExtVisitor.java[IExtVisitor"/>
+      <height="-1"/>
+      <width="-1"/>
+      <x="385"/>
+      <y="186"/>
+   </type>
+   <type>
+      <name="=ExtendedVisitorDemo/src<extVisitor{IHost.java[IHost"/>
+      <height="-1"/>
+      <width="-1"/>
+      <x="16"/>
+      <y="182"/>
+   </type>
+   <relationship>
+      <class="edu.buffalo.cse.green.relationship.realization.RealizationPart"/>
+      <sourceType="=ExtendedVisitorDemo/src<extVisitor{ExtVisitor.java[ExtVisitor"/>
+      <targetType="=ExtendedVisitorDemo/src<extVisitor{IExtVisitor.java[IExtVisitor"/>
+      <bendpoints>
+      </bendpoints>
+   </relationship>
+</uml>
+

@@ -1,0 +1,13 @@
+package model;
+
+/**
+ * @author Suozhi Qi, Zhou Liu
+ *
+ */
+public interface IPaintStrategyFac {
+	
+	/**
+	 * @return paint strategy
+	 */
+	public IPaintStrategy make();
+}

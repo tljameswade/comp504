@@ -1,0 +1,15 @@
+package model.Strategy;
+
+import model.Ball;
+import model.IUpdateStrategy;
+import util.Dispatcher;
+
+/**
+ * default strategy
+ * @author SuozhiQi, HongyangZhang
+ * 
+ */
+public class StraightStrategy implements IUpdateStrategy {
+	public void updateState(Ball ball, Dispatcher dispatcher) {
+	}
+}

@@ -1,0 +1,39 @@
+package model.paint;
+
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.Shape;
+import java.awt.geom.AffineTransform;
+
+import model.Ball;
+
+/**
+ * @author Suozhi Qi, Zhou Liu
+ *
+ */
+public class ShapePaintStrategy extends APaintStrategy{
+
+	private Shape shape;
+	
+	/**
+	 * @param shape
+	 */
+	public ShapePaintStrategy(Shape shape) {
+		this(new AffineTransform(), shape);
+	}
+	
+	/**
+	 * @param at
+	 * @param shape
+	 */
+	public ShapePaintStrategy(AffineTransform at, Shape shape) {
+		super(at);
+		this.shape = shape;
+	}
+
+	@Override
+	public void paintXfrm(Graphics g, Ball host, AffineTransform at) {
+		((Graphics2D) g).fill(at.createTransformedShape(shape));
+	}
+
+}

@@ -1,0 +1,11 @@
+package model.paint.strategy;
+
+import model.paint.UprightImagePaintStrategy;
+
+public class SaturnPaintStrategy extends UprightImagePaintStrategy{
+
+	public SaturnPaintStrategy(String filename, double fillFactor) {
+		super("images/Mario_animate.gif", 0.5);
+	}
+
+}

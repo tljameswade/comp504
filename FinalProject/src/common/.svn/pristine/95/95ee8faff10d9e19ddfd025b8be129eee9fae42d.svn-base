@@ -1,0 +1,113 @@
+package common;
+
+import java.rmi.Remote;
+import java.rmi.RemoteException;
+
+import common.msg.IChatMsg;
+import provided.datapacket.ADataPacket;
+import provided.datapacket.DataPacketAlgo;
+
+/**
+ * IChatServer interface is associated with a particular chatroom and used to receive the message targeted directly
+ * to the chatroom.
+ */
+public interface IChatServer extends Remote {
+
+	/**
+	 * for server app instances
+	 */
+	public static final int BOUND_PORT_SERVER = 2100;
+	/**
+	 * for client app instances
+	 */
+	public static final int BOUND_PORT_CLIENT = 2101;
+	/**
+	 * for 2nd client app for test on a single computer. you probably need not use this port.
+	 */
+	public static final int BOUND_PORT_CLIENT_SECONDARY = 2102;
+	
+	/**
+	 * Receive message (and then call msg.execute(algo) to process it) as a remote IChatServer stub.
+	 * 
+	 * @param dp -  A message that implements IChatMsg.
+	 * @throws RemoteException
+	 */
+	public <S> void receive(OurDataPacket<? extends IChatMsg, S> dp) throws RemoteException;
+	
+	/**
+	 * Get the user associated with this chatserver
+	 * @return the user object
+	 * @throws RemoteException 
+	 **/
+	public IUser getUser() throws RemoteException;
+
+	/**
+	 * Get the chatroom that it associated with
+	 * @return an IChatroom type
+	 * @throws RemoteException 
+	 * */
+	public IChatroom getChatroom() throws RemoteException;
+
+
+//	
+//	/**
+//	 * Add an IChatServer stub into the IChatServer list of its chatroom
+//	 * @param chatStub to be added into the IChatServer list of its chatroom
+//	 * @return True if chatStub does not belong to the chatroom and false if chatStub belongs to the chatroom.
+//	 * @throws RemoteException 
+//	 */
+//	@Deprecated
+//	public boolean joinChatroom(IChatServer chatStub) throws RemoteException;
+
+//	/**
+//	 * Remove an IChatServer stub from the IChatServer list of its chatroom
+//	 * @param chatStub to be added into the IChatServer list of its chatroom
+//	 * @return True if chatStub is removed from the chatroom and false if the chatStub is not in chatroom.
+//	 * @throws RemoteException 
+//	 */
+//	@Deprecated
+//	public boolean leaveChatroom(IChatServer chatStub) throws RemoteException;
+
+//	/**
+//	 * Receive and process the message sent by the remote application
+//	 * @param sender - the user who sent the message
+//	 * @param message - the data packet that they sent
+//	 * @throws RemoteException 
+//	 * */
+//	@Deprecated
+//	public void receive(ADataPacket message) throws RemoteException;
+//	
+//	/**
+//	 * This method is used to communicate back to the sender so we can get the new command to deal with 
+//	 * the unknown datapacket
+//	 * @param requestClass - A data type needed to be process
+//	 * @return a new command to deal with the unknown datapacket
+//	 * @throws RemoteException
+//	 */
+//	@Deprecated
+//	public ADataPacketAlgoCmdGroupF<?> getNewCommand(Class<?> requestClass) throws RemoteException;
+//	
+//	@Deprecated
+//	public <S> AOurDataPacketAlgoCmd<?,S> requestNewCommand(Class<?> requestClass) throws RemoteException;
+
+//	@Deprecated
+//	public AOurDataPacketAlgoCmd<?> getNewCommand(Class<?> requestClass) throws RemoteException;
+//	/**
+//	 * @param dataPacketAlgo
+//	 * @throws RemoteException
+//	 */
+//	@Deprecated
+//	void setDataPacketAlgo(DataPacketAlgo<String, IChatServer> dataPacketAlgo) throws RemoteException;
+	
+//	@Deprecated
+//	void setDataPacketAlgo(DataPacketAlgo<Void, Object> dataPacketAlgo) throws RemoteException;
+	
+//	/**
+//	 * This method is used to refresh the friend list of a chatroom. But note that this method will 
+//	 * seldom be used as all the refresh process are handled automatically after we add a user or 
+//	 * remove a user
+//	 * @throws RemoteException
+//	 */
+//	@Deprecated
+//	public void refresh() throws RemoteException;
+}

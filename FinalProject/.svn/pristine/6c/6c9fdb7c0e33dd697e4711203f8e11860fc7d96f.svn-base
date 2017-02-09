@@ -1,0 +1,22 @@
+package sq6_kt21.server.game.model.message;
+
+import common.msg.IChatMsg;
+import sq6_kt21.server.game.model.StartGameFactory;
+
+public class StartGame implements IChatMsg{
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 8735118144706053840L;
+	
+	private StartGameFactory fac;
+	
+	public StartGame(StartGameFactory _fac){
+		fac = _fac;
+	}
+	
+	public StartGameFactory getFactory(){
+		return fac;
+	}
+}

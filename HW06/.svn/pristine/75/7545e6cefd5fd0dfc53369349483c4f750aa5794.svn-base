@@ -1,0 +1,63 @@
+/**
+ * 
+ */
+package view;
+
+/**
+ * @param <TVisitor> 
+ *
+ */
+public interface IModelAdapter<TVisitor> {
+
+	/**
+	 * @param filename string
+	 */
+	void Open(String filename);
+	
+	/**
+	 * 
+	 */
+	void Parse();
+	
+	/**
+	 * 
+	 */
+	void Play();
+	
+	/**
+	 * 
+	 */
+	void Stop();
+	
+	
+	/**
+	 * null
+	 */
+	public static final IModelAdapter<?> NULL_OBJ = new IModelAdapter<Object>() {
+		
+		@Override
+		public void Open(String filename) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void Parse() {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void Play() {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void Stop() {
+			// TODO Auto-generated method stub
+			
+		}
+	};
+	
+}

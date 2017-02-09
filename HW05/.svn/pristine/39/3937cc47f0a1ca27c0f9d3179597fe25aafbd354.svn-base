@@ -1,0 +1,36 @@
+package model.paint;
+
+import java.awt.Graphics;
+import java.awt.geom.AffineTransform;
+
+import model.Ball;
+
+/**
+ * @author Suozhi Qi, Zhou Liu
+ *
+ */
+public class ADecoratorPaintStrategy extends APaintStrategy{
+	
+	private APaintStrategy decoree;
+
+	/**
+	 * @param decoree
+	 */
+	public ADecoratorPaintStrategy(APaintStrategy decoree) {
+		super(new AffineTransform());
+		this.decoree = decoree;
+	}
+
+	public void init(Ball host) {
+		decoree.init(host);
+	}
+	
+	public void paint(Graphics g, Ball host) {
+		decoree.paint(g, host);
+	}
+	@Override
+	public void paintXfrm(Graphics g, Ball host, AffineTransform at) {
+		decoree.paintXfrm(g, host, at);
+	}
+
+}

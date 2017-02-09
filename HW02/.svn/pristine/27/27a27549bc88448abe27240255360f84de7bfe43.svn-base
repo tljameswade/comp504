@@ -1,0 +1,42 @@
+package shape;
+
+import java.awt.Graphics;
+
+/**
+ * Composite class
+ * extends the AShape class
+ * represent an abstract composition of multiple shapes
+ * implemented the concrete paint methods that draws multiple shapes
+ * 
+ * @author qw12 and xl68
+ *
+ */
+public class Composite extends AShape {
+
+	private AShape[] shapes;
+	private int n;
+
+	/**
+	 * Constructor of a composite shape that consists of an array of AShapes
+	 * @param s  the array of AShapes
+	 * @param numbShapes the size of the array
+	 */
+	public Composite(AShape[] s, int numbShapes) {
+		shapes = s;
+		n = numbShapes;
+	}
+
+	/**
+	 * Paint methods which calls every dedicated paint method of AShape in the array
+	 */
+	@Override
+	public void paint(Graphics g) {
+
+		for (int i = 0; i < n; i++) {
+			shapes[i].paint(g);
+		}
+		// TODO Auto-generated method stub
+
+	}
+
+}

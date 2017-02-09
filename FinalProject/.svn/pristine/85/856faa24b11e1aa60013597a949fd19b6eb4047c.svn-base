@@ -1,0 +1,33 @@
+package sq6_kt21.server.game.model.message;
+
+import common.AOurDataPacketAlgoCmd;
+import common.IChatServer;
+import common.ICmd2ModelAdapter;
+import common.OurDataPacket;
+import provided.mixedData.MixedDataKey;
+import sq6_kt21.server.game.model.GameModel;
+
+public class TeamMsgCmd extends AOurDataPacketAlgoCmd<TeamMsg, IChatServer> {
+
+	transient private ICmd2ModelAdapter cmd2ModelAdpt = null;
+	
+	public TeamMsgCmd(ICmd2ModelAdapter cmd2ModelAdapter) {
+		cmd2ModelAdpt = cmd2ModelAdapter;
+	}
+	
+	@Override
+	public Void apply(Class<?> index, OurDataPacket<TeamMsg, IChatServer> host, Object... params) {
+		MixedDataKey<GameModel> gameModelKey = new MixedDataKey<GameModel>(GameModel.uuid, "gameModel", GameModel.class);
+		GameModel model = cmd2ModelAdpt.getFromLocalDict(gameModelKey);
+		System.out.println(model);
+		model.appendToGlobal(host.getData().getTeamMsg());
+		return null;
+	}
+
+	@Override
+	public void setCmd2ModelAdpt(ICmd2ModelAdapter cmd2ModelAdpt) {
+		this.cmd2ModelAdpt = cmd2ModelAdpt;
+		
+	}
+
+}

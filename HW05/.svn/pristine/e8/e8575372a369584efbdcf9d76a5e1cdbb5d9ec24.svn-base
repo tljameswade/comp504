@@ -1,0 +1,41 @@
+package model.Strategy;
+
+import model.Ball;
+
+/**
+ * this class will make a SwitcherStrategy ball
+ * @author SuozhiQi,HongyangZhang
+ *
+ */
+public class SwitcherStrategy implements IUpdateStrategy {
+
+	/**
+	 * The strategy to switch to
+	 */
+	public IUpdateStrategy Switch;
+
+	/**
+	 * The default ball would implement a straight strategy
+	 */
+	public SwitcherStrategy() {
+		this.Switch = new StraightStrategy();
+	}
+
+	/**
+	 * Update the strategy the ball is using
+	 * @param ball the ball to update strategy
+	 */
+	@Override
+	public void updateSTATE(Ball ball) {
+		Switch.updateSTATE(ball);
+	}
+
+	/**
+	* Set the strategy of the ball to the new switcherstrategy
+	* @param Switch the new strategy that the ball will switch to
+	*/
+	public void setStrategy(IUpdateStrategy Switch) {
+		this.Switch = Switch;
+	}
+
+}

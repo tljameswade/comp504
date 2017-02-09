@@ -1,0 +1,28 @@
+package sq6_kt21.server.game.model.message;
+
+import java.util.List;
+
+import common.msg.IChatMsg;
+
+public class CityMsg implements IChatMsg{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -4860731301812235236L;
+	
+	private List<String> cityList;
+	
+	public CityMsg(List<String> list) {
+		this.setCityList(list);
+	}
+
+	public List<String> getCityList() {
+		return cityList;
+	}
+
+	public void setCityList(List<String> cityList) {
+		this.cityList = cityList;
+	}
+
+}

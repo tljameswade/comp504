@@ -1,0 +1,43 @@
+package model.Strategy;
+
+import java.awt.Point;
+
+import model.Ball;
+import model.IBallCmd;
+import model.IInteractStrategy;
+import model.IUpdateStrategy;
+import model.MultiInteractStrategy;
+import util.IDispatcher;
+
+/**
+ * This strategy mimics a no-ball zone, and it interacts with the DistanceSensor Strategy Balls
+ * The noballzone ball will not move
+ * and all of the balls that come within the distance of 50 will be eliminated
+ * @author Suozhi Qi, Zhaohan Jia
+ *
+ * @param <TDispMsg> The generic type of the parameter
+ */
+public class NoBallZoneStrategy<TDispMsg> implements IUpdateStrategy<TDispMsg> {
+	/**
+	 * Use the interact strategy to set the no ball zone strategy
+	 * When the ball moves into the area within 50 of the context ball,
+	 * the target ball will be eliminated
+	 * @param context The context ball.
+	 */
+	@Override
+	public void init(Ball context) {
+		context.setInteractStrategy(new MultiInteractStrategy(context.getInteractStrategy(), new IInteractStrategy() {
+			public void interact(Ball context, Ball target, IDispatcher<IBallCmd> disp) {
+				disp.deleteObserver(target);
+			}
+		}));
+	}
+
+	/**
+	 * No-op
+	 */
+	@Override
+	public void updateState(Ball context, IDispatcher<TDispMsg> dispatcher) {
+		context.setVelocity(new Point(0, 0));
+	}
+}

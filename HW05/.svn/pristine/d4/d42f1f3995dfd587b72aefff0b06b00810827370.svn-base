@@ -1,0 +1,23 @@
+Author: Suozhi Qi, Hongyang Zhang
+
+Overview: This simple program demonstrates a composition-based system to add dynamically modifiable behaviors loaded behaviors to the system
+
+Available functions:
+1 Type the name of the strategy into the text input frame. These strategies are available:
+	Breathing
+	Color
+	Curve
+	Wander
+	AngryShaking
+	
+2 Clicking the "Add to Lists" button will add the strategy input from the text frame to both of the drop lists
+
+3 Clicking "Make Selected Ball" will make a ball with the strategy selected on the top drop list
+
+4 Clicking "Combine!" will dynamically create a strategy that is the combination of the strategies selected on top and bottom lists.
+  The new generated strategy is then placed back into both drop lists and can be used again for combining.
+
+5 Clicking "Make Switcher" button will make a ball, initially, ones that go straight
+
+6 Clicking "Switch!" will cause all Switcher balls ever made to switch behaviors to whatever is the selected strategy on the top drop list. 
+  Switcher balls made later will have the same behavior as whatever the previously made Switchers have.

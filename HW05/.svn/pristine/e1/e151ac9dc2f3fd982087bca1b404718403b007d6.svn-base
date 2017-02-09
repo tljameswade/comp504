@@ -1,0 +1,166 @@
+package controller;
+
+import java.awt.Component;
+import java.awt.EventQueue;
+import java.awt.Graphics;
+
+import model.BallModel;
+import model.IBallCmd;
+import view.BallGUI;
+import view.IModelControlAdapter;
+import view.IModelPaintAdapter;
+import model.IModel2ViewAdapter;
+import model.IPaintStrategyFac;
+import model.IStrategyFac;
+
+/**
+ * MVC Controller for the system
+ * @author Suozhi Qi, Zhaohan Jia
+ * @version 1.0
+ * 
+ */
+public class Controller {
+
+	/**
+	 * The model side object
+	 */
+	private BallModel model;
+
+	/**
+	 * The view side object
+	 */
+	private BallGUI<IStrategyFac<IBallCmd>, IPaintStrategyFac> view;
+
+	/**
+	 * Controller constructor builds the system
+	 */
+	public Controller() {
+		model = new BallModel(new IModel2ViewAdapter() {
+			@Override
+			public Component getCanvas() {
+				return view.getCanvas();
+			}
+
+			@Override
+			public void update() {
+				view.update();
+			}
+		});
+
+		view = new BallGUI<IStrategyFac<IBallCmd>, IPaintStrategyFac>(
+				new IModelControlAdapter<IStrategyFac<IBallCmd>, IPaintStrategyFac>() {
+
+					@Override
+					/**
+					* Returns an IStrategyFac that can instantiate the strategy specified
+					* by classname. Returns null if classname is null. The toString() of
+					* the returned factory is the classname.
+					* @param classname  Shortened name of desired strategy 
+					* @return A factory to make that strategy
+					*/
+					public IStrategyFac<IBallCmd> addStrategy(String classname) {
+						return model.makeStrategyFac(classname);
+					}
+
+					@Override
+					/**
+					* Add a ball to the system with a strategy as given by the given IStrategyFac
+					* @param selectedItem The fully qualified name of the desired strategy.
+					*/
+					public void loadBall(IStrategyFac<IBallCmd> selectedItem, IPaintStrategyFac paintItem) {
+						if (null != selectedItem && null != paintItem)
+							model.makeballs(selectedItem.make(), paintItem.make()); // Here, loadBall takes a strategy object, but your method may take the strategy factory instead.
+					}
+
+					@Override
+					/**
+					* Returns an IStrategyFac that can instantiate a MultiStrategy with the
+					* two strategies made by the two given IStrategyFac objects. Returns
+					* null if either supplied factory is null. The toString() of the
+					* returned factory is the toString()'s of the two given factories,
+					* concatenated with "-".             * 
+					* @param selectedItem1 An IStrategyFac for a strategy
+					* @param selectedItem2 An IStrategyFac for a strategy
+					* @return An IStrategyFac for the composition of the two strategies
+					*/
+					public IStrategyFac<IBallCmd> combineStrategies(IStrategyFac<IBallCmd> selectedItem1,
+							IStrategyFac<IBallCmd> selectedItem2) {
+						return model.combineStrategyFacs(selectedItem1, selectedItem2);
+					}
+
+					/**
+					 * implements the clearballs function in BallModel
+					 */
+					@Override
+					public void clearballs() {
+						model.clearballs();
+					}
+
+					/**
+					 * make a default StraightStrategy ball with
+					 * the selected paintstrategy as a SwitcherStrategy ball
+					 */
+					@Override
+					public void makeSwitcher(IPaintStrategyFac paintstrategy) {
+						model.makeballs(model.getSwitcherStrategy(), paintstrategy.make());
+					}
+
+					/**
+					 * switch balls to a new strategy
+					 * @param selectedItem1 An IStrategyFac for a strategy			
+					 */
+					@Override
+					public void SwitchStrategy(IStrategyFac<IBallCmd> selectedItem) {
+						if (selectedItem != null) {
+							model.SetSwitcherStrategy(selectedItem.make());
+						}
+					}
+
+					/**
+					* Returns an IStrategyFac that can instantiate the strategy specified
+					* by classname. Returns null if classname is null. The toString() of
+					* the returned factory is the classname.
+					* @param classname  Shortened name of desired paintstrategy 
+					* @return A factory to make that paintstrategy
+					*/
+					@Override
+					public IPaintStrategyFac addPaintStrategy(String classname) {
+						return model.makePaintStrategyFac(classname);
+					}
+
+				}, new IModelPaintAdapter() {
+					/**
+					* Pass the update request to the model.
+					* @param g The Graphics object the balls use to draw themselves.
+					*/
+					public void paint(Graphics g) {
+						model.update(g);
+					}
+				});
+	}
+
+	/**
+	 * Start the system
+	 */
+	public void start() {
+		model.start();
+		view.start();
+	}
+
+	/**
+	 * Launch the application.
+	 * @param args Arguments given by the system or command line.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Controller controller = new Controller();
+					controller.start();
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+}

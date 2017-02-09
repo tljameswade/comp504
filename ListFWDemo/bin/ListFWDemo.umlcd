@@ -1,0 +1,672 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.yattasolutions.uml.diagrams.classifier:ClassDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.yattasolutions.diagrams="http://ns.yatta-solutions.com/umllab/diagrams/1.1.0" xmlns:com.yattasolutions.uml.diagrams.classifier="http://ns.yatta-solutions.com/umllab/diagrams/classifier/1.1.0" xmi:id="_o97JQAmVEeKM4on4VJsf5A">
+  <modelElement href="ListFWDemo.uml#_poeiIAmVEeKM4on4VJsf5A"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_sIb9cQmVEeKM4on4VJsf5A" targetItem="_sIlHYAmVEeKM4on4VJsf5A" sourceItem="_sIb9cAmVEeKM4on4VJsf5A"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_sKX3IAmVEeKM4on4VJsf5A" targetItem="_sKX3IQmVEeKM4on4VJsf5A" sourceItem="_sKEVIAmVEeKM4on4VJsf5A"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_sK9tAAmVEeKM4on4VJsf5A" targetItem="_sLHeAAmVEeKM4on4VJsf5A" sourceItem="_sKqyEAmVEeKM4on4VJsf5A"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_sK9tAQmVEeKM4on4VJsf5A" sourceAnchor="163.0,0.0" targetAnchor="162.0,90.0" dashed="true" superClass="_sLHeAAmVEeKM4on4VJsf5A" subClass="_sIlHYAmVEeKM4on4VJsf5A">
+    <modelElement href="ListFWDemo.uml#_pw9vwAmVEeKM4on4VJsf5A"/>
+    <bendpoints xmi:id="_CtfezQmWEeKM4on4VJsf5A" sourceY="-34" targetX="-177" targetY="106"/>
+    <bendpoints xmi:id="_CtfezgmWEeKM4on4VJsf5A" sourceX="177" sourceY="-34" targetY="106"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_sMc6wAmVEeKM4on4VJsf5A" sourceAnchor="300.0,46.0" targetAnchor="150.0,92.0" target="_sNCwqAmVEeKM4on4VJsf5A" source="_sNCwqAmVEeKM4on4VJsf5A">
+    <modelElement href="ListFWDemo.uml#_p0ryIAmVEeKM4on4VJsf5A"/>
+    <bendpoints xmi:id="_CtfewwmWEeKM4on4VJsf5A" sourceX="33" targetX="183" targetY="-46"/>
+    <bendpoints xmi:id="_CtfexAmWEeKM4on4VJsf5A" sourceX="33" sourceY="86" targetX="183" targetY="40"/>
+    <bendpoints xmi:id="_CtfexQmWEeKM4on4VJsf5A" sourceX="-150" sourceY="86" targetY="40"/>
+    <stereotypes xmi:id="_sNCwogmVEeKM4on4VJsf5A" name="Reference">
+      <modelElement href="ListFWDemo.uml#_p0ryIgmVEeKM4on4VJsf5A"/>
+    </stereotypes>
+    <nameVisual xmi:id="_sM5msQmVEeKM4on4VJsf5A" text="">
+      <visualProperties xmi:id="_soIKLAmVEeKM4on4VJsf5A" position="-40.0,-112.0"/>
+    </nameVisual>
+    <sourceRole xmi:id="_sNCwoAmVEeKM4on4VJsf5A" aggregationKind="NONE" name="">
+      <modelElement href="ListFWDemo.uml#_p0ryIQmVEeKM4on4VJsf5A"/>
+      <visualProperties xmi:id="_soIKKwmVEeKM4on4VJsf5A" position="5.0,-44.0"/>
+      <visibility xmi:id="_sNCwpAmVEeKM4on4VJsf5A" label="+"/>
+      <cardinality xmi:id="_sNCwowmVEeKM4on4VJsf5A" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_sNCwoQmVEeKM4on4VJsf5A" aggregationKind="NONE" name="Singleton" navigable="true">
+      <modelElement href="ListFWDemo.uml#_pzMkYAmVEeKM4on4VJsf5A"/>
+      <visualProperties xmi:id="_soIKLQmVEeKM4on4VJsf5A" position="6.0,5.0"/>
+      <visibility xmi:id="_sNCwpgmVEeKM4on4VJsf5A" label="+"/>
+      <cardinality xmi:id="_sNCwpQmVEeKM4on4VJsf5A" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_sMmrwAmVEeKM4on4VJsf5A" sourceAnchor="150.0,0.0" targetAnchor="149.0,71.0" dashed="true" superClass="_sKX3IQmVEeKM4on4VJsf5A" subClass="_sNCwqAmVEeKM4on4VJsf5A">
+    <modelElement href="ListFWDemo.uml#_pvoTAAmVEeKM4on4VJsf5A"/>
+    <bendpoints xmi:id="_CtfexgmWEeKM4on4VJsf5A" sourceY="-15" targetX="-166" targetY="75"/>
+    <bendpoints xmi:id="_CtfexwmWEeKM4on4VJsf5A" sourceX="166" sourceY="-15" targetY="75"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_sM5msAmVEeKM4on4VJsf5A" targetItem="_sNCwqAmVEeKM4on4VJsf5A" sourceItem="_sMv1sAmVEeKM4on4VJsf5A"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_sNyXgAmVEeKM4on4VJsf5A" sourceAnchor="180.0,0.0" targetAnchor="298.0,35.0" target="_sKX3IQmVEeKM4on4VJsf5A" source="_sQK9IAmVEeKM4on4VJsf5A">
+    <modelElement href="ListFWDemo.uml#_p0ryJgmVEeKM4on4VJsf5A"/>
+    <bendpoints xmi:id="_CtfewAmWEeKM4on4VJsf5A" sourceY="-125" targetX="113"/>
+    <stereotypes xmi:id="_sOrvZQmVEeKM4on4VJsf5A" name="Reference">
+      <modelElement href="ListFWDemo.uml#_p0ryKAmVEeKM4on4VJsf5A"/>
+    </stereotypes>
+    <nameVisual xmi:id="_sOrvYgmVEeKM4on4VJsf5A" text="">
+      <visualProperties xmi:id="_soIKLwmVEeKM4on4VJsf5A" position="-92.0,-17.0"/>
+    </nameVisual>
+    <sourceRole xmi:id="_sOrvYwmVEeKM4on4VJsf5A" aggregationKind="NONE" name="">
+      <modelElement href="ListFWDemo.uml#_p0ryJwmVEeKM4on4VJsf5A"/>
+      <visualProperties xmi:id="_soIKLgmVEeKM4on4VJsf5A" position="-16.0,-85.0"/>
+      <visibility xmi:id="_sPuRMAmVEeKM4on4VJsf5A" label="+"/>
+      <cardinality xmi:id="_sPRlQwmVEeKM4on4VJsf5A" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_sOrvZAmVEeKM4on4VJsf5A" aggregationKind="NONE" name="_rest" navigable="true">
+      <modelElement href="ListFWDemo.uml#_pzWVZAmVEeKM4on4VJsf5A"/>
+      <visualProperties xmi:id="_soIKMAmVEeKM4on4VJsf5A" position="33.0,1.0000000000000284"/>
+      <visibility xmi:id="_sQBMIQmVEeKM4on4VJsf5A" label="-"/>
+      <cardinality xmi:id="_sQBMIAmVEeKM4on4VJsf5A" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_sOY0cAmVEeKM4on4VJsf5A" sourceAnchor="150.0,0.0" targetAnchor="149.0,71.0" dashed="true" superClass="_sKX3IQmVEeKM4on4VJsf5A" subClass="_sQK9IAmVEeKM4on4VJsf5A">
+    <modelElement href="ListFWDemo.uml#_pvxc8AmVEeKM4on4VJsf5A"/>
+    <bendpoints xmi:id="_CtfewQmWEeKM4on4VJsf5A" sourceY="-14" targetX="232" targetY="75"/>
+    <bendpoints xmi:id="_CtfewgmWEeKM4on4VJsf5A" sourceX="-232" sourceY="-14" targetY="75"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_sOrvYQmVEeKM4on4VJsf5A" targetItem="_sQK9IAmVEeKM4on4VJsf5A" sourceItem="_sOrvYAmVEeKM4on4VJsf5A"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_sPIbUAmVEeKM4on4VJsf5A" targetItem="_sQK9LQmVEeKM4on4VJsf5A" sourceItem="_sO1gYAmVEeKM4on4VJsf5A"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_sPRlQAmVEeKM4on4VJsf5A" targetItem="_sQK9MQmVEeKM4on4VJsf5A" sourceItem="_sPIbUQmVEeKM4on4VJsf5A"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_sPRlQgmVEeKM4on4VJsf5A" targetItem="_sQK9OQmVEeKM4on4VJsf5A" sourceItem="_sPRlQQmVEeKM4on4VJsf5A"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_sRz74AmVEeKM4on4VJsf5A" sourceAnchor="324.0,46.0" targetAnchor="162.0,92.0" target="_sSjiyAmVEeKM4on4VJsf5A" source="_sSjiyAmVEeKM4on4VJsf5A">
+    <modelElement href="ListFWDemo.uml#_p0ryLAmVEeKM4on4VJsf5A"/>
+    <bendpoints xmi:id="_CtfeyAmWEeKM4on4VJsf5A" sourceX="20" targetX="182" targetY="-46"/>
+    <bendpoints xmi:id="_CtfeyQmWEeKM4on4VJsf5A" sourceX="20" sourceY="86" targetX="182" targetY="40"/>
+    <bendpoints xmi:id="_CtfeygmWEeKM4on4VJsf5A" sourceX="-162" sourceY="86" targetY="40"/>
+    <stereotypes xmi:id="_sSjiwwmVEeKM4on4VJsf5A" name="Reference">
+      <modelElement href="ListFWDemo.uml#_p01jIAmVEeKM4on4VJsf5A"/>
+    </stereotypes>
+    <nameVisual xmi:id="_sSjiwAmVEeKM4on4VJsf5A" text="">
+      <visualProperties xmi:id="_soRUFAmVEeKM4on4VJsf5A" position="-40.0,-112.0"/>
+    </nameVisual>
+    <sourceRole xmi:id="_sSjiwQmVEeKM4on4VJsf5A" aggregationKind="NONE" name="">
+      <modelElement href="ListFWDemo.uml#_p0ryLQmVEeKM4on4VJsf5A"/>
+      <visualProperties xmi:id="_soRUEwmVEeKM4on4VJsf5A" position="5.0,-44.0"/>
+      <visibility xmi:id="_sSjixQmVEeKM4on4VJsf5A" label="+"/>
+      <cardinality xmi:id="_sSjixAmVEeKM4on4VJsf5A" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_sSjiwgmVEeKM4on4VJsf5A" aggregationKind="NONE" name="Singleton" navigable="true">
+      <modelElement href="ListFWDemo.uml#_pzffUwmVEeKM4on4VJsf5A"/>
+      <visualProperties xmi:id="_soRUFQmVEeKM4on4VJsf5A" position="6.0,5.0"/>
+      <visibility xmi:id="_sSjixwmVEeKM4on4VJsf5A" label="+"/>
+      <cardinality xmi:id="_sSjixgmVEeKM4on4VJsf5A" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_sSZxwAmVEeKM4on4VJsf5A" sourceAnchor="162.0,0.0" targetAnchor="162.0,90.0" dashed="true" superClass="_sLHeAAmVEeKM4on4VJsf5A" subClass="_sSjiyAmVEeKM4on4VJsf5A">
+    <modelElement href="ListFWDemo.uml#_pwhD0AmVEeKM4on4VJsf5A"/>
+    <bendpoints xmi:id="_CtfeywmWEeKM4on4VJsf5A" sourceY="-30" targetX="220" targetY="106"/>
+    <bendpoints xmi:id="_CtfezAmWEeKM4on4VJsf5A" sourceX="-220" sourceY="-30" targetY="106"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_sSZxwgmVEeKM4on4VJsf5A" targetItem="_sSjiyAmVEeKM4on4VJsf5A" sourceItem="_sSZxwQmVEeKM4on4VJsf5A"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_sTTJoAmVEeKM4on4VJsf5A" sourceAnchor="164.0,0.0" targetAnchor="162.0,90.0" dashed="true" superClass="_sLHeAAmVEeKM4on4VJsf5A" subClass="_sUVrcAmVEeKM4on4VJsf5A">
+    <modelElement href="ListFWDemo.uml#_pwOI4AmVEeKM4on4VJsf5A"/>
+    <bendpoints xmi:id="_Ctfe0AmWEeKM4on4VJsf5A" sourceY="-33" targetX="634" targetY="106"/>
+    <bendpoints xmi:id="_Ctfe0QmWEeKM4on4VJsf5A" sourceX="-634" sourceY="-33" targetY="106"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_sUCwgAmVEeKM4on4VJsf5A" targetItem="_sUVrcAmVEeKM4on4VJsf5A" sourceItem="_sTvOgAmVEeKM4on4VJsf5A"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_sVYNQAmVEeKM4on4VJsf5A" sourceAnchor="328.0,46.0" targetAnchor="49.0,0.0" target="_sWH0JwmVEeKM4on4VJsf5A" source="_sUVrcAmVEeKM4on4VJsf5A">
+    <modelElement href="ListFWDemo.uml#_p0ryKQmVEeKM4on4VJsf5A"/>
+    <bendpoints xmi:id="_CtfezwmWEeKM4on4VJsf5A" sourceX="63" targetY="-46"/>
+    <stereotypes xmi:id="_sWH0IgmVEeKM4on4VJsf5A" name="Reference">
+      <modelElement href="ListFWDemo.uml#_p0ryKwmVEeKM4on4VJsf5A"/>
+    </stereotypes>
+    <nameVisual xmi:id="_sV-DIAmVEeKM4on4VJsf5A" text="">
+      <visualProperties xmi:id="_soRUFwmVEeKM4on4VJsf5A" position="2.0,15.5"/>
+    </nameVisual>
+    <sourceRole xmi:id="_sWH0IAmVEeKM4on4VJsf5A" aggregationKind="NONE" name="">
+      <modelElement href="ListFWDemo.uml#_p0ryKgmVEeKM4on4VJsf5A"/>
+      <visualProperties xmi:id="_soRUFgmVEeKM4on4VJsf5A" position="10.200000000000045,-37.0"/>
+      <visibility xmi:id="_sWH0JAmVEeKM4on4VJsf5A" label="+"/>
+      <cardinality xmi:id="_sWH0IwmVEeKM4on4VJsf5A" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_sWH0IQmVEeKM4on4VJsf5A" aggregationKind="NONE" name="Singleton" navigable="true">
+      <modelElement href="ListFWDemo.uml#_pzffUQmVEeKM4on4VJsf5A"/>
+      <visualProperties xmi:id="_soRUGAmVEeKM4on4VJsf5A" position="-54.0,-39.0"/>
+      <visibility xmi:id="_sWH0JgmVEeKM4on4VJsf5A" label="+"/>
+      <cardinality xmi:id="_sWH0JQmVEeKM4on4VJsf5A" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_sXKV8AmVEeKM4on4VJsf5A" sourceAnchor="300.0,48.0" targetAnchor="0.0,22.0" target="_sYgZwAmVEeKM4on4VJsf5A" source="_sQK9IAmVEeKM4on4VJsf5A">
+    <modelElement href="ListFWDemo.uml#_p0ryIwmVEeKM4on4VJsf5A"/>
+    <stereotypes xmi:id="_sYDt0gmVEeKM4on4VJsf5A" name="Reference">
+      <modelElement href="ListFWDemo.uml#_p0ryJQmVEeKM4on4VJsf5A"/>
+    </stereotypes>
+    <nameVisual xmi:id="_sXwy4AmVEeKM4on4VJsf5A" text="">
+      <visualProperties xmi:id="_soRUEQmVEeKM4on4VJsf5A" position="-12.0,-56.0"/>
+    </nameVisual>
+    <sourceRole xmi:id="_sYDt0AmVEeKM4on4VJsf5A" aggregationKind="NONE" name="">
+      <modelElement href="ListFWDemo.uml#_p0ryJAmVEeKM4on4VJsf5A"/>
+      <visualProperties xmi:id="_soRUEAmVEeKM4on4VJsf5A" position="8.0,-37.0"/>
+      <visibility xmi:id="_sYDt1AmVEeKM4on4VJsf5A" label="+"/>
+      <cardinality xmi:id="_sYDt0wmVEeKM4on4VJsf5A" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_sYDt0QmVEeKM4on4VJsf5A" aggregationKind="NONE" name="_first" navigable="true">
+      <modelElement href="ListFWDemo.uml#_pzWVYgmVEeKM4on4VJsf5A"/>
+      <visualProperties xmi:id="_soRUEgmVEeKM4on4VJsf5A" position="-35.0,22.0"/>
+      <visibility xmi:id="_sYDt1gmVEeKM4on4VJsf5A" label="-"/>
+      <cardinality xmi:id="_sYDt1QmVEeKM4on4VJsf5A" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_sIb9cAmVEeKM4on4VJsf5A" sourceConnectionVisual="_sIb9cQmVEeKM4on4VJsf5A" text="@stereotype visitor" item="_sIlHYAmVEeKM4on4VJsf5A">
+    <modelElement href="ListFWDemo.uml#_p0iBJgmVEeKM4on4VJsf5A"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_sKEVIAmVEeKM4on4VJsf5A" sourceConnectionVisual="_sKX3IAmVEeKM4on4VJsf5A" text="Represents the abstract list structure with a hook method to call on the extrinsic &#xD;&#xA;behaviors represented as visitors.&#xD;&#xA;@author D. X. Nguyen&#xD;&#xA;@author S. B. Wong" item="_sKX3IQmVEeKM4on4VJsf5A">
+    <modelElement href="ListFWDemo.uml#_p0Y3OQmVEeKM4on4VJsf5A"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_sKqyEAmVEeKM4on4VJsf5A" sourceConnectionVisual="_sK9tAAmVEeKM4on4VJsf5A" text="Represents an abstract algorithm to be executed by a host IList.&#xD;&#xA;Plays the role of a &quot;visitor&quot; in the design pattern language.&#xD;&#xA; &lt;p>&#xD;&#xA;In non OO programming paradigms, an algorithm on lists is expressed as a&#xD;&#xA;function or procedure that takes in a list as parameter. &#xD;&#xA;In our OO formulation, an alogrithm on lists is an interface that has two&#xD;&#xA;methods, each takes in a list as a parameter: &lt;ul>&#xD;&#xA; &lt;li>One method, called emptyCase, operates specifically on an empty list&#xD;&#xA;    (MTList) and is to be called exclusively by an MTList.&#xD;&#xA; &lt;li>The other method, called nonEmptyCase, operates specifically on a&#xD;&#xA;    non-empty list (NEList) and is to be called exclusively by an NEList.&#xD;&#xA; &lt;/ul>&#xD;&#xA;When we want to perform an alogrithm (IListAlgo) on a list (IList), we asks&#xD;&#xA;the IList to 'execute' the algorithm with a given input.  An MTList knows&#xD;&#xA;instrinsically that is empty and calls the emptyCase method of the IListAlgo.&#xD;&#xA;Analogously, a non-empty list (NEList) will correctly call the nonEmptyCase&#xD;&#xA;method of the IListAlgo.&#xD;&#xA; &lt;p>&#xD;&#xA;One need not (and should not) check for the type of a list before applying&#xD;&#xA;an algorithm to it.  THERE IS NO if!&#xD;&#xA; &lt;/p>&#xD;&#xA;@author Dung X. Nguyen&#xD;&#xA;@author Stephen B. Wong&#xD;&#xA;@since Copyright 2005 - DXN, SBW All rights reserved" item="_sLHeAAmVEeKM4on4VJsf5A">
+    <modelElement href="ListFWDemo.uml#_p0Y3OgmVEeKM4on4VJsf5A"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_sMv1sAmVEeKM4on4VJsf5A" sourceConnectionVisual="_sM5msAmVEeKM4on4VJsf5A" text="Represents the unique empty list using the singleton pattern.&#xD;&#xA;Provides concrete code for the execute method: simply calls the emptyCase&#xD;&#xA;method of the IListAlgo parameter, passing to this method itself as the host&#xD;&#xA;and the given input Object as the input.&#xD;&#xA;@author D. X. Nguyen&#xD;&#xA;@author S. B. Wong" item="_sNCwqAmVEeKM4on4VJsf5A">
+    <modelElement href="ListFWDemo.uml#_p0Y3OwmVEeKM4on4VJsf5A"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_sOrvYAmVEeKM4on4VJsf5A" sourceConnectionVisual="_sOrvYQmVEeKM4on4VJsf5A" text="Represents non-empty lists.&#xD;&#xA;Contains two pieces of data:&lt;ul>&#xD;&#xA; &lt;li>first: an Object representing the first data element&#xD;&#xA; &lt;li>rest: an IList object representing the rest of this non-emptylist.&lt;/ul>&#xD;&#xA;When a class contains other objects that are isomorphic to itself,&#xD;&#xA;this class is called a composite.&lt;/p>&#xD;&#xA;Provides concrete code for &lt;ul>&#xD;&#xA; &lt;li>a constructor to initialize this NEList to a given first and rest,&#xD;&#xA; &lt;li>the getFirst() method for accessing the first data element,&#xD;&#xA; &lt;li>the getRest() method for accesssing the rest of the list,&#xD;&#xA; &lt;li>the execute method: simply calls the nonEmptyCase method of the IListAlgo&#xD;&#xA; parameter, passing to this method itself as the host and the given input&#xD;&#xA; Object as the input.&lt;/ul>&#xD;&#xA;@author D. X. Nguyen&#xD;&#xA;@author S. B. Wong" item="_sQK9IAmVEeKM4on4VJsf5A">
+    <modelElement href="ListFWDemo.uml#_p0iBIAmVEeKM4on4VJsf5A"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_sO1gYAmVEeKM4on4VJsf5A" sourceConnectionVisual="_sPIbUAmVEeKM4on4VJsf5A" text="Returns the first data element of this NEList.&#xD;&#xA;     * This method is marked as final to prevent all subclasses from overriding it.&#xD;&#xA;     * Finalizing a method also allows the compiler to generate more efficient calling code." item="_sQK9LQmVEeKM4on4VJsf5A">
+    <modelElement href="ListFWDemo.uml#_p0iBIgmVEeKM4on4VJsf5A"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_sPIbUQmVEeKM4on4VJsf5A" sourceConnectionVisual="_sPRlQAmVEeKM4on4VJsf5A" text="Returns the first data element of this NEList.&#xD;&#xA;     * This method is marked as final to prevent all subclasses from overriding it.&#xD;&#xA;     * Finalizing a method also allows the compiler to generate more efficient calling code." item="_sQK9MQmVEeKM4on4VJsf5A">
+    <modelElement href="ListFWDemo.uml#_p0iBIwmVEeKM4on4VJsf5A"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_sPRlQQmVEeKM4on4VJsf5A" sourceConnectionVisual="_sPRlQgmVEeKM4on4VJsf5A" text="Initializes this NEList to a given first and a given rest.&#xD;&#xA;     * @param f the first element of this NEList.&#xD;&#xA;     * @param r != null, the rest of this NEList." item="_sQK9OQmVEeKM4on4VJsf5A">
+    <modelElement href="ListFWDemo.uml#_p0iBIQmVEeKM4on4VJsf5A"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_sSZxwQmVEeKM4on4VJsf5A" sourceConnectionVisual="_sSZxwgmVEeKM4on4VJsf5A" text="Computes a String reprsentation of IList showing  a left parenthesis followed&#xD;&#xA;by elements of the IList separated by commas, ending with with a right parenthesis.&#xD;&#xA;@stereotype visitor" item="_sSjiyAmVEeKM4on4VJsf5A">
+    <modelElement href="ListFWDemo.uml#_p0iBJAmVEeKM4on4VJsf5A"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_sTvOgAmVEeKM4on4VJsf5A" sourceConnectionVisual="_sUCwgAmVEeKM4on4VJsf5A" text="Helps ToStringAlgo compute the String representation of the rest of the list." item="_sUVrcAmVEeKM4on4VJsf5A">
+    <modelElement href="ListFWDemo.uml#_p0iBJQmVEeKM4on4VJsf5A"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:InterfaceVisual" xmi:id="_sKX3IQmVEeKM4on4VJsf5A" comments="_sKEVIAmVEeKM4on4VJsf5A" targetConnectionVisual="_sKX3IAmVEeKM4on4VJsf5A" name="IList" associationsIn="_sNyXgAmVEeKM4on4VJsf5A" subclassedBy="_sMmrwAmVEeKM4on4VJsf5A _sOY0cAmVEeKM4on4VJsf5A">
+    <modelElement href="ListFWDemo.uml#_pqjlwAmVEeKM4on4VJsf5A"/>
+    <visualProperties xmi:id="_sKX3IgmVEeKM4on4VJsf5A" position="-834.0,59.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_sKX3IwmVEeKM4on4VJsf5A" label="+"/>
+    <operations xmi:id="_sKX3JAmVEeKM4on4VJsf5A" abstractOperation="true" name="execute">
+      <modelElement href="ListFWDemo.uml#_pxjlogmVEeKM4on4VJsf5A"/>
+      <stereotypes xmi:id="_sKX3JQmVEeKM4on4VJsf5A" name="LegacyStyledElement">
+        <modelElement href="ListFWDemo.uml#_pxtWoQmVEeKM4on4VJsf5A"/>
+      </stereotypes>
+      <visibility xmi:id="_sKX3JgmVEeKM4on4VJsf5A" label="+"/>
+      <outParameters xmi:id="_sKX3JwmVEeKM4on4VJsf5A">
+        <modelElement href="ListFWDemo.uml#_pxtWoAmVEeKM4on4VJsf5A"/>
+        <type xmi:id="_sKX3KAmVEeKM4on4VJsf5A" name="Object">
+          <modelElement href="ListFWDemo.uml#_pxjloAmVEeKM4on4VJsf5A"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_sKX3KQmVEeKM4on4VJsf5A" name="algo">
+        <modelElement href="ListFWDemo.uml#_pxjlowmVEeKM4on4VJsf5A"/>
+        <type xmi:id="_sKX3KgmVEeKM4on4VJsf5A" name="IListAlgo">
+          <modelElement href="ListFWDemo.uml#_pq2gsAmVEeKM4on4VJsf5A"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_sKX3KwmVEeKM4on4VJsf5A" name="inp">
+        <modelElement href="ListFWDemo.uml#_pxjlpAmVEeKM4on4VJsf5A"/>
+        <type xmi:id="_sKX3LAmVEeKM4on4VJsf5A" name="Object">
+          <modelElement href="ListFWDemo.uml#_pxjloAmVEeKM4on4VJsf5A"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_sQK9IAmVEeKM4on4VJsf5A" comments="_sOrvYAmVEeKM4on4VJsf5A" targetConnectionVisual="_sOrvYQmVEeKM4on4VJsf5A" name="NEList" associationsOut="_sNyXgAmVEeKM4on4VJsf5A _sXKV8AmVEeKM4on4VJsf5A" generalizations="_sOY0cAmVEeKM4on4VJsf5A">
+    <modelElement href="ListFWDemo.uml#_prc9oAmVEeKM4on4VJsf5A"/>
+    <visualProperties xmi:id="_sQK9IQmVEeKM4on4VJsf5A" position="-603.0,220.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_sQK9IgmVEeKM4on4VJsf5A" label="+"/>
+    <attributes xmi:id="_sQK9IwmVEeKM4on4VJsf5A" name="_first">
+      <modelElement href="ListFWDemo.uml#_pzWVYgmVEeKM4on4VJsf5A"/>
+      <stereotypes xmi:id="_sQK9JAmVEeKM4on4VJsf5A" name="LegacyStyledElement">
+        <modelElement href="ListFWDemo.uml#_pzWVYwmVEeKM4on4VJsf5A"/>
+      </stereotypes>
+      <stereotypes xmi:id="_sYDt1wmVEeKM4on4VJsf5A" name="LegacyStyledElement">
+        <modelElement href="ListFWDemo.uml#_pzWVYwmVEeKM4on4VJsf5A"/>
+      </stereotypes>
+      <visibility xmi:id="_sQK9JQmVEeKM4on4VJsf5A" label="-"/>
+      <cardinality xmi:id="_sQK9JgmVEeKM4on4VJsf5A" label="1" max="1" min="1"/>
+      <type xmi:id="_sQK9JwmVEeKM4on4VJsf5A" name="Object">
+        <modelElement href="ListFWDemo.uml#_pxjloAmVEeKM4on4VJsf5A"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_sQK9KAmVEeKM4on4VJsf5A" name="_rest">
+      <modelElement href="ListFWDemo.uml#_pzWVZAmVEeKM4on4VJsf5A"/>
+      <stereotypes xmi:id="_sQK9KQmVEeKM4on4VJsf5A" name="LegacyStyledElement">
+        <modelElement href="ListFWDemo.uml#_pzffUAmVEeKM4on4VJsf5A"/>
+      </stereotypes>
+      <stereotypes xmi:id="_sQBMIgmVEeKM4on4VJsf5A" name="LegacyStyledElement">
+        <modelElement href="ListFWDemo.uml#_pzffUAmVEeKM4on4VJsf5A"/>
+      </stereotypes>
+      <visibility xmi:id="_sQK9KgmVEeKM4on4VJsf5A" label="-"/>
+      <cardinality xmi:id="_sQK9KwmVEeKM4on4VJsf5A" label="1" max="1" min="1"/>
+      <type xmi:id="_sQK9LAmVEeKM4on4VJsf5A" name="IList">
+        <modelElement href="ListFWDemo.uml#_pqjlwAmVEeKM4on4VJsf5A"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_sQK9LQmVEeKM4on4VJsf5A" comments="_sO1gYAmVEeKM4on4VJsf5A" targetConnectionVisual="_sPIbUAmVEeKM4on4VJsf5A" name="getFirst">
+      <modelElement href="ListFWDemo.uml#_prmHkAmVEeKM4on4VJsf5A"/>
+      <visibility xmi:id="_sQK9LgmVEeKM4on4VJsf5A" label="+"/>
+      <outParameters xmi:id="_sQK9LwmVEeKM4on4VJsf5A">
+        <modelElement href="ListFWDemo.uml#_pyKCmQmVEeKM4on4VJsf5A"/>
+        <type xmi:id="_sQK9MAmVEeKM4on4VJsf5A" name="Object">
+          <modelElement href="ListFWDemo.uml#_pxjloAmVEeKM4on4VJsf5A"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_sQK9MQmVEeKM4on4VJsf5A" comments="_sPIbUQmVEeKM4on4VJsf5A" targetConnectionVisual="_sPRlQAmVEeKM4on4VJsf5A" name="getRest">
+      <modelElement href="ListFWDemo.uml#_prmHkQmVEeKM4on4VJsf5A"/>
+      <visibility xmi:id="_sQK9MgmVEeKM4on4VJsf5A" label="+"/>
+      <outParameters xmi:id="_sQK9MwmVEeKM4on4VJsf5A">
+        <modelElement href="ListFWDemo.uml#_pv7N8AmVEeKM4on4VJsf5A"/>
+        <type xmi:id="_sQK9NAmVEeKM4on4VJsf5A" name="IList">
+          <modelElement href="ListFWDemo.uml#_pqjlwAmVEeKM4on4VJsf5A"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_sQK9NQmVEeKM4on4VJsf5A" name="toString">
+      <modelElement href="ListFWDemo.uml#_prmHkgmVEeKM4on4VJsf5A"/>
+      <visibility xmi:id="_sQK9NgmVEeKM4on4VJsf5A" label="+"/>
+      <outParameters xmi:id="_sQK9NwmVEeKM4on4VJsf5A">
+        <modelElement href="ListFWDemo.uml#_prv4kAmVEeKM4on4VJsf5A"/>
+        <type xmi:id="_sQK9OAmVEeKM4on4VJsf5A" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_sQK9OQmVEeKM4on4VJsf5A" comments="_sPRlQQmVEeKM4on4VJsf5A" targetConnectionVisual="_sPRlQgmVEeKM4on4VJsf5A" name="NEList">
+      <modelElement href="ListFWDemo.uml#_pyKCkwmVEeKM4on4VJsf5A"/>
+      <keywords xmi:id="_sQK9OgmVEeKM4on4VJsf5A" keyword="create"/>
+      <visibility xmi:id="_sQK9OwmVEeKM4on4VJsf5A" label="+"/>
+      <outParameters xmi:id="_sQK9PAmVEeKM4on4VJsf5A">
+        <modelElement href="ListFWDemo.uml#_pyKCmAmVEeKM4on4VJsf5A"/>
+        <type xmi:id="_sQK9PQmVEeKM4on4VJsf5A" name="NEList">
+          <modelElement href="ListFWDemo.uml#_prc9oAmVEeKM4on4VJsf5A"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_sQK9PgmVEeKM4on4VJsf5A" name="f">
+        <modelElement href="ListFWDemo.uml#_pyKClAmVEeKM4on4VJsf5A"/>
+        <type xmi:id="_sQK9PwmVEeKM4on4VJsf5A" name="Object">
+          <modelElement href="ListFWDemo.uml#_pxjloAmVEeKM4on4VJsf5A"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_sQK9QAmVEeKM4on4VJsf5A" name="r">
+        <modelElement href="ListFWDemo.uml#_pyKClQmVEeKM4on4VJsf5A"/>
+        <type xmi:id="_sQK9QQmVEeKM4on4VJsf5A" name="IList">
+          <modelElement href="ListFWDemo.uml#_pqjlwAmVEeKM4on4VJsf5A"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_sQK9QgmVEeKM4on4VJsf5A" name="execute">
+      <modelElement href="ListFWDemo.uml#_pyTMgAmVEeKM4on4VJsf5A"/>
+      <stereotypes xmi:id="_sQK9QwmVEeKM4on4VJsf5A" name="LegacyStyledElement">
+        <modelElement href="ListFWDemo.uml#_pyTMhAmVEeKM4on4VJsf5A"/>
+      </stereotypes>
+      <visibility xmi:id="_sQK9RAmVEeKM4on4VJsf5A" label="+"/>
+      <outParameters xmi:id="_sQK9RQmVEeKM4on4VJsf5A">
+        <modelElement href="ListFWDemo.uml#_pyTMgwmVEeKM4on4VJsf5A"/>
+        <type xmi:id="_sQK9RgmVEeKM4on4VJsf5A" name="Object">
+          <modelElement href="ListFWDemo.uml#_pxjloAmVEeKM4on4VJsf5A"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_sQK9RwmVEeKM4on4VJsf5A" name="algo">
+        <modelElement href="ListFWDemo.uml#_pyTMgQmVEeKM4on4VJsf5A"/>
+        <type xmi:id="_sQK9SAmVEeKM4on4VJsf5A" name="IListAlgo">
+          <modelElement href="ListFWDemo.uml#_pq2gsAmVEeKM4on4VJsf5A"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_sQK9SQmVEeKM4on4VJsf5A" name="inp">
+        <modelElement href="ListFWDemo.uml#_pyTMggmVEeKM4on4VJsf5A"/>
+        <type xmi:id="_sQK9SgmVEeKM4on4VJsf5A" name="Object">
+          <modelElement href="ListFWDemo.uml#_pxjloAmVEeKM4on4VJsf5A"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_sNCwqAmVEeKM4on4VJsf5A" comments="_sMv1sAmVEeKM4on4VJsf5A" targetConnectionVisual="_sM5msAmVEeKM4on4VJsf5A" name="MTList" associationsIn="_sMc6wAmVEeKM4on4VJsf5A" associationsOut="_sMc6wAmVEeKM4on4VJsf5A" generalizations="_sMmrwAmVEeKM4on4VJsf5A">
+    <modelElement href="ListFWDemo.uml#_prKCsAmVEeKM4on4VJsf5A"/>
+    <visualProperties xmi:id="_sNCwqQmVEeKM4on4VJsf5A" position="-1001.0,221.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_sNCwqgmVEeKM4on4VJsf5A" label="+"/>
+    <attributes xmi:id="_sNCwqwmVEeKM4on4VJsf5A" defaultValue="new MTList()" name="Singleton" staticAttribute="true">
+      <modelElement href="ListFWDemo.uml#_pzMkYAmVEeKM4on4VJsf5A"/>
+      <stereotypes xmi:id="_sNCwrAmVEeKM4on4VJsf5A" name="LegacyStyledElement">
+        <modelElement href="ListFWDemo.uml#_pzWVYQmVEeKM4on4VJsf5A"/>
+      </stereotypes>
+      <stereotypes xmi:id="_sNCwpwmVEeKM4on4VJsf5A" name="LegacyStyledElement">
+        <modelElement href="ListFWDemo.uml#_pzWVYQmVEeKM4on4VJsf5A"/>
+      </stereotypes>
+      <visibility xmi:id="_sNCwrQmVEeKM4on4VJsf5A" label="+"/>
+      <cardinality xmi:id="_sNCwrgmVEeKM4on4VJsf5A" label="1" max="1" min="1"/>
+      <type xmi:id="_sNCwrwmVEeKM4on4VJsf5A" name="MTList">
+        <modelElement href="ListFWDemo.uml#_prKCsAmVEeKM4on4VJsf5A"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_sNCwsAmVEeKM4on4VJsf5A" name="MTList">
+      <modelElement href="ListFWDemo.uml#_prKCsQmVEeKM4on4VJsf5A"/>
+      <keywords xmi:id="_sNCwsQmVEeKM4on4VJsf5A" keyword="create"/>
+      <stereotypes xmi:id="_sNCwsgmVEeKM4on4VJsf5A" name="LegacyStyledElement">
+        <modelElement href="ListFWDemo.uml#_prKCtAmVEeKM4on4VJsf5A"/>
+      </stereotypes>
+      <visibility xmi:id="_sNCwswmVEeKM4on4VJsf5A" label="-"/>
+      <outParameters xmi:id="_sNCwtAmVEeKM4on4VJsf5A">
+        <modelElement href="ListFWDemo.uml#_prKCtQmVEeKM4on4VJsf5A"/>
+        <type xmi:id="_sNCwtQmVEeKM4on4VJsf5A" name="MTList">
+          <modelElement href="ListFWDemo.uml#_prKCsAmVEeKM4on4VJsf5A"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_sNCwtgmVEeKM4on4VJsf5A" name="toString">
+      <modelElement href="ListFWDemo.uml#_prKCtgmVEeKM4on4VJsf5A"/>
+      <visibility xmi:id="_sNCwtwmVEeKM4on4VJsf5A" label="+"/>
+      <outParameters xmi:id="_sNCwuAmVEeKM4on4VJsf5A">
+        <modelElement href="ListFWDemo.uml#_prTMoAmVEeKM4on4VJsf5A"/>
+        <type xmi:id="_sNCwuQmVEeKM4on4VJsf5A" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_sNCwugmVEeKM4on4VJsf5A" name="execute">
+      <modelElement href="ListFWDemo.uml#_pyARlAmVEeKM4on4VJsf5A"/>
+      <stereotypes xmi:id="_sNCwuwmVEeKM4on4VJsf5A" name="LegacyStyledElement">
+        <modelElement href="ListFWDemo.uml#_pyKCkAmVEeKM4on4VJsf5A"/>
+      </stereotypes>
+      <visibility xmi:id="_sNCwvAmVEeKM4on4VJsf5A" label="+"/>
+      <outParameters xmi:id="_sNCwvQmVEeKM4on4VJsf5A">
+        <modelElement href="ListFWDemo.uml#_pyARlwmVEeKM4on4VJsf5A"/>
+        <type xmi:id="_sNCwvgmVEeKM4on4VJsf5A" name="Object">
+          <modelElement href="ListFWDemo.uml#_pxjloAmVEeKM4on4VJsf5A"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_sNCwvwmVEeKM4on4VJsf5A" name="algo">
+        <modelElement href="ListFWDemo.uml#_pyARlQmVEeKM4on4VJsf5A"/>
+        <type xmi:id="_sNCwwAmVEeKM4on4VJsf5A" name="IListAlgo">
+          <modelElement href="ListFWDemo.uml#_pq2gsAmVEeKM4on4VJsf5A"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_sNCwwQmVEeKM4on4VJsf5A" name="inp">
+        <modelElement href="ListFWDemo.uml#_pyARlgmVEeKM4on4VJsf5A"/>
+        <type xmi:id="_sNCwwgmVEeKM4on4VJsf5A" name="Object">
+          <modelElement href="ListFWDemo.uml#_pxjloAmVEeKM4on4VJsf5A"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_sYgZwAmVEeKM4on4VJsf5A" name="Object" associationsIn="_sXKV8AmVEeKM4on4VJsf5A">
+    <modelElement href="ListFWDemo.uml#_pxjloAmVEeKM4on4VJsf5A"/>
+    <visualProperties xmi:id="_sYgZwQmVEeKM4on4VJsf5A" position="-264.0,246.0" size="-1.0,-1.0"/>
+    <stereotypes xmi:id="_sYgZwgmVEeKM4on4VJsf5A" name="Reference">
+      <modelElement href="ListFWDemo.uml#_pxjloQmVEeKM4on4VJsf5A"/>
+    </stereotypes>
+    <visibility xmi:id="_sYgZwwmVEeKM4on4VJsf5A" label="+"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:InterfaceVisual" xmi:id="_sLHeAAmVEeKM4on4VJsf5A" comments="_sKqyEAmVEeKM4on4VJsf5A" targetConnectionVisual="_sK9tAAmVEeKM4on4VJsf5A" name="IListAlgo" subclassedBy="_sK9tAQmVEeKM4on4VJsf5A _sSZxwAmVEeKM4on4VJsf5A _sTTJoAmVEeKM4on4VJsf5A">
+    <modelElement href="ListFWDemo.uml#_pq2gsAmVEeKM4on4VJsf5A"/>
+    <visualProperties xmi:id="_sLHeAQmVEeKM4on4VJsf5A" position="20.0,41.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_sLHeAgmVEeKM4on4VJsf5A" label="+"/>
+    <operations xmi:id="_sLHeAwmVEeKM4on4VJsf5A" abstractOperation="true" name="emptyCase">
+      <modelElement href="ListFWDemo.uml#_pxtWpAmVEeKM4on4VJsf5A"/>
+      <stereotypes xmi:id="_sLHeBAmVEeKM4on4VJsf5A" name="LegacyStyledElement">
+        <modelElement href="ListFWDemo.uml#_px3HowmVEeKM4on4VJsf5A"/>
+      </stereotypes>
+      <visibility xmi:id="_sLHeBQmVEeKM4on4VJsf5A" label="+"/>
+      <outParameters xmi:id="_sLHeBgmVEeKM4on4VJsf5A">
+        <modelElement href="ListFWDemo.uml#_px3HogmVEeKM4on4VJsf5A"/>
+        <type xmi:id="_sLHeBwmVEeKM4on4VJsf5A" name="Object">
+          <modelElement href="ListFWDemo.uml#_pxjloAmVEeKM4on4VJsf5A"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_sLHeCAmVEeKM4on4VJsf5A" name="host">
+        <modelElement href="ListFWDemo.uml#_px3HoAmVEeKM4on4VJsf5A"/>
+        <type xmi:id="_sLHeCQmVEeKM4on4VJsf5A" name="MTList">
+          <modelElement href="ListFWDemo.uml#_prKCsAmVEeKM4on4VJsf5A"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_sLHeCgmVEeKM4on4VJsf5A" name="inp">
+        <modelElement href="ListFWDemo.uml#_px3HoQmVEeKM4on4VJsf5A"/>
+        <type xmi:id="_sLHeCwmVEeKM4on4VJsf5A" name="Object">
+          <modelElement href="ListFWDemo.uml#_pxjloAmVEeKM4on4VJsf5A"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_sLHeDAmVEeKM4on4VJsf5A" abstractOperation="true" name="nonEmptyCase">
+      <modelElement href="ListFWDemo.uml#_px3HpgmVEeKM4on4VJsf5A"/>
+      <stereotypes xmi:id="_sLHeDQmVEeKM4on4VJsf5A" name="LegacyStyledElement">
+        <modelElement href="ListFWDemo.uml#_pyARkQmVEeKM4on4VJsf5A"/>
+      </stereotypes>
+      <visibility xmi:id="_sLHeDgmVEeKM4on4VJsf5A" label="+"/>
+      <outParameters xmi:id="_sLHeDwmVEeKM4on4VJsf5A">
+        <modelElement href="ListFWDemo.uml#_pyARkAmVEeKM4on4VJsf5A"/>
+        <type xmi:id="_sLHeEAmVEeKM4on4VJsf5A" name="Object">
+          <modelElement href="ListFWDemo.uml#_pxjloAmVEeKM4on4VJsf5A"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_sLHeEQmVEeKM4on4VJsf5A" name="host">
+        <modelElement href="ListFWDemo.uml#_px3HpwmVEeKM4on4VJsf5A"/>
+        <type xmi:id="_sLHeEgmVEeKM4on4VJsf5A" name="NEList">
+          <modelElement href="ListFWDemo.uml#_prc9oAmVEeKM4on4VJsf5A"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_sLHeEwmVEeKM4on4VJsf5A" name="inp">
+        <modelElement href="ListFWDemo.uml#_px3HqAmVEeKM4on4VJsf5A"/>
+        <type xmi:id="_sLHeFAmVEeKM4on4VJsf5A" name="Object">
+          <modelElement href="ListFWDemo.uml#_pxjloAmVEeKM4on4VJsf5A"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_sWH0JwmVEeKM4on4VJsf5A" name="ToStringHelper" associationsIn="_sVYNQAmVEeKM4on4VJsf5A">
+    <modelElement href="ListFWDemo.uml#_pyTMhwmVEeKM4on4VJsf5A"/>
+    <visualProperties xmi:id="_sWH0KAmVEeKM4on4VJsf5A" position="994.0,362.0" size="-1.0,-1.0"/>
+    <stereotypes xmi:id="_sWH0KQmVEeKM4on4VJsf5A" name="Reference">
+      <modelElement href="ListFWDemo.uml#_pyc9gAmVEeKM4on4VJsf5A"/>
+    </stereotypes>
+    <visibility xmi:id="_sWH0KgmVEeKM4on4VJsf5A" label="+"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_sSjiyAmVEeKM4on4VJsf5A" comments="_sSZxwQmVEeKM4on4VJsf5A" targetConnectionVisual="_sSZxwgmVEeKM4on4VJsf5A" name="ToStringAlgo" associationsIn="_sRz74AmVEeKM4on4VJsf5A" associationsOut="_sRz74AmVEeKM4on4VJsf5A" generalizations="_sSZxwAmVEeKM4on4VJsf5A">
+    <modelElement href="ListFWDemo.uml#_psCzgAmVEeKM4on4VJsf5A"/>
+    <visualProperties xmi:id="_sSjiyQmVEeKM4on4VJsf5A" position="240.0,267.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_sSjiygmVEeKM4on4VJsf5A" label="+"/>
+    <attributes xmi:id="_sSjiywmVEeKM4on4VJsf5A" defaultValue="new ToStringAlgo()" name="Singleton" staticAttribute="true">
+      <modelElement href="ListFWDemo.uml#_pzffUwmVEeKM4on4VJsf5A"/>
+      <visibility xmi:id="_sSjizAmVEeKM4on4VJsf5A" label="+"/>
+      <cardinality xmi:id="_sSjizQmVEeKM4on4VJsf5A" label="1" max="1" min="1"/>
+      <type xmi:id="_sSjizgmVEeKM4on4VJsf5A" name="ToStringAlgo">
+        <modelElement href="ListFWDemo.uml#_psCzgAmVEeKM4on4VJsf5A"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_sSjizwmVEeKM4on4VJsf5A" name="ToStringAlgo">
+      <modelElement href="ListFWDemo.uml#_psVucAmVEeKM4on4VJsf5A"/>
+      <keywords xmi:id="_sSji0AmVEeKM4on4VJsf5A" keyword="create"/>
+      <stereotypes xmi:id="_sSji0QmVEeKM4on4VJsf5A" name="LegacyStyledElement">
+        <modelElement href="ListFWDemo.uml#_psgGggmVEeKM4on4VJsf5A"/>
+      </stereotypes>
+      <visibility xmi:id="_sSji0gmVEeKM4on4VJsf5A" label="-"/>
+      <outParameters xmi:id="_sSji0wmVEeKM4on4VJsf5A">
+        <modelElement href="ListFWDemo.uml#_psgGgwmVEeKM4on4VJsf5A"/>
+        <type xmi:id="_sSji1AmVEeKM4on4VJsf5A" name="ToStringAlgo">
+          <modelElement href="ListFWDemo.uml#_psCzgAmVEeKM4on4VJsf5A"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_sSji1QmVEeKM4on4VJsf5A" name="emptyCase">
+      <modelElement href="ListFWDemo.uml#_pymuhwmVEeKM4on4VJsf5A"/>
+      <stereotypes xmi:id="_sSji1gmVEeKM4on4VJsf5A" name="LegacyStyledElement">
+        <modelElement href="ListFWDemo.uml#_pymuiwmVEeKM4on4VJsf5A"/>
+      </stereotypes>
+      <visibility xmi:id="_sSji1wmVEeKM4on4VJsf5A" label="+"/>
+      <outParameters xmi:id="_sSji2AmVEeKM4on4VJsf5A">
+        <modelElement href="ListFWDemo.uml#_pymuigmVEeKM4on4VJsf5A"/>
+        <type xmi:id="_sSji2QmVEeKM4on4VJsf5A" name="Object">
+          <modelElement href="ListFWDemo.uml#_pxjloAmVEeKM4on4VJsf5A"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_sSji2gmVEeKM4on4VJsf5A" name="host">
+        <modelElement href="ListFWDemo.uml#_pymuiAmVEeKM4on4VJsf5A"/>
+        <type xmi:id="_sSji2wmVEeKM4on4VJsf5A" name="MTList">
+          <modelElement href="ListFWDemo.uml#_prKCsAmVEeKM4on4VJsf5A"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_sSji3AmVEeKM4on4VJsf5A" name="nu">
+        <modelElement href="ListFWDemo.uml#_pymuiQmVEeKM4on4VJsf5A"/>
+        <type xmi:id="_sSji3QmVEeKM4on4VJsf5A" name="Object">
+          <modelElement href="ListFWDemo.uml#_pxjloAmVEeKM4on4VJsf5A"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_sSji3gmVEeKM4on4VJsf5A" name="nonEmptyCase">
+      <modelElement href="ListFWDemo.uml#_pyv4cQmVEeKM4on4VJsf5A"/>
+      <stereotypes xmi:id="_sSji3wmVEeKM4on4VJsf5A" name="LegacyStyledElement">
+        <modelElement href="ListFWDemo.uml#_pyv4dQmVEeKM4on4VJsf5A"/>
+      </stereotypes>
+      <visibility xmi:id="_sSji4AmVEeKM4on4VJsf5A" label="+"/>
+      <outParameters xmi:id="_sSji4QmVEeKM4on4VJsf5A">
+        <modelElement href="ListFWDemo.uml#_pyv4dAmVEeKM4on4VJsf5A"/>
+        <type xmi:id="_sSji4gmVEeKM4on4VJsf5A" name="Object">
+          <modelElement href="ListFWDemo.uml#_pxjloAmVEeKM4on4VJsf5A"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_sSji4wmVEeKM4on4VJsf5A" name="host">
+        <modelElement href="ListFWDemo.uml#_pyv4cgmVEeKM4on4VJsf5A"/>
+        <type xmi:id="_sSji5AmVEeKM4on4VJsf5A" name="NEList">
+          <modelElement href="ListFWDemo.uml#_prc9oAmVEeKM4on4VJsf5A"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_sSji5QmVEeKM4on4VJsf5A" name="nu">
+        <modelElement href="ListFWDemo.uml#_pyv4cwmVEeKM4on4VJsf5A"/>
+        <type xmi:id="_sSji5gmVEeKM4on4VJsf5A" name="Object">
+          <modelElement href="ListFWDemo.uml#_pxjloAmVEeKM4on4VJsf5A"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_sIlHYAmVEeKM4on4VJsf5A" comments="_sIb9cAmVEeKM4on4VJsf5A" targetConnectionVisual="_sIb9cQmVEeKM4on4VJsf5A" name="CopyAlgo" generalizations="_sK9tAQmVEeKM4on4VJsf5A">
+    <modelElement href="ListFWDemo.uml#_ps8ycAmVEeKM4on4VJsf5A"/>
+    <visualProperties xmi:id="_sIlHYQmVEeKM4on4VJsf5A" position="-158.0,271.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_sIlHYgmVEeKM4on4VJsf5A" label="+"/>
+    <operations xmi:id="_sIlHYwmVEeKM4on4VJsf5A" name="emptyCase">
+      <modelElement href="ListFWDemo.uml#_py5pcAmVEeKM4on4VJsf5A"/>
+      <stereotypes xmi:id="_sIlHZAmVEeKM4on4VJsf5A" name="LegacyStyledElement">
+        <modelElement href="ListFWDemo.uml#_py5pdAmVEeKM4on4VJsf5A"/>
+      </stereotypes>
+      <visibility xmi:id="_sIlHZQmVEeKM4on4VJsf5A" label="+"/>
+      <outParameters xmi:id="_sIlHZgmVEeKM4on4VJsf5A">
+        <modelElement href="ListFWDemo.uml#_py5pcwmVEeKM4on4VJsf5A"/>
+        <type xmi:id="_sIlHZwmVEeKM4on4VJsf5A" name="Object">
+          <modelElement href="ListFWDemo.uml#_pxjloAmVEeKM4on4VJsf5A"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_sIlHaAmVEeKM4on4VJsf5A" name="host">
+        <modelElement href="ListFWDemo.uml#_py5pcQmVEeKM4on4VJsf5A"/>
+        <type xmi:id="_sIlHaQmVEeKM4on4VJsf5A" name="MTList">
+          <modelElement href="ListFWDemo.uml#_prKCsAmVEeKM4on4VJsf5A"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_sIlHagmVEeKM4on4VJsf5A" name="inp">
+        <modelElement href="ListFWDemo.uml#_py5pcgmVEeKM4on4VJsf5A"/>
+        <type xmi:id="_sIlHawmVEeKM4on4VJsf5A" name="Object">
+          <modelElement href="ListFWDemo.uml#_pxjloAmVEeKM4on4VJsf5A"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_sIlHbAmVEeKM4on4VJsf5A" name="nonEmptyCase">
+      <modelElement href="ListFWDemo.uml#_pzCzYQmVEeKM4on4VJsf5A"/>
+      <stereotypes xmi:id="_sIlHbQmVEeKM4on4VJsf5A" name="LegacyStyledElement">
+        <modelElement href="ListFWDemo.uml#_pzCzZQmVEeKM4on4VJsf5A"/>
+      </stereotypes>
+      <visibility xmi:id="_sIlHbgmVEeKM4on4VJsf5A" label="+"/>
+      <outParameters xmi:id="_sIlHbwmVEeKM4on4VJsf5A">
+        <modelElement href="ListFWDemo.uml#_pzCzZAmVEeKM4on4VJsf5A"/>
+        <type xmi:id="_sIlHcAmVEeKM4on4VJsf5A" name="Object">
+          <modelElement href="ListFWDemo.uml#_pxjloAmVEeKM4on4VJsf5A"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_sIlHcQmVEeKM4on4VJsf5A" name="host">
+        <modelElement href="ListFWDemo.uml#_pzCzYgmVEeKM4on4VJsf5A"/>
+        <type xmi:id="_sIlHcgmVEeKM4on4VJsf5A" name="NEList">
+          <modelElement href="ListFWDemo.uml#_prc9oAmVEeKM4on4VJsf5A"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_sIlHcwmVEeKM4on4VJsf5A" name="inp">
+        <modelElement href="ListFWDemo.uml#_pzCzYwmVEeKM4on4VJsf5A"/>
+        <type xmi:id="_sIlHdAmVEeKM4on4VJsf5A" name="Object">
+          <modelElement href="ListFWDemo.uml#_pxjloAmVEeKM4on4VJsf5A"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_sUVrcAmVEeKM4on4VJsf5A" comments="_sTvOgAmVEeKM4on4VJsf5A" targetConnectionVisual="_sUCwgAmVEeKM4on4VJsf5A" name="ToStringHelper" associationsOut="_sVYNQAmVEeKM4on4VJsf5A" generalizations="_sTTJoAmVEeKM4on4VJsf5A">
+    <modelElement href="ListFWDemo.uml#_psMkgAmVEeKM4on4VJsf5A"/>
+    <visualProperties xmi:id="_sUVrcQmVEeKM4on4VJsf5A" position="652.0,270.0" size="-1.0,-1.0"/>
+    <keywords xmi:id="_sUVrcgmVEeKM4on4VJsf5A" keyword="sameFile"/>
+    <visibility xmi:id="_sUVrcwmVEeKM4on4VJsf5A" label="~"/>
+    <attributes xmi:id="_sUVrdAmVEeKM4on4VJsf5A" defaultValue="new ToStringHelper()" name="Singleton" staticAttribute="true">
+      <modelElement href="ListFWDemo.uml#_pzffUQmVEeKM4on4VJsf5A"/>
+      <visibility xmi:id="_sUVrdQmVEeKM4on4VJsf5A" label="+"/>
+      <cardinality xmi:id="_sUVrdgmVEeKM4on4VJsf5A" label="1" max="1" min="1"/>
+      <type xmi:id="_sUVrdwmVEeKM4on4VJsf5A" name="ToStringHelper">
+        <modelElement href="ListFWDemo.uml#_pyTMhwmVEeKM4on4VJsf5A"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_sUVreAmVEeKM4on4VJsf5A" name="ToStringHelper">
+      <modelElement href="ListFWDemo.uml#_psMkgwmVEeKM4on4VJsf5A"/>
+      <keywords xmi:id="_sUVreQmVEeKM4on4VJsf5A" keyword="create"/>
+      <stereotypes xmi:id="_sUVregmVEeKM4on4VJsf5A" name="LegacyStyledElement">
+        <modelElement href="ListFWDemo.uml#_psMkhgmVEeKM4on4VJsf5A"/>
+      </stereotypes>
+      <visibility xmi:id="_sUVrewmVEeKM4on4VJsf5A" label="-"/>
+      <outParameters xmi:id="_sUVrfAmVEeKM4on4VJsf5A">
+        <modelElement href="ListFWDemo.uml#_psMkhwmVEeKM4on4VJsf5A"/>
+        <type xmi:id="_sUVrfQmVEeKM4on4VJsf5A" name="ToStringHelper">
+          <modelElement href="ListFWDemo.uml#_psMkgAmVEeKM4on4VJsf5A"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_sUVrfgmVEeKM4on4VJsf5A" name="emptyCase">
+      <modelElement href="ListFWDemo.uml#_pyc9gQmVEeKM4on4VJsf5A"/>
+      <stereotypes xmi:id="_sUVrfwmVEeKM4on4VJsf5A" name="LegacyStyledElement">
+        <modelElement href="ListFWDemo.uml#_pyc9hQmVEeKM4on4VJsf5A"/>
+      </stereotypes>
+      <visibility xmi:id="_sUVrgAmVEeKM4on4VJsf5A" label="+"/>
+      <outParameters xmi:id="_sUVrgQmVEeKM4on4VJsf5A">
+        <modelElement href="ListFWDemo.uml#_pyc9hAmVEeKM4on4VJsf5A"/>
+        <type xmi:id="_sUVrggmVEeKM4on4VJsf5A" name="Object">
+          <modelElement href="ListFWDemo.uml#_pxjloAmVEeKM4on4VJsf5A"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_sUVrgwmVEeKM4on4VJsf5A" name="host">
+        <modelElement href="ListFWDemo.uml#_pyc9ggmVEeKM4on4VJsf5A"/>
+        <type xmi:id="_sUVrhAmVEeKM4on4VJsf5A" name="MTList">
+          <modelElement href="ListFWDemo.uml#_prKCsAmVEeKM4on4VJsf5A"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_sUVrhQmVEeKM4on4VJsf5A" name="acc">
+        <modelElement href="ListFWDemo.uml#_pyc9gwmVEeKM4on4VJsf5A"/>
+        <type xmi:id="_sUVrhgmVEeKM4on4VJsf5A" name="Object">
+          <modelElement href="ListFWDemo.uml#_pxjloAmVEeKM4on4VJsf5A"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_sUVrhwmVEeKM4on4VJsf5A" name="nonEmptyCase">
+      <modelElement href="ListFWDemo.uml#_pymugAmVEeKM4on4VJsf5A"/>
+      <stereotypes xmi:id="_sUVriAmVEeKM4on4VJsf5A" name="LegacyStyledElement">
+        <modelElement href="ListFWDemo.uml#_pymuhAmVEeKM4on4VJsf5A"/>
+      </stereotypes>
+      <visibility xmi:id="_sUVriQmVEeKM4on4VJsf5A" label="+"/>
+      <outParameters xmi:id="_sUVrigmVEeKM4on4VJsf5A">
+        <modelElement href="ListFWDemo.uml#_pymugwmVEeKM4on4VJsf5A"/>
+        <type xmi:id="_sUVriwmVEeKM4on4VJsf5A" name="Object">
+          <modelElement href="ListFWDemo.uml#_pxjloAmVEeKM4on4VJsf5A"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_sUVrjAmVEeKM4on4VJsf5A" name="host">
+        <modelElement href="ListFWDemo.uml#_pymugQmVEeKM4on4VJsf5A"/>
+        <type xmi:id="_sUVrjQmVEeKM4on4VJsf5A" name="NEList">
+          <modelElement href="ListFWDemo.uml#_prc9oAmVEeKM4on4VJsf5A"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_sUVrjgmVEeKM4on4VJsf5A" name="acc">
+        <modelElement href="ListFWDemo.uml#_pymuggmVEeKM4on4VJsf5A"/>
+        <type xmi:id="_sUVrjwmVEeKM4on4VJsf5A" name="Object">
+          <modelElement href="ListFWDemo.uml#_pxjloAmVEeKM4on4VJsf5A"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+</com.yattasolutions.uml.diagrams.classifier:ClassDiagram>

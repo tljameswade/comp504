@@ -1,0 +1,62 @@
+package shape;
+
+import java.awt.*;
+
+/**
+ * A abstract class of shape that contains location and color as well as an abstract method of paint
+ * @author qw12 and xl68
+ *
+ */
+public abstract class AShape {
+	private int locationX;
+	private int locationY;
+	private Color shapeColor;
+
+	/**
+	 * abstract paint method that needs to be overridden by concrete classes
+	 * @param g Graphics object
+	 */
+	public abstract void paint(Graphics g);
+
+	/**
+	 * @return return the location X
+	 */
+	public int getLocationX() {
+		return locationX;
+	}
+
+	/**
+	 * @param locationX set X coordinate of the shape location
+	 */
+	public void setLocationX(int locationX) {
+		this.locationX = locationX;
+	}
+
+	/**
+	 * @return the location Y
+	 */
+	public int getLocationY() {
+		return locationY;
+	}
+
+	/**
+	 * @param locationY set Y coordinate of the shape location
+	 */
+	public void setLocationY(int locationY) {
+		this.locationY = locationY;
+	}
+
+	/**
+	 * @return the shapeColor
+	 */
+	public Color getShapeColor() {
+		return shapeColor;
+	}
+
+	/**
+	 * @param shapeColor the shapeColor to set
+	 */
+	public void setShapeColor(Color shapeColor) {
+		this.shapeColor = shapeColor;
+	}
+}

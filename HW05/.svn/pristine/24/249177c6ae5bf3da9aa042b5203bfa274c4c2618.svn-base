@@ -1,0 +1,14 @@
+package model.paint.strategy;
+
+import model.paint.UprightImagePaintStrategy;
+
+public class SoccerPaintStrategy extends UprightImagePaintStrategy{
+
+	/**
+	 * 
+	 */
+	public SoccerPaintStrategy() {
+		super("images/FIFA_Soccer_Ball.png", 0.3);
+	}
+
+}

@@ -1,0 +1,189 @@
+package view01;
+
+import java.awt.BorderLayout;
+import java.awt.*;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+
+import shape.*;
+
+import java.awt.Color;
+import javax.swing.JLabel;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.JTextField;
+
+/**
+ * @author qw12 and xl68 (@rice.edu)
+ *
+ */
+public class MainFrame extends JFrame {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 4293163509408853301L;
+	private JPanel contentPane;
+
+	private final JPanel pnlCenter = new JPanel() {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = -2988754211033487085L;
+
+		/**
+		* Overridden paintComponent method to paint a shape in the panel.
+		* @param g The Graphics object to paint on.
+		**/
+		public void paintComponent(Graphics g) {
+			super.paintComponent(g); // Do everything normally done first, e.g. clear the screen.
+			g.setColor(Color.RED); // Set the color to use when drawing
+			g.fillOval(75, 100, 20, 40); // paint a filled 20x40 red ellipse whose upper left corner is at (75, 100)
+			someShape.paint(g);
+
+		}
+	};
+	private final JPanel pnlNorth = new JPanel();
+	private final JLabel lblNorth = new JLabel("Text");
+	private final JButton btnNorth = new JButton("Display");
+	private final JTextField txtNorth = new JTextField();
+	private AShape someShape = new shape.Rectangle(50, 20, 10, 10, Color.BLUE);
+	private final JPanel pnlSounth = new JPanel();
+	private final JButton btnCircle = new JButton("Circle");
+	private final JButton btnRectangle = new JButton("Rectangle");
+	private final JButton btnTriangle = new JButton("Triangle");
+	private final JButton btnComposite = new JButton("Composite");
+
+	/**
+	 * Launch the application.
+	 * @param args inputting arguments for running the application
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					start();
+
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Lanuch the application
+	 */
+	public static void start() {
+		MainFrame frame = new MainFrame();
+		frame.setVisible(true);
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public MainFrame() {
+		txtNorth.setToolTipText("input some text and it will show up in the label on the left");
+		txtNorth.setColumns(10);
+		initGUI();
+	}
+
+	/**
+	 * Initialize the GUI
+	 * Create all the components required, such as panels, labels, text area and buttons
+	 * Configure/Add the action listeners for the button click event to perform shape painting
+	 * 
+	 */
+	public void initGUI() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		contentPane.setLayout(new BorderLayout(0, 0));
+		setContentPane(contentPane);
+		pnlCenter.setBackground(Color.WHITE);
+
+		contentPane.add(pnlCenter, BorderLayout.CENTER);
+		pnlNorth.setBackground(Color.LIGHT_GRAY);
+
+		contentPane.add(pnlNorth, BorderLayout.NORTH);
+		lblNorth.setToolTipText("this lable will display the text you entered in the text box");
+
+		pnlNorth.add(lblNorth);
+		btnNorth.setToolTipText("click button to show input text on the label");
+		btnNorth.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				lblNorth.setText(txtNorth.getText());
+			}
+		});
+
+		pnlNorth.add(txtNorth);
+
+		pnlNorth.add(btnNorth);
+		pnlSounth.setBackground(Color.LIGHT_GRAY);
+
+		contentPane.add(pnlSounth, BorderLayout.SOUTH);
+		btnCircle.setToolTipText("Click button to draw a circle");
+
+		/**
+		 * add the actionListener for the button to draw a circle
+		 */
+		btnCircle.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				someShape = new Circle(50, 20, 20, Color.CYAN);
+				pnlCenter.repaint();
+			}
+		});
+
+		pnlSounth.add(btnCircle);
+
+		/**
+		 * add the actionListener for the button to draw a rectangle
+		 */
+		btnRectangle.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				someShape = new shape.Rectangle(40, 10, 30, 50, Color.BLACK);
+				pnlCenter.repaint();
+			}
+		});
+		btnRectangle.setToolTipText("click button to draw a rectangle");
+
+		pnlSounth.add(btnRectangle);
+
+		/**
+		 * add the actionListener for the button to draw a triangle
+		 */
+		btnTriangle.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				int[] x = { 30, 20, 30 };
+				int[] y = { 30, 20, 10 };
+				someShape = new shape.Polygon(x, y, 3, Color.RED);
+				pnlCenter.repaint();
+			}
+		});
+		btnTriangle.setToolTipText("click button to draw a triangle");
+
+		pnlSounth.add(btnTriangle);
+		btnComposite.setToolTipText("Click button to generate a composite shape");
+
+		/**
+		 * add the actionListener for the button to draw a composite shape
+		 */
+		btnComposite.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				AShape[] shapes = { new shape.Circle(125, 50, 60, Color.YELLOW),
+						new shape.Circle(100, 100, 60, Color.BLUE), new shape.Circle(150, 100, 60, Color.RED) };
+				someShape = new shape.Composite(shapes, 3);
+				pnlCenter.repaint();
+
+			}
+		});
+
+		pnlSounth.add(btnComposite);
+	}
+
+}

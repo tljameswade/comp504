@@ -1,0 +1,6 @@
+package model;
+
+public interface IPaintStrategyFac {
+	
+	public IPaintStrategy make();
+}

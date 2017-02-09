@@ -1,0 +1,252 @@
+package sq6_kt21.server.game.model;
+
+import java.io.Serializable;
+import java.net.SocketException;
+import java.net.UnknownHostException;
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.UUID;
+
+import common.AOurDataPacketAlgoCmd;
+import common.IChatServer;
+import common.IChatroom;
+import common.ICmd2ModelAdapter;
+import common.IComponentFactory;
+import common.IUser;
+import common.OurDataPacket;
+
+import common.msg.IChatMsg;
+import common.msg.chat.INewCmdReqMsg;
+import gov.nasa.worldwind.geom.Position;
+import gov.nasa.worldwind.render.Annotation;
+import map.MapLayer;
+import provided.datapacket.DataPacketAlgo;
+import provided.mixedData.IMixedDataDictionary;
+import provided.mixedData.MixedDataDictionary;
+import provided.mixedData.MixedDataKey;
+import provided.rmiUtils.IRMIUtils;
+import provided.rmiUtils.RMIUtils;
+import provided.util.IVoidLambda;
+import sq6_kt21.concrete.chat.NewCmdReqMsg;
+import sq6_kt21.server.game.model.message.CityMsg;
+import sq6_kt21.server.game.model.message.TeamMsg;
+import sq6_kt21.server.game.model.message.TeamMsgCmd;
+import sq6_kt21.server.model.ServerModel;
+
+import map.ToggleAnnotation;
+
+
+
+
+public class GameModel implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -3210917738510721660L;
+	
+	String ip;
+	
+	/**
+	 * The lambda to print the message out on the server view
+	 */
+	private IVoidLambda<String> outputCmd = new IVoidLambda<String> (){
+		public void apply(String... strs){
+			for(String s: strs) viewAdapter.appendToGlobal(s);
+		}
+	};
+	/**
+	 * Utility object used to get the Registry
+	 */
+	private IRMIUtils rmiUtils = new RMIUtils(outputCmd);
+	
+	private IGameModel2ViewAdapter viewAdapter;
+	
+	private IChatServer serverStub;
+	
+	private IChatServer clientStub;
+	
+	private DataPacketAlgo<Void, Object> dataPacketAlgo;
+	
+	
+	MapLayer _layer = new MapLayer();
+	
+	int numberOfSelected;
+	
+	public static final UUID uuid = UUID.randomUUID();
+	
+	ArrayList<String> cityList;
+	
+	HashMap<String, Integer> valueMap = new HashMap<>();
+	
+	private IMixedDataDictionary gameDict = new MixedDataDictionary();
+	
+	
+	public GameModel(IGameModel2ViewAdapter model2ViewAdpt) {
+		this.viewAdapter = model2ViewAdpt;
+		
+	}
+	
+	public void start() {
+		try {
+			this.ip = rmiUtils.getLocalAddress();
+		} catch (SocketException | UnknownHostException e) {
+			e.printStackTrace();
+		}
+		
+		this.viewAdapter.appendToGlobal("My IP address is " + ip);
+		
+		this.clientStub = new IChatServer() {
+			
+			@Override
+			public <S> void receive(OurDataPacket<? extends IChatMsg, S> dp) throws RemoteException {
+				receiveMessage(dp);
+			}
+			
+			@Override
+			public IUser getUser() throws RemoteException {
+				// TODO Auto-generated method stub
+				return null;
+			}
+			
+			@Override
+			public IChatroom getChatroom() throws RemoteException {
+				// TODO Auto-generated method stub
+				return null;
+			}
+		};
+		
+		try {
+			UnicastRemoteObject.exportObject(clientStub, IUser.BOUND_PORT_SERVER);
+		} catch (RemoteException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		Position willy = Position.fromDegrees(29.718550, -95.399068);
+		Position epcot = Position.fromDegrees(28.374454, -81.549363);
+		Position nyc   = Position.fromDegrees(40.748974, -73.990288);
+		Position london = Position.fromDegrees(51.503367, -0.119968);
+		_layer.addToggleAnnotation("Willy", "Willy Selected!", willy);
+		_layer.addToggleAnnotation("Epcot Center", "Epcot Selected!", epcot);
+		_layer.addToggleAnnotation("New York", "New York Selected", nyc);
+		_layer.addToggleAnnotation("London", "London Selected", london);
+		valueMap.put("Willy", 100);
+		valueMap.put("Epcot", 50);
+		valueMap.put("New York", 200);
+		valueMap.put("London", 80);
+		
+		viewAdapter.show(_layer);
+		
+
+
+	}
+
+
+	public String getIP() {
+		return this.ip;
+	}
+	
+	public <S> void receiveMessage(OurDataPacket<? extends IChatMsg, S> dp) {
+		dp.execute(dataPacketAlgo);
+	}
+
+	public void setProperties(IChatServer server, DataPacketAlgo<Void, Object> dataPacketAlgo){
+		this.serverStub = server;
+		this.dataPacketAlgo = dataPacketAlgo;
+		
+		ICmd2ModelAdapter cmd2ModelAdapter = new ICmd2ModelAdapter() {
+			
+			@Override
+			public <T extends IChatMsg> void sendMsg2LocalChatroom(Class<T> index, T msg) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public <T> boolean putIntoLocalDict(MixedDataKey<T> key, T value) {
+				gameDict.put(key, value);
+				return true;
+			}
+			
+			@Override
+			public <T> T getFromLocalDict(MixedDataKey<T> key) {
+				return gameDict.get(key);
+			}
+			
+			@Override
+			public IChatServer getChatServer() {
+				return null;
+			}
+			
+			@Override
+			public void buildComponentInScrollable(IComponentFactory fac) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void buildComponentInNonScrollable(IComponentFactory fac) {
+				// TODO Auto-generated method stub
+				
+			}
+		};
+		
+		MixedDataKey<GameModel> gameModelKey = new MixedDataKey<GameModel>(uuid, "gameModel", GameModel.class);
+		gameDict.put(gameModelKey, this);
+		
+	}
+
+	public int countSelected() {
+		numberOfSelected = 0;
+		for (Annotation annotation: _layer.getAnnotations()) {
+			if(annotation instanceof ToggleAnnotation){  // must check this before GlobeAnnotation
+				if (((ToggleAnnotation) annotation).isSelected()) numberOfSelected++;
+			}
+		}
+		// TODO Auto-generated method stub
+		return numberOfSelected;
+	}
+	
+
+	public int getSelected() {
+		cityList = new ArrayList<String>();
+		for (Annotation annotation: _layer.getAnnotations()) {
+			if(annotation instanceof ToggleAnnotation){
+				if (((ToggleAnnotation) annotation).isSelected()) {
+					String s = annotation.toString();
+					int num = s.indexOf("Selected");
+					cityList.add(s.substring(1, num - 1));
+				}
+			}
+		}
+		
+		int num = 0;
+		
+		for (String string : cityList) {
+			num += valueMap.get(string);
+		}
+		return num;
+	}
+
+	public void submitToServer(int total) {
+		CityMsg msg = new CityMsg(uuid, total);
+		if (this.serverStub != null) {
+			try {
+				this.serverStub.receive(new OurDataPacket<CityMsg, IChatServer>(CityMsg.class, msg, this.clientStub));
+			} catch (RemoteException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+	public void appendToGlobal(String str){
+		viewAdapter.appendToGlobal(str);
+	}
+	
+	
+	
+}

@@ -1,0 +1,56 @@
+package model.Strategy;
+
+import java.awt.Point;
+import model.Ball;
+import model.IBallCmd;
+import model.IUpdateStrategy;
+import util.IDispatcher;
+
+public class ShootStrategy<TDispMsg> implements IUpdateStrategy<IBallCmd> {
+	
+	/**
+	 * Tick counter that counts out the delay before another ball can be spawned.
+	 */
+	private int count = 101;
+	
+	/**
+	 * Tick delay which increases at each spawn to keep total spawn rate from exponentially exploding.
+	 */
+	private int delay = 100;
+	
+	@Override
+	public void init(Ball context) {
+		//context.setVelocity(new Point(0,0));
+	}
+
+	@Override
+	public void updateState(Ball ball, IDispatcher<IBallCmd> dispatcher) {
+		if(delay < count ++){
+			dispatcher.dispatch(new IBallCmd(){
+				@Override
+				public void apply(Ball other, IDispatcher<IBallCmd> dispatcher) {
+					double safeDistance = 100;
+					if(ball!=other){
+						double distance = ball.getLocation().distance(other.getLocation());
+						if( distance <= (ball.getRadius()+other.getRadius()+safeDistance)){
+							double rate = (ball.getRadius()+10);
+							double sinTheta = (other.getLocation().y - ball.getLocation().y)/distance;
+							double cosTheta = (other.getLocation().x - ball.getLocation().x)/distance;
+							dispatcher.addObserver(new Ball(
+									new Point((int)(ball.getLocation().x + rate*cosTheta), (int)(ball.getLocation().y + rate*sinTheta)),
+									5, 
+									new  Point((int)(rate*cosTheta), (int)(rate*sinTheta)), 
+									ball.getColor(), 
+									ball.getCanvas(), 
+									new DareToDieStrategy<IBallCmd>(), 
+									ball.getPaintStrategy())
+									);
+							count = 0;	
+						}
+					}
+				}
+			});
+		}
+	}
+
+}

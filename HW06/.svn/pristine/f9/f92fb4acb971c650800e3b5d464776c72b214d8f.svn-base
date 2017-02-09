@@ -1,0 +1,42 @@
+/**
+ * 
+ */
+package model.visitor;
+
+import provided.music.APhraseVisitor;
+import provided.music.IPhrase;
+import provided.music.IPhraseVisitorCmd;
+import provided.music.NESeqList;
+
+/**
+ *
+ */
+public class ToStringVisitor extends APhraseVisitor{
+
+	/**
+	 * 
+	 */
+	public ToStringVisitor(){
+		
+		this.addCmd("NESeqList", new IPhraseVisitorCmd() {
+			
+			@Override
+			public Object apply(String id, IPhrase host, Object... params) {
+				NESeqList list = (NESeqList)host;
+				return list.getRest().execute(ToStringVisitor.this, params[0] + ", " + list.getFirst());
+			}
+		});
+		
+		
+		this.addCmd("MTSeqList", new IPhraseVisitorCmd() {
+			
+			@Override
+			public Object apply(String id, IPhrase host, Object... params) {
+				// TODO Auto-generated method stub
+				return params[0] + "}";
+			}
+		});
+		
+		
+	}
+}

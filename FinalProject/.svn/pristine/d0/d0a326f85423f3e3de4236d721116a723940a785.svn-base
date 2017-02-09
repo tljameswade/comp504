@@ -1,0 +1,21 @@
+package sq6_kt21.concrete.chat;
+
+import common.msg.chat.ITextMsg;
+
+public class TextMsg implements ITextMsg{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	String text;
+	
+	public TextMsg(String text) {
+		this.text = text;
+	}
+	@Override
+	public String getContent() {
+		return text;
+	}
+
+}

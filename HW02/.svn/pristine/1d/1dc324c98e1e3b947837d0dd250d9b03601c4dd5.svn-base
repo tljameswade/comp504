@@ -1,0 +1,46 @@
+package shape;
+
+import java.awt.Graphics;
+import java.awt.*;
+
+/**
+ * Polygon class
+ * extends AShape class
+ * represents a polygon with an array of vertices, to be specific, x and y coordinates
+ * implements a concrete paint function that draws the polygon
+ * @author qw12 and xl68
+ *
+ */
+public class Polygon extends AShape {
+
+	private int[] x;
+	private int[] y;
+	private int numberPoints;
+
+	/**
+	 * Constructor of a polygon
+	 * @param xcoods an array of x coordinates regarding the vertices
+	 * @param ycoords an array of y coordinates regarding the vertices
+	 * @param n the number of vertices
+	 * @param c the color of the polygon
+	 */
+	public Polygon(int[] xcoods, int[] ycoords, int n, Color c) {
+		numberPoints = n;
+		x = new int[n];
+		System.arraycopy(xcoods, 0, x, 0, n);
+		y = new int[n];
+		System.arraycopy(ycoords, 0, y, 0, n);
+		setShapeColor(c);
+	}
+
+	/**
+	 * Dedicated methods for painting a polygon
+	 */
+	@Override
+	public void paint(Graphics g) {
+		// TODO Auto-generated method stub
+		g.setColor(getShapeColor());
+		g.fillPolygon(x, y, numberPoints);
+
+	}
+}

@@ -1,0 +1,29 @@
+package fibo;
+/**
+ * The n should be less or equal to 46, otherwise it will be too big for Integer
+ * @author suozhiqi
+ *
+ */
+
+public class FiboCalc {
+	public int Fibo(int n) {
+		int[] fiboNum = new int[46];
+		
+		if (n == 1) return 1;
+		if (n == 2) return 1;
+		
+		fiboNum[0] = 1;
+		fiboNum[1] = 1;
+		
+		for (int i = 2; i < n; i++) {
+			fiboNum[i] = fiboNum[i - 1] + fiboNum[i - 2];
+		}
+		
+		return fiboNum[n - 1];
+	}
+	
+	public static void main(String[] args) {
+		FiboCalc test = new FiboCalc();
+		System.out.println(test.Fibo(46));
+	}
+}

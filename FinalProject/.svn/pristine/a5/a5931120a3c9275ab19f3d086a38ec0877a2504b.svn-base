@@ -1,0 +1,23 @@
+package sq6_kt21.concrete.chat;
+
+import common.IChatServer;
+import common.msg.chat.IAddMeMsg;
+
+public class AddMeMsg implements IAddMeMsg{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 3428537189011423279L;
+	
+	IChatServer chatStub;
+	
+	public AddMeMsg(IChatServer _chatStub) {
+		this.chatStub = _chatStub;
+	}
+	
+	public IChatServer getChatStub() {
+		return chatStub;
+	}
+
+}

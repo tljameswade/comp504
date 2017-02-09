@@ -1,0 +1,35 @@
+package model;
+
+import java.awt.Component;
+
+/**
+ * Interface that goes from the model to the view that enables the model to talk to the view
+ * @author Suozhi Qi, Zhaohan Jia
+ * @version 1.0
+ */
+public interface IModel2ViewAdapter {
+
+	/**
+	 * The method that tells the view to update
+	 */
+	public void update();
+
+	/**
+	 * The method that calls the view to get canvas
+	 * @return The Component canvas
+	 */
+	public Component getCanvas();
+
+	/**
+	 * No-op "null" adapter
+	 * See the web page on the Null Object Design Pattern at http://cnx.org/content/m17227/latest/
+	 */
+	public static final IModel2ViewAdapter NULL_OBJECT = new IModel2ViewAdapter() {
+		public void update() {
+		}
+
+		public Component getCanvas() {
+			return null;
+		}
+	};
+}

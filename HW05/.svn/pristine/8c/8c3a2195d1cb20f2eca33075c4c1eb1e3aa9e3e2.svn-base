@@ -1,0 +1,22 @@
+package model;
+
+import util.IDispatcher;
+
+public class MultiInteractStrategy implements IInteractStrategy {
+	
+	private IInteractStrategy s1;
+	
+	private IInteractStrategy s2;
+	
+	public MultiInteractStrategy(IInteractStrategy interact1, IInteractStrategy interact2) {
+		this.s1 = interact1;
+		this.s2 = interact2;
+	}
+
+	@Override
+	public void interact(Ball context, Ball target, IDispatcher<IBallCmd> disp) {
+		this.s1.interact(context, target, disp);
+		this.s2.interact(context, target, disp);
+	}
+
+}

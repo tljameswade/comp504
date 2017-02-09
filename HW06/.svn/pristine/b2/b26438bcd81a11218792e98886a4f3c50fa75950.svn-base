@@ -1,0 +1,150 @@
+package view;
+
+import java.awt.BorderLayout;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.border.TitledBorder;
+
+import provided.util.ABCUtil;
+
+import javax.swing.JTextField;
+import javax.swing.JLabel;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JSplitPane;
+import javax.swing.JScrollPane;
+import javax.swing.JTextPane;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+/**
+ * @param <TVisitor>
+ *
+ *
+ */
+public class MusicPlayerFrame<TVisitor> extends JFrame {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -8418893651461696476L;
+	private JPanel contentPane;
+	private final JPanel pnlControl = new JPanel();
+	private final JTextField txtFile = new JTextField();
+	private final JLabel lblFile = new JLabel("File:");
+	private final JButton btnLoad = new JButton("Load");
+	private final JButton btnParse = new JButton("Parse");
+	@SuppressWarnings("unchecked")
+	private final JComboBox<TVisitor> cbPlayer = new JComboBox<TVisitor>((TVisitor[]) ABCUtil.Singleton.getInstruments());
+	private final JButton btnPlay = new JButton("Play");
+	private final JButton btnStop = new JButton("Stop");
+	private final JSplitPane splitPane = new JSplitPane();
+	private final JScrollPane scrollPaneUp = new JScrollPane();
+	private final JScrollPane scrollPaneDown = new JScrollPane();
+	private final JTextPane txtpnFileContent = new JTextPane();
+	private final JTextPane txtpnParsedFile = new JTextPane();
+	
+	
+	@SuppressWarnings("unchecked")
+	private IModelAdapter<TVisitor> adptr = (IModelAdapter<TVisitor>) IModelAdapter.NULL_OBJ;
+
+
+
+	/**
+	 * Create the frame.
+	 */
+	public MusicPlayerFrame() {
+		txtFile.setToolTipText("Music file name");
+		txtFile.setText("");
+		txtFile.setColumns(20);
+		initGUI();
+	}
+	
+	/**
+	 * @param madptr model adapter
+	 */
+	public MusicPlayerFrame(IModelAdapter<TVisitor> madptr){
+		adptr = (IModelAdapter<TVisitor>) madptr;
+		initGUI();
+		
+	}
+	
+	private void initGUI() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 677, 435);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		contentPane.setLayout(new BorderLayout(0, 0));
+		setContentPane(contentPane);
+		
+		contentPane.add(pnlControl, BorderLayout.NORTH);
+		
+		pnlControl.add(lblFile);
+		
+		pnlControl.add(txtFile);
+		btnParse.setEnabled(false);
+		txtFile.setColumns(20);
+		btnLoad.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				adptr.Open("/songs/" + txtFile.getText() + ".abc");
+				btnParse.setEnabled(true);
+			}
+		});
+		
+		pnlControl.add(btnLoad);
+		btnParse.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				adptr.Parse();
+			}
+		});
+		
+		pnlControl.add(btnParse);
+		
+		pnlControl.add(cbPlayer);
+		
+		pnlControl.add(btnPlay);
+		
+		pnlControl.add(btnStop);
+		splitPane.setResizeWeight(0.5);
+		splitPane.setOrientation(JSplitPane.VERTICAL_SPLIT);
+		
+		contentPane.add(splitPane, BorderLayout.CENTER);
+		
+		splitPane.setLeftComponent(scrollPaneUp);
+		
+		scrollPaneUp.setViewportView(txtpnFileContent);
+		
+		splitPane.setRightComponent(scrollPaneDown);
+		
+		scrollPaneDown.setViewportView(txtpnParsedFile);
+		
+		scrollPaneUp.setBorder(new TitledBorder("File Content:"));
+		
+		scrollPaneDown.setBorder(new TitledBorder("Parsed Content:"));
+		
+		
+		
+	}
+	
+	/**
+	 * 
+	 */
+	public void start(){
+		setVisible(true);
+	}
+
+	/**
+	 * @return txtpn
+	 */
+	public JTextPane getTxtpnParsedFile() {
+		return txtpnParsedFile;
+	}
+	
+	/**
+	 * @return txtpn
+	 */
+	public JTextPane getTxtpnFileContent(){
+		return txtpnFileContent;
+	}
+}

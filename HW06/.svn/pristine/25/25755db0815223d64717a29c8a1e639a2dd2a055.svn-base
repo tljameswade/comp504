@@ -1,0 +1,32 @@
+/**
+ * 
+ */
+package model;
+
+/**
+ * @author qq287
+ *
+ */
+public interface IViewAdapter {
+	
+	/**
+	 * @param content
+	 */
+	void DisplayFileContent(String content);
+
+	/**
+	 * 
+	 */
+	public static final IViewAdapter NULL_OBJ = new IViewAdapter() {
+
+		@Override
+		public void DisplayFileContent(String content) {
+			// TODO Auto-generated method stub
+			
+		}
+
+
+		
+		
+	};
+}

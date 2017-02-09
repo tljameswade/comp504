@@ -1,0 +1,16 @@
+Readme instructions on HW01:
+
+This simple GUI app, when running, will automatically paint a red oval
+and a yellow rectangle on the center panel.
+
+There are three buttons on the lowest panel (south panel), Circle, Arc,
+and Compound. When clicking Circle button, a magenta circle will appear on the center panel.
+At the same time, the red oval still remains but the yellow rectangle disappears.
+
+When clicking Arc button, a cyan Arc will appear on the center panel.
+The center panel now contains both the Arc and the red oval.
+
+When clicking compound, a orange rectangle and a cyan Arc will appear together on the
+center panel.
+The center panel has the red oval, together with the orange rectangle and the
+cyan Arc.

@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:UMLLabProfile="http:///schemas/UMLLabProfile/NS/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xsi:schemaLocation="http:///schemas/UMLLabProfile/NS/0 pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile">
+  <uml:Model xmi:id="_o8lsgAmVEeKM4on4VJsf5A" name="ListFWDemo">
+    <eAnnotations xmi:id="_pOlbcAmVEeKM4on4VJsf5A" source="http://www.yatta-solutions.com/umllab/codegen/codegenDirectory">
+      <details xmi:id="_pOlbcQmVEeKM4on4VJsf5A" key="codegenDirectory" value="/ListFWDemo/src"/>
+    </eAnnotations>
+    <eAnnotations xmi:id="_p1IeEAmVEeKM4on4VJsf5A" source="com.yattasolutions.codegen.RoundTripInformation">
+      <details xmi:id="_p1IeEQmVEeKM4on4VJsf5A" key="AssociatedSourceCode" value="/ListFWDemo/src/listFW/IList.java;2616446381/1;/ListFWDemo/src/listFW/IListAlgo.java;1838963745/1;/ListFWDemo/src/listFW/MTList.java;3961108851/1;/ListFWDemo/src/listFW/NEList.java;739341834/1;/ListFWDemo/src/listFW/ToStringAlgo.java;227984702/1;/ListFWDemo/src/listFW/visitor/CopyAlgo.java;2597487405/1;"/>
+    </eAnnotations>
+    <elementImport xmi:id="_pmsZcAmVEeKM4on4VJsf5A">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+    </elementImport>
+    <elementImport xmi:id="_pmsZcQmVEeKM4on4VJsf5A">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#byte"/>
+    </elementImport>
+    <elementImport xmi:id="_pmsZcgmVEeKM4on4VJsf5A">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+    </elementImport>
+    <elementImport xmi:id="_pmsZcwmVEeKM4on4VJsf5A">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+    </elementImport>
+    <elementImport xmi:id="_pmsZdAmVEeKM4on4VJsf5A">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+    </elementImport>
+    <elementImport xmi:id="_pmsZdQmVEeKM4on4VJsf5A">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    </elementImport>
+    <elementImport xmi:id="_pmsZdgmVEeKM4on4VJsf5A">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+    </elementImport>
+    <elementImport xmi:id="_pmsZdwmVEeKM4on4VJsf5A">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#short"/>
+    </elementImport>
+    <elementImport xmi:id="_pmsZeAmVEeKM4on4VJsf5A">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </elementImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_pm_UYAmVEeKM4on4VJsf5A" name="listFW">
+      <packagedElement xmi:type="uml:Package" xmi:id="_poeiIAmVEeKM4on4VJsf5A" name="visitor">
+        <packagedElement xmi:type="uml:Class" xmi:id="_ps8ycAmVEeKM4on4VJsf5A" clientDependency="_pw9vwAmVEeKM4on4VJsf5A" name="CopyAlgo">
+          <ownedComment xmi:id="_p0iBJgmVEeKM4on4VJsf5A">
+            <body>@stereotype visitor</body>
+          </ownedComment>
+          <interfaceRealization xmi:id="_pw9vwAmVEeKM4on4VJsf5A" client="_ps8ycAmVEeKM4on4VJsf5A" supplier="_pq2gsAmVEeKM4on4VJsf5A" contract="_pq2gsAmVEeKM4on4VJsf5A"/>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_p0PGSwmVEeKM4on4VJsf5A" name="emptyCase" specification="_py5pcAmVEeKM4on4VJsf5A">
+            <ownedParameter xmi:id="_p0Y3MAmVEeKM4on4VJsf5A" name="host" type="_prKCsAmVEeKM4on4VJsf5A"/>
+            <ownedParameter xmi:id="_p0Y3MQmVEeKM4on4VJsf5A" name="inp" type="_pxjloAmVEeKM4on4VJsf5A">
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_p0Y3MgmVEeKM4on4VJsf5A" value="*"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_p0Y3MwmVEeKM4on4VJsf5A" type="_pxjloAmVEeKM4on4VJsf5A" direction="return"/>
+            <language>java</language>
+            <body>return (null);&#xD;
+ </body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_p0Y3NAmVEeKM4on4VJsf5A" name="nonEmptyCase" specification="_pzCzYQmVEeKM4on4VJsf5A">
+            <ownedParameter xmi:id="_p0Y3NQmVEeKM4on4VJsf5A" name="host" type="_prc9oAmVEeKM4on4VJsf5A"/>
+            <ownedParameter xmi:id="_p0Y3NgmVEeKM4on4VJsf5A" name="inp" type="_pxjloAmVEeKM4on4VJsf5A">
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_p0Y3NwmVEeKM4on4VJsf5A" value="*"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_p0Y3OAmVEeKM4on4VJsf5A" type="_pxjloAmVEeKM4on4VJsf5A" direction="return"/>
+            <language>java</language>
+            <body>return (null);&#xD;
+ </body>
+          </ownedBehavior>
+          <ownedOperation xmi:id="_py5pcAmVEeKM4on4VJsf5A" name="emptyCase" method="_p0PGSwmVEeKM4on4VJsf5A">
+            <ownedParameter xmi:id="_py5pcQmVEeKM4on4VJsf5A" name="host" type="_prKCsAmVEeKM4on4VJsf5A"/>
+            <ownedParameter xmi:id="_py5pcgmVEeKM4on4VJsf5A" name="inp" type="_pxjloAmVEeKM4on4VJsf5A">
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_py5pdQmVEeKM4on4VJsf5A" value="*"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_py5pcwmVEeKM4on4VJsf5A" type="_pxjloAmVEeKM4on4VJsf5A" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_pzCzYQmVEeKM4on4VJsf5A" name="nonEmptyCase" method="_p0Y3NAmVEeKM4on4VJsf5A">
+            <ownedParameter xmi:id="_pzCzYgmVEeKM4on4VJsf5A" name="host" type="_prc9oAmVEeKM4on4VJsf5A"/>
+            <ownedParameter xmi:id="_pzCzYwmVEeKM4on4VJsf5A" name="inp" type="_pxjloAmVEeKM4on4VJsf5A">
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_pzCzZgmVEeKM4on4VJsf5A" value="*"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_pzCzZAmVEeKM4on4VJsf5A" type="_pxjloAmVEeKM4on4VJsf5A" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_pqjlwAmVEeKM4on4VJsf5A" name="IList">
+        <ownedComment xmi:id="_p0Y3OQmVEeKM4on4VJsf5A">
+          <body>Represents the abstract list structure with a hook method to call on the extrinsic &#xD;
+behaviors represented as visitors.&#xD;
+@author D. X. Nguyen&#xD;
+@author S. B. Wong</body>
+        </ownedComment>
+        <ownedOperation xmi:id="_pxjlogmVEeKM4on4VJsf5A" name="execute" isAbstract="true">
+          <ownedParameter xmi:id="_pxjlowmVEeKM4on4VJsf5A" name="algo" type="_pq2gsAmVEeKM4on4VJsf5A"/>
+          <ownedParameter xmi:id="_pxjlpAmVEeKM4on4VJsf5A" name="inp" type="_pxjloAmVEeKM4on4VJsf5A">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_pxtWogmVEeKM4on4VJsf5A" value="*"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_pxtWoAmVEeKM4on4VJsf5A" type="_pxjloAmVEeKM4on4VJsf5A" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_pq2gsAmVEeKM4on4VJsf5A" name="IListAlgo">
+        <ownedComment xmi:id="_p0Y3OgmVEeKM4on4VJsf5A">
+          <body>Represents an abstract algorithm to be executed by a host IList.&#xD;
+Plays the role of a &quot;visitor&quot; in the design pattern language.&#xD;
+ &lt;p>&#xD;
+In non OO programming paradigms, an algorithm on lists is expressed as a&#xD;
+function or procedure that takes in a list as parameter. &#xD;
+In our OO formulation, an alogrithm on lists is an interface that has two&#xD;
+methods, each takes in a list as a parameter: &lt;ul>&#xD;
+ &lt;li>One method, called emptyCase, operates specifically on an empty list&#xD;
+    (MTList) and is to be called exclusively by an MTList.&#xD;
+ &lt;li>The other method, called nonEmptyCase, operates specifically on a&#xD;
+    non-empty list (NEList) and is to be called exclusively by an NEList.&#xD;
+ &lt;/ul>&#xD;
+When we want to perform an alogrithm (IListAlgo) on a list (IList), we asks&#xD;
+the IList to 'execute' the algorithm with a given input.  An MTList knows&#xD;
+instrinsically that is empty and calls the emptyCase method of the IListAlgo.&#xD;
+Analogously, a non-empty list (NEList) will correctly call the nonEmptyCase&#xD;
+method of the IListAlgo.&#xD;
+ &lt;p>&#xD;
+One need not (and should not) check for the type of a list before applying&#xD;
+an algorithm to it.  THERE IS NO if!&#xD;
+ &lt;/p>&#xD;
+@author Dung X. Nguyen&#xD;
+@author Stephen B. Wong&#xD;
+@since Copyright 2005 - DXN, SBW All rights reserved</body>
+        </ownedComment>
+        <ownedOperation xmi:id="_pxtWpAmVEeKM4on4VJsf5A" name="emptyCase" isAbstract="true">
+          <ownedParameter xmi:id="_px3HoAmVEeKM4on4VJsf5A" name="host" type="_prKCsAmVEeKM4on4VJsf5A"/>
+          <ownedParameter xmi:id="_px3HoQmVEeKM4on4VJsf5A" name="inp" type="_pxjloAmVEeKM4on4VJsf5A">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_px3HpAmVEeKM4on4VJsf5A" value="*"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_px3HogmVEeKM4on4VJsf5A" type="_pxjloAmVEeKM4on4VJsf5A" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_px3HpgmVEeKM4on4VJsf5A" name="nonEmptyCase" isAbstract="true">
+          <ownedParameter xmi:id="_px3HpwmVEeKM4on4VJsf5A" name="host" type="_prc9oAmVEeKM4on4VJsf5A"/>
+          <ownedParameter xmi:id="_px3HqAmVEeKM4on4VJsf5A" name="inp" type="_pxjloAmVEeKM4on4VJsf5A">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_pyARkgmVEeKM4on4VJsf5A" value="*"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_pyARkAmVEeKM4on4VJsf5A" type="_pxjloAmVEeKM4on4VJsf5A" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_prKCsAmVEeKM4on4VJsf5A" clientDependency="_pvoTAAmVEeKM4on4VJsf5A" name="MTList">
+        <ownedComment xmi:id="_p0Y3OwmVEeKM4on4VJsf5A">
+          <body>Represents the unique empty list using the singleton pattern.&#xD;
+Provides concrete code for the execute method: simply calls the emptyCase&#xD;
+method of the IListAlgo parameter, passing to this method itself as the host&#xD;
+and the given input Object as the input.&#xD;
+@author D. X. Nguyen&#xD;
+@author S. B. Wong</body>
+        </ownedComment>
+        <ownedAttribute xmi:id="_pzMkYAmVEeKM4on4VJsf5A" name="Singleton" isLeaf="true" isStatic="true" type="_prKCsAmVEeKM4on4VJsf5A" isReadOnly="true" association="_p0ryIAmVEeKM4on4VJsf5A">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_pzWVYAmVEeKM4on4VJsf5A" value="new MTList()"/>
+        </ownedAttribute>
+        <interfaceRealization xmi:id="_pvoTAAmVEeKM4on4VJsf5A" client="_prKCsAmVEeKM4on4VJsf5A" supplier="_pqjlwAmVEeKM4on4VJsf5A" contract="_pqjlwAmVEeKM4on4VJsf5A"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_p0F8QAmVEeKM4on4VJsf5A" name="execute" specification="_pyARlAmVEeKM4on4VJsf5A">
+          <ownedParameter xmi:id="_p0F8QQmVEeKM4on4VJsf5A" name="algo" type="_pq2gsAmVEeKM4on4VJsf5A"/>
+          <ownedParameter xmi:id="_p0F8QgmVEeKM4on4VJsf5A" name="inp" type="_pxjloAmVEeKM4on4VJsf5A">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_p0F8QwmVEeKM4on4VJsf5A" value="*"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_p0F8RAmVEeKM4on4VJsf5A" type="_pxjloAmVEeKM4on4VJsf5A" direction="return"/>
+          <language>java</language>
+          <body>return algo.emptyCase(this, inp);&#xD;
+ </body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_p0F8RQmVEeKM4on4VJsf5A" name="toString" specification="_prKCtgmVEeKM4on4VJsf5A">
+          <ownedParameter xmi:id="_p0F8RgmVEeKM4on4VJsf5A" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>return (String)ToStringAlgo.Singleton.emptyCase(this);&#xD;
+ </body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_prKCsQmVEeKM4on4VJsf5A" name="MTList" visibility="private">
+          <eAnnotations xmi:id="_prKCsgmVEeKM4on4VJsf5A" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_prKCswmVEeKM4on4VJsf5A" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_prKCtQmVEeKM4on4VJsf5A" type="_prKCsAmVEeKM4on4VJsf5A" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_prKCtgmVEeKM4on4VJsf5A" name="toString" method="_p0F8RQmVEeKM4on4VJsf5A">
+          <ownedParameter xmi:id="_prTMoAmVEeKM4on4VJsf5A" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_pyARlAmVEeKM4on4VJsf5A" name="execute" isLeaf="true" method="_p0F8QAmVEeKM4on4VJsf5A">
+          <ownedParameter xmi:id="_pyARlQmVEeKM4on4VJsf5A" name="algo" type="_pq2gsAmVEeKM4on4VJsf5A"/>
+          <ownedParameter xmi:id="_pyARlgmVEeKM4on4VJsf5A" name="inp" type="_pxjloAmVEeKM4on4VJsf5A">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_pyKCkQmVEeKM4on4VJsf5A" value="*"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_pyARlwmVEeKM4on4VJsf5A" type="_pxjloAmVEeKM4on4VJsf5A" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_prc9oAmVEeKM4on4VJsf5A" clientDependency="_pvxc8AmVEeKM4on4VJsf5A" name="NEList">
+        <ownedComment xmi:id="_p0iBIAmVEeKM4on4VJsf5A">
+          <body>Represents non-empty lists.&#xD;
+Contains two pieces of data:&lt;ul>&#xD;
+ &lt;li>first: an Object representing the first data element&#xD;
+ &lt;li>rest: an IList object representing the rest of this non-emptylist.&lt;/ul>&#xD;
+When a class contains other objects that are isomorphic to itself,&#xD;
+this class is called a composite.&lt;/p>&#xD;
+Provides concrete code for &lt;ul>&#xD;
+ &lt;li>a constructor to initialize this NEList to a given first and rest,&#xD;
+ &lt;li>the getFirst() method for accessing the first data element,&#xD;
+ &lt;li>the getRest() method for accesssing the rest of the list,&#xD;
+ &lt;li>the execute method: simply calls the nonEmptyCase method of the IListAlgo&#xD;
+ parameter, passing to this method itself as the host and the given input&#xD;
+ Object as the input.&lt;/ul>&#xD;
+@author D. X. Nguyen&#xD;
+@author S. B. Wong</body>
+        </ownedComment>
+        <ownedAttribute xmi:id="_pzWVYgmVEeKM4on4VJsf5A" name="_first" visibility="private" type="_pxjloAmVEeKM4on4VJsf5A" association="_p0ryIwmVEeKM4on4VJsf5A"/>
+        <ownedAttribute xmi:id="_pzWVZAmVEeKM4on4VJsf5A" name="_rest" visibility="private" type="_pqjlwAmVEeKM4on4VJsf5A" association="_p0ryJgmVEeKM4on4VJsf5A"/>
+        <interfaceRealization xmi:id="_pvxc8AmVEeKM4on4VJsf5A" client="_prc9oAmVEeKM4on4VJsf5A" supplier="_pqjlwAmVEeKM4on4VJsf5A" contract="_pqjlwAmVEeKM4on4VJsf5A"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_p0F8RwmVEeKM4on4VJsf5A" name="NEList" specification="_pyKCkwmVEeKM4on4VJsf5A">
+          <ownedParameter xmi:id="_p0F8SAmVEeKM4on4VJsf5A" name="f" type="_pxjloAmVEeKM4on4VJsf5A"/>
+          <ownedParameter xmi:id="_p0F8SQmVEeKM4on4VJsf5A" name="r" type="_pqjlwAmVEeKM4on4VJsf5A"/>
+          <ownedParameter xmi:id="_p0F8SgmVEeKM4on4VJsf5A" type="_prc9oAmVEeKM4on4VJsf5A" direction="return"/>
+          <language>java</language>
+          <body>_first = f;&#xD;
+     _rest = r;&#xD;
+ </body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_p0F8SwmVEeKM4on4VJsf5A" name="getFirst" specification="_prmHkAmVEeKM4on4VJsf5A">
+          <ownedParameter xmi:id="_p0F8TAmVEeKM4on4VJsf5A" type="_pxjloAmVEeKM4on4VJsf5A" direction="return"/>
+          <language>java</language>
+          <body>return _first;&#xD;
+ </body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_p0F8TQmVEeKM4on4VJsf5A" name="getRest" specification="_prmHkQmVEeKM4on4VJsf5A">
+          <ownedParameter xmi:id="_p0F8TgmVEeKM4on4VJsf5A" type="_pqjlwAmVEeKM4on4VJsf5A" direction="return"/>
+          <language>java</language>
+          <body>return _rest;&#xD;
+ </body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_p0PGMAmVEeKM4on4VJsf5A" name="execute" specification="_pyTMgAmVEeKM4on4VJsf5A">
+          <ownedParameter xmi:id="_p0PGMQmVEeKM4on4VJsf5A" name="algo" type="_pq2gsAmVEeKM4on4VJsf5A"/>
+          <ownedParameter xmi:id="_p0PGMgmVEeKM4on4VJsf5A" name="inp" type="_pxjloAmVEeKM4on4VJsf5A">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_p0PGMwmVEeKM4on4VJsf5A" value="*"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_p0PGNAmVEeKM4on4VJsf5A" type="_pxjloAmVEeKM4on4VJsf5A" direction="return"/>
+          <language>java</language>
+          <body>return algo.nonEmptyCase(this, inp);&#xD;
+ </body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_p0PGNQmVEeKM4on4VJsf5A" name="toString" specification="_prmHkgmVEeKM4on4VJsf5A">
+          <ownedParameter xmi:id="_p0PGNgmVEeKM4on4VJsf5A" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>return (String)ToStringAlgo.Singleton.nonEmptyCase(this);&#xD;
+ </body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_prmHkAmVEeKM4on4VJsf5A" name="getFirst" isLeaf="true" method="_p0F8SwmVEeKM4on4VJsf5A">
+          <ownedComment xmi:id="_p0iBIgmVEeKM4on4VJsf5A">
+            <body>Returns the first data element of this NEList.&#xD;
+     * This method is marked as final to prevent all subclasses from overriding it.&#xD;
+     * Finalizing a method also allows the compiler to generate more efficient calling code.</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_pyKCmQmVEeKM4on4VJsf5A" type="_pxjloAmVEeKM4on4VJsf5A" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_prmHkQmVEeKM4on4VJsf5A" name="getRest" isLeaf="true" method="_p0F8TQmVEeKM4on4VJsf5A">
+          <ownedComment xmi:id="_p0iBIwmVEeKM4on4VJsf5A">
+            <body>Returns the first data element of this NEList.&#xD;
+     * This method is marked as final to prevent all subclasses from overriding it.&#xD;
+     * Finalizing a method also allows the compiler to generate more efficient calling code.</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_pv7N8AmVEeKM4on4VJsf5A" type="_pqjlwAmVEeKM4on4VJsf5A" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_prmHkgmVEeKM4on4VJsf5A" name="toString" method="_p0PGNQmVEeKM4on4VJsf5A">
+          <ownedParameter xmi:id="_prv4kAmVEeKM4on4VJsf5A" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_pyKCkwmVEeKM4on4VJsf5A" name="NEList" method="_p0F8RwmVEeKM4on4VJsf5A">
+          <eAnnotations xmi:id="_pyKClgmVEeKM4on4VJsf5A" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_pyKClwmVEeKM4on4VJsf5A" key="create"/>
+          </eAnnotations>
+          <ownedComment xmi:id="_p0iBIQmVEeKM4on4VJsf5A">
+            <body>Initializes this NEList to a given first and a given rest.&#xD;
+     * @param f the first element of this NEList.&#xD;
+     * @param r != null, the rest of this NEList.</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_pyKClAmVEeKM4on4VJsf5A" name="f" type="_pxjloAmVEeKM4on4VJsf5A"/>
+          <ownedParameter xmi:id="_pyKClQmVEeKM4on4VJsf5A" name="r" type="_pqjlwAmVEeKM4on4VJsf5A"/>
+          <ownedParameter xmi:id="_pyKCmAmVEeKM4on4VJsf5A" type="_prc9oAmVEeKM4on4VJsf5A" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_pyTMgAmVEeKM4on4VJsf5A" name="execute" isLeaf="true" method="_p0PGMAmVEeKM4on4VJsf5A">
+          <ownedParameter xmi:id="_pyTMgQmVEeKM4on4VJsf5A" name="algo" type="_pq2gsAmVEeKM4on4VJsf5A"/>
+          <ownedParameter xmi:id="_pyTMggmVEeKM4on4VJsf5A" name="inp" type="_pxjloAmVEeKM4on4VJsf5A">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_pyTMhQmVEeKM4on4VJsf5A" value="*"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_pyTMgwmVEeKM4on4VJsf5A" type="_pxjloAmVEeKM4on4VJsf5A" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_psCzgAmVEeKM4on4VJsf5A" clientDependency="_pwhD0AmVEeKM4on4VJsf5A" name="ToStringAlgo">
+        <ownedComment xmi:id="_p0iBJAmVEeKM4on4VJsf5A">
+          <body>Computes a String reprsentation of IList showing  a left parenthesis followed&#xD;
+by elements of the IList separated by commas, ending with with a right parenthesis.&#xD;
+@stereotype visitor</body>
+        </ownedComment>
+        <ownedAttribute xmi:id="_pzffUwmVEeKM4on4VJsf5A" name="Singleton" isLeaf="true" isStatic="true" type="_psCzgAmVEeKM4on4VJsf5A" isReadOnly="true" association="_p0ryLAmVEeKM4on4VJsf5A">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_pzffVAmVEeKM4on4VJsf5A" value="new ToStringAlgo()"/>
+        </ownedAttribute>
+        <interfaceRealization xmi:id="_pwhD0AmVEeKM4on4VJsf5A" client="_psCzgAmVEeKM4on4VJsf5A" supplier="_pq2gsAmVEeKM4on4VJsf5A" contract="_pq2gsAmVEeKM4on4VJsf5A"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_p0PGQQmVEeKM4on4VJsf5A" name="emptyCase" specification="_pymuhwmVEeKM4on4VJsf5A">
+          <ownedParameter xmi:id="_p0PGQgmVEeKM4on4VJsf5A" name="host" type="_prKCsAmVEeKM4on4VJsf5A"/>
+          <ownedParameter xmi:id="_p0PGQwmVEeKM4on4VJsf5A" name="nu" type="_pxjloAmVEeKM4on4VJsf5A">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_p0PGRAmVEeKM4on4VJsf5A" value="*"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_p0PGRQmVEeKM4on4VJsf5A" type="_pxjloAmVEeKM4on4VJsf5A" direction="return"/>
+          <language>java</language>
+          <body>return &quot;()&quot;;&#xD;
+ </body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_p0PGRgmVEeKM4on4VJsf5A" name="nonEmptyCase" specification="_pyv4cQmVEeKM4on4VJsf5A">
+          <ownedParameter xmi:id="_p0PGRwmVEeKM4on4VJsf5A" name="host" type="_prc9oAmVEeKM4on4VJsf5A"/>
+          <ownedParameter xmi:id="_p0PGSAmVEeKM4on4VJsf5A" name="nu" type="_pxjloAmVEeKM4on4VJsf5A">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_p0PGSQmVEeKM4on4VJsf5A" value="*"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_p0PGSgmVEeKM4on4VJsf5A" type="_pxjloAmVEeKM4on4VJsf5A" direction="return"/>
+          <language>java</language>
+          <body>return host.getRest().execute(ToStringHelper.Singleton, &quot;(&quot; + host.getFirst());&#xD;
+ </body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_psVucAmVEeKM4on4VJsf5A" name="ToStringAlgo" visibility="private">
+          <eAnnotations xmi:id="_psgGgAmVEeKM4on4VJsf5A" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_psgGgQmVEeKM4on4VJsf5A" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_psgGgwmVEeKM4on4VJsf5A" type="_psCzgAmVEeKM4on4VJsf5A" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_pymuhwmVEeKM4on4VJsf5A" name="emptyCase" method="_p0PGQQmVEeKM4on4VJsf5A">
+          <ownedParameter xmi:id="_pymuiAmVEeKM4on4VJsf5A" name="host" type="_prKCsAmVEeKM4on4VJsf5A"/>
+          <ownedParameter xmi:id="_pymuiQmVEeKM4on4VJsf5A" name="nu" type="_pxjloAmVEeKM4on4VJsf5A">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_pymujAmVEeKM4on4VJsf5A" value="*"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_pymuigmVEeKM4on4VJsf5A" type="_pxjloAmVEeKM4on4VJsf5A" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_pyv4cQmVEeKM4on4VJsf5A" name="nonEmptyCase" method="_p0PGRgmVEeKM4on4VJsf5A">
+          <ownedParameter xmi:id="_pyv4cgmVEeKM4on4VJsf5A" name="host" type="_prc9oAmVEeKM4on4VJsf5A"/>
+          <ownedParameter xmi:id="_pyv4cwmVEeKM4on4VJsf5A" name="nu" type="_pxjloAmVEeKM4on4VJsf5A">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_pyv4dgmVEeKM4on4VJsf5A" value="*"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_pyv4dAmVEeKM4on4VJsf5A" type="_pxjloAmVEeKM4on4VJsf5A" direction="return"/>
+        </ownedOperation>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_psMkgAmVEeKM4on4VJsf5A" clientDependency="_pwOI4AmVEeKM4on4VJsf5A" name="ToStringHelper" visibility="package">
+          <eAnnotations xmi:id="_psMkgQmVEeKM4on4VJsf5A" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_psMkggmVEeKM4on4VJsf5A" key="sameFile"/>
+          </eAnnotations>
+          <ownedComment xmi:id="_p0iBJQmVEeKM4on4VJsf5A">
+            <body>Helps ToStringAlgo compute the String representation of the rest of the list.</body>
+          </ownedComment>
+          <ownedAttribute xmi:id="_pzffUQmVEeKM4on4VJsf5A" name="Singleton" isLeaf="true" isStatic="true" type="_pyTMhwmVEeKM4on4VJsf5A" isReadOnly="true" association="_p0ryKQmVEeKM4on4VJsf5A">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_pzffUgmVEeKM4on4VJsf5A" value="new ToStringHelper()"/>
+          </ownedAttribute>
+          <interfaceRealization xmi:id="_pwOI4AmVEeKM4on4VJsf5A" client="_psMkgAmVEeKM4on4VJsf5A" supplier="_pq2gsAmVEeKM4on4VJsf5A" contract="_pq2gsAmVEeKM4on4VJsf5A"/>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_p0PGNwmVEeKM4on4VJsf5A" name="emptyCase" specification="_pyc9gQmVEeKM4on4VJsf5A">
+            <ownedParameter xmi:id="_p0PGOAmVEeKM4on4VJsf5A" name="host" type="_prKCsAmVEeKM4on4VJsf5A"/>
+            <ownedParameter xmi:id="_p0PGOQmVEeKM4on4VJsf5A" name="acc" type="_pxjloAmVEeKM4on4VJsf5A">
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_p0PGOgmVEeKM4on4VJsf5A" value="*"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_p0PGOwmVEeKM4on4VJsf5A" type="_pxjloAmVEeKM4on4VJsf5A" direction="return"/>
+            <language>java</language>
+            <body>return  acc[0] + &quot;)&quot;;&#xD;
+ </body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_p0PGPAmVEeKM4on4VJsf5A" name="nonEmptyCase" specification="_pymugAmVEeKM4on4VJsf5A">
+            <ownedParameter xmi:id="_p0PGPQmVEeKM4on4VJsf5A" name="host" type="_prc9oAmVEeKM4on4VJsf5A"/>
+            <ownedParameter xmi:id="_p0PGPgmVEeKM4on4VJsf5A" name="acc" type="_pxjloAmVEeKM4on4VJsf5A">
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_p0PGPwmVEeKM4on4VJsf5A" value="*"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_p0PGQAmVEeKM4on4VJsf5A" type="_pxjloAmVEeKM4on4VJsf5A" direction="return"/>
+            <language>java</language>
+            <body>return host.getRest().execute(this, acc[0] + &quot;, &quot; + host.getFirst());    &#xD;
+ </body>
+          </ownedBehavior>
+          <ownedOperation xmi:id="_psMkgwmVEeKM4on4VJsf5A" name="ToStringHelper" visibility="private">
+            <eAnnotations xmi:id="_psMkhAmVEeKM4on4VJsf5A" source="http://www.eclipse.org/uml2/2.0.0/UML">
+              <details xmi:id="_psMkhQmVEeKM4on4VJsf5A" key="create"/>
+            </eAnnotations>
+            <ownedParameter xmi:id="_psMkhwmVEeKM4on4VJsf5A" type="_psMkgAmVEeKM4on4VJsf5A" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_pyc9gQmVEeKM4on4VJsf5A" name="emptyCase" method="_p0PGNwmVEeKM4on4VJsf5A">
+            <ownedParameter xmi:id="_pyc9ggmVEeKM4on4VJsf5A" name="host" type="_prKCsAmVEeKM4on4VJsf5A"/>
+            <ownedParameter xmi:id="_pyc9gwmVEeKM4on4VJsf5A" name="acc" type="_pxjloAmVEeKM4on4VJsf5A">
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_pyc9hgmVEeKM4on4VJsf5A" value="*"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_pyc9hAmVEeKM4on4VJsf5A" type="_pxjloAmVEeKM4on4VJsf5A" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_pymugAmVEeKM4on4VJsf5A" name="nonEmptyCase" method="_p0PGPAmVEeKM4on4VJsf5A">
+            <ownedParameter xmi:id="_pymugQmVEeKM4on4VJsf5A" name="host" type="_prc9oAmVEeKM4on4VJsf5A"/>
+            <ownedParameter xmi:id="_pymuggmVEeKM4on4VJsf5A" name="acc" type="_pxjloAmVEeKM4on4VJsf5A">
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_pymuhQmVEeKM4on4VJsf5A" value="*"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_pymugwmVEeKM4on4VJsf5A" type="_pxjloAmVEeKM4on4VJsf5A" direction="return"/>
+          </ownedOperation>
+        </nestedClassifier>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_pyTMhwmVEeKM4on4VJsf5A" name="ToStringHelper"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_p0ryIAmVEeKM4on4VJsf5A" name="" memberEnd="_p0ryIQmVEeKM4on4VJsf5A _pzMkYAmVEeKM4on4VJsf5A">
+        <ownedEnd xmi:id="_p0ryIQmVEeKM4on4VJsf5A" name="" type="_prKCsAmVEeKM4on4VJsf5A" association="_p0ryIAmVEeKM4on4VJsf5A"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_p0ryIwmVEeKM4on4VJsf5A" name="" memberEnd="_p0ryJAmVEeKM4on4VJsf5A _pzWVYgmVEeKM4on4VJsf5A">
+        <ownedEnd xmi:id="_p0ryJAmVEeKM4on4VJsf5A" name="" type="_prc9oAmVEeKM4on4VJsf5A" association="_p0ryIwmVEeKM4on4VJsf5A"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_p0ryJgmVEeKM4on4VJsf5A" name="" memberEnd="_p0ryJwmVEeKM4on4VJsf5A _pzWVZAmVEeKM4on4VJsf5A">
+        <ownedEnd xmi:id="_p0ryJwmVEeKM4on4VJsf5A" name="" type="_prc9oAmVEeKM4on4VJsf5A" association="_p0ryJgmVEeKM4on4VJsf5A"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_p0ryKQmVEeKM4on4VJsf5A" name="" memberEnd="_p0ryKgmVEeKM4on4VJsf5A _pzffUQmVEeKM4on4VJsf5A">
+        <ownedEnd xmi:id="_p0ryKgmVEeKM4on4VJsf5A" name="" type="_psMkgAmVEeKM4on4VJsf5A" association="_p0ryKQmVEeKM4on4VJsf5A"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_p0ryLAmVEeKM4on4VJsf5A" name="" memberEnd="_p0ryLQmVEeKM4on4VJsf5A _pzffUwmVEeKM4on4VJsf5A">
+        <ownedEnd xmi:id="_p0ryLQmVEeKM4on4VJsf5A" name="" type="_psCzgAmVEeKM4on4VJsf5A" association="_p0ryLAmVEeKM4on4VJsf5A"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_pxabsAmVEeKM4on4VJsf5A" name="java">
+      <packagedElement xmi:type="uml:Package" xmi:id="_pxabsQmVEeKM4on4VJsf5A" name="lang">
+        <packagedElement xmi:type="uml:Class" xmi:id="_pxjloAmVEeKM4on4VJsf5A" name="Object"/>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:id="_pOlbcgmVEeKM4on4VJsf5A">
+      <eAnnotations xmi:id="_pOvMcAmVEeKM4on4VJsf5A" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile"/>
+    </profileApplication>
+  </uml:Model>
+  <UMLLabProfile:TargetLanguage xmi:id="_pPCHYAmVEeKM4on4VJsf5A" base_Package="_o8lsgAmVEeKM4on4VJsf5A">
+    <languageName>java</languageName>
+  </UMLLabProfile:TargetLanguage>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_prKCtAmVEeKM4on4VJsf5A" base_Element="_prKCsQmVEeKM4on4VJsf5A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_psMkhgmVEeKM4on4VJsf5A" base_Element="_psMkgwmVEeKM4on4VJsf5A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_psgGggmVEeKM4on4VJsf5A" base_Element="_psVucAmVEeKM4on4VJsf5A"/>
+  <UMLLabProfile:Reference xmi:id="_pxjloQmVEeKM4on4VJsf5A" base_Element="_pxjloAmVEeKM4on4VJsf5A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_pxtWoQmVEeKM4on4VJsf5A" base_Element="_pxjlogmVEeKM4on4VJsf5A"/>
+  <UMLLabProfile:Array xmi:id="_pxtWowmVEeKM4on4VJsf5A" base_Element="_pxjlpAmVEeKM4on4VJsf5A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_px3HowmVEeKM4on4VJsf5A" base_Element="_pxtWpAmVEeKM4on4VJsf5A"/>
+  <UMLLabProfile:Array xmi:id="_px3HpQmVEeKM4on4VJsf5A" base_Element="_px3HoQmVEeKM4on4VJsf5A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_pyARkQmVEeKM4on4VJsf5A" base_Element="_px3HpgmVEeKM4on4VJsf5A"/>
+  <UMLLabProfile:Array xmi:id="_pyARkwmVEeKM4on4VJsf5A" base_Element="_px3HqAmVEeKM4on4VJsf5A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_pyKCkAmVEeKM4on4VJsf5A" base_Element="_pyARlAmVEeKM4on4VJsf5A"/>
+  <UMLLabProfile:Array xmi:id="_pyKCkgmVEeKM4on4VJsf5A" base_Element="_pyARlgmVEeKM4on4VJsf5A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_pyTMhAmVEeKM4on4VJsf5A" base_Element="_pyTMgAmVEeKM4on4VJsf5A"/>
+  <UMLLabProfile:Array xmi:id="_pyTMhgmVEeKM4on4VJsf5A" base_Element="_pyTMggmVEeKM4on4VJsf5A"/>
+  <UMLLabProfile:Reference xmi:id="_pyc9gAmVEeKM4on4VJsf5A" base_Element="_pyTMhwmVEeKM4on4VJsf5A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_pyc9hQmVEeKM4on4VJsf5A" base_Element="_pyc9gQmVEeKM4on4VJsf5A"/>
+  <UMLLabProfile:Array xmi:id="_pyc9hwmVEeKM4on4VJsf5A" base_Element="_pyc9gwmVEeKM4on4VJsf5A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_pymuhAmVEeKM4on4VJsf5A" base_Element="_pymugAmVEeKM4on4VJsf5A"/>
+  <UMLLabProfile:Array xmi:id="_pymuhgmVEeKM4on4VJsf5A" base_Element="_pymuggmVEeKM4on4VJsf5A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_pymuiwmVEeKM4on4VJsf5A" base_Element="_pymuhwmVEeKM4on4VJsf5A"/>
+  <UMLLabProfile:Array xmi:id="_pyv4cAmVEeKM4on4VJsf5A" base_Element="_pymuiQmVEeKM4on4VJsf5A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_pyv4dQmVEeKM4on4VJsf5A" base_Element="_pyv4cQmVEeKM4on4VJsf5A"/>
+  <UMLLabProfile:Array xmi:id="_pyv4dwmVEeKM4on4VJsf5A" base_Element="_pyv4cwmVEeKM4on4VJsf5A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_py5pdAmVEeKM4on4VJsf5A" base_Element="_py5pcAmVEeKM4on4VJsf5A"/>
+  <UMLLabProfile:Array xmi:id="_pzCzYAmVEeKM4on4VJsf5A" base_Element="_py5pcgmVEeKM4on4VJsf5A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_pzCzZQmVEeKM4on4VJsf5A" base_Element="_pzCzYQmVEeKM4on4VJsf5A"/>
+  <UMLLabProfile:Array xmi:id="_pzCzZwmVEeKM4on4VJsf5A" base_Element="_pzCzYwmVEeKM4on4VJsf5A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_pzWVYQmVEeKM4on4VJsf5A" base_Element="_pzMkYAmVEeKM4on4VJsf5A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_pzWVYwmVEeKM4on4VJsf5A" base_Element="_pzWVYgmVEeKM4on4VJsf5A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_pzffUAmVEeKM4on4VJsf5A" base_Element="_pzWVZAmVEeKM4on4VJsf5A"/>
+  <UMLLabProfile:Reference xmi:id="_p0ryIgmVEeKM4on4VJsf5A" base_Element="_p0ryIAmVEeKM4on4VJsf5A"/>
+  <UMLLabProfile:Reference xmi:id="_p0ryJQmVEeKM4on4VJsf5A" base_Element="_p0ryIwmVEeKM4on4VJsf5A"/>
+  <UMLLabProfile:Reference xmi:id="_p0ryKAmVEeKM4on4VJsf5A" base_Element="_p0ryJgmVEeKM4on4VJsf5A"/>
+  <UMLLabProfile:Reference xmi:id="_p0ryKwmVEeKM4on4VJsf5A" base_Element="_p0ryKQmVEeKM4on4VJsf5A"/>
+  <UMLLabProfile:Reference xmi:id="_p01jIAmVEeKM4on4VJsf5A" base_Element="_p0ryLAmVEeKM4on4VJsf5A"/>
+</xmi:XMI>

@@ -1,0 +1,81 @@
+package view;
+
+/**
+ * The interface of the adapter from the view to the model that enables the view to talk to the model.
+ * @author Suozhi Qi, Hongyan Zhang
+ * @version 1.0
+ */
+public interface IModelControlAdapter<TDropListItem> {
+
+	/**
+	 * Take the given short strategy name and return a corresponding something to put onto both drop lists.
+	 * @param classname  The shortened class name of the desired strategy
+	 * @return Something to put onto both the drop lists.
+	 */
+	public TDropListItem addStrategy(String classname);
+
+	/**
+	 * This method tells the model to load a specific type of
+	 * ball based on the className
+	 * @param listItem The strategy loaded from input from the text frame
+	 */
+	public void loadBall(TDropListItem listItem);
+
+	/**
+	 * This method tells the model to erase all of the balls
+	 * on the canvas
+	 */
+	public void clearballs();
+
+	/**
+	* This method will change the SwitcherStrategy ball to switch their state to the item
+	* @param item will be IStrategyFac object in model.Strategy package coming from the BallGUI JComboBox 
+	*/
+	public void SwitchStrategy(TDropListItem item);
+
+	/**
+	* This method will make a SwitcherStrategy ball
+	*/
+	public void makeSwitcher();
+
+	/**
+	 * Return a new object to put on both lists, given two items from the lists.
+	 * @param selectedItem1  An object from one drop list
+	 * @param selectedItem2 An object from the other drop list
+	 * @return An object to put back on both lists.
+	 */
+	public TDropListItem combineStrategies(TDropListItem selectedItem1, TDropListItem selectedItem2);
+
+	/**
+	 * No-op singleton implementation of IView2ModelAdapter 
+	 * See the web page on the Null Object Design Pattern at http://cnx.org/content/m17227/latest/
+	 */
+	@SuppressWarnings("rawtypes")
+	public static final IModelControlAdapter NULL_OBJECT = new IModelControlAdapter() {
+
+		public Object addStrategy(String classname) {
+			return null;
+		}
+
+		public void loadBall(Object listItem) {
+		}
+
+		public void clearballs() {
+		}
+
+		@Override
+		public Object combineStrategies(Object selectedItem1, Object selectedItem2) {
+			return null;
+		}
+
+		@Override
+		public void makeSwitcher() {
+		}
+
+		@Override
+		public void SwitchStrategy(Object item) {
+		}
+
+	};
+
+}

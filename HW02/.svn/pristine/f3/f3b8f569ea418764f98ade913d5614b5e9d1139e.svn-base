@@ -1,0 +1,79 @@
+package shape;
+
+import java.awt.Color;
+import java.awt.Graphics;
+
+/**
+ * Rectangle class
+ * extends the AShape class
+ * represent a rectangle with height and width
+ * implemented the concrete paint methods that draws a rectangle
+ * @author qw12 and xl68
+ *
+ */
+public class Rectangle extends AShape {
+
+	private int height;
+	private int width;
+
+	/**
+	 * Constructor of a Rectangle
+	 * @param x location of the rectangle -- x coordinate
+	 * @param y location of the rectangle -- y coordinate
+	 * @param width width of the rectangle
+	 * @param height height of the rectangle
+	 * @param c color of the rectangle
+	 */
+	public Rectangle(int x, int y, int width, int height, Color c) {
+		setLocationX(x);
+		setLocationY(y);
+		setHeight(height);
+		setWidth(width);
+		setShapeColor(c);
+	}
+
+	/**
+	 * Overridden method of superclass
+	 * It is dedicated to the painting of a rectangle shape
+	 * @param g Graphics component
+	 */
+	@Override
+	public void paint(Graphics g) {
+		// TODO Auto-generated method stub
+		g.setColor(getShapeColor());
+		g.fillRect(getLocationX(), getLocationY(), getWidth(), getHeight());
+	}
+
+	/**
+	 * 
+	 * @return height of rectangle
+	 */
+	public int getHeight() {
+		return height;
+	}
+
+	/**
+	 * setter of height
+	 * @param Height height
+	 */
+	public void setHeight(int Height) {
+		height = Height;
+	}
+
+	/**
+	 * 
+	 * @return width of the rectangle
+	 */
+	public int getWidth() {
+		return width;
+	}
+
+	/**
+	 * setter of width
+	 * @param Width width
+	 */
+	public void setWidth(int Width) {
+		width = Width;
+	}
+
+}

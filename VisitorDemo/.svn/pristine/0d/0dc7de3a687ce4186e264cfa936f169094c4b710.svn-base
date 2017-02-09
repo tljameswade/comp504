@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:UMLLabProfile="http:///schemas/UMLLabProfile/NS/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xsi:schemaLocation="http:///schemas/UMLLabProfile/NS/0 pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile">
+  <uml:Model xmi:id="_R7YwMAxSEeK_iMlKBWzZbA" name="VisitorDemo">
+    <eAnnotations xmi:id="_08HygCbrEeOkWJZ3f-HIZQ" source="http://ns.yatta.de/umllab">
+      <contents xmi:type="ecore:EAnnotation" xmi:id="_08HygSbrEeOkWJZ3f-HIZQ" source="codegen">
+        <details xmi:id="_08HygibrEeOkWJZ3f-HIZQ" key="codegenDirectory" value="/VisitorDemo/src"/>
+        <details xmi:id="_1H_EQCbrEeOkWJZ3f-HIZQ" key="AssociatedSourceCode" value="/VisitorDemo/src/visitors/HostA.java;2077181656/1;/VisitorDemo/src/visitors/HostB.java;3218532735/1;/VisitorDemo/src/visitors/HostC.java;1257337309/1;/VisitorDemo/src/visitors/IHost.java;1470175046/1;/VisitorDemo/src/visitors/IVisitor.java;949235415/1;/VisitorDemo/src/visitors/impl/Visitor1.java;1003330336/1;/VisitorDemo/src/visitors/impl/Visitor2.java;2360537550/1;"/>
+      </contents>
+    </eAnnotations>
+    <elementImport xmi:id="_TPwiIAxSEeK_iMlKBWzZbA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+    </elementImport>
+    <elementImport xmi:id="_TPwiIQxSEeK_iMlKBWzZbA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#byte"/>
+    </elementImport>
+    <elementImport xmi:id="_TPwiIgxSEeK_iMlKBWzZbA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+    </elementImport>
+    <elementImport xmi:id="_TPwiIwxSEeK_iMlKBWzZbA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+    </elementImport>
+    <elementImport xmi:id="_TPwiJAxSEeK_iMlKBWzZbA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+    </elementImport>
+    <elementImport xmi:id="_TPwiJQxSEeK_iMlKBWzZbA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    </elementImport>
+    <elementImport xmi:id="_TPwiJgxSEeK_iMlKBWzZbA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+    </elementImport>
+    <elementImport xmi:id="_TPwiJwxSEeK_iMlKBWzZbA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#short"/>
+    </elementImport>
+    <elementImport xmi:id="_TPwiKAxSEeK_iMlKBWzZbA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </elementImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_TP2owAxSEeK_iMlKBWzZbA" name="visitors">
+      <packagedElement xmi:type="uml:Package" xmi:id="_TQPDQAxSEeK_iMlKBWzZbA" name="impl">
+        <packagedElement xmi:type="uml:Class" xmi:id="_TRYSwAxSEeK_iMlKBWzZbA" clientDependency="_TSno4AxSEeK_iMlKBWzZbA" name="Visitor1">
+          <ownedComment xmi:id="_TTkrUQxSEeK_iMlKBWzZbA">
+            <body>A visitor that returns a String that says &quot;This is the result from HostX,&#xD;
+where HostX is the type of the IHost object executing this visitor. &#xD;
+@author swong&#xD;
+ *</body>
+          </ownedComment>
+          <interfaceRealization xmi:id="_TSno4AxSEeK_iMlKBWzZbA" client="_TRYSwAxSEeK_iMlKBWzZbA" supplier="_TRMFgQxSEeK_iMlKBWzZbA" contract="_TRMFgQxSEeK_iMlKBWzZbA"/>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_TTkrLgxSEeK_iMlKBWzZbA" name="caseHostA" specification="_TTMQqgxSEeK_iMlKBWzZbA">
+            <ownedParameter xmi:id="_TTkrLwxSEeK_iMlKBWzZbA" name="host" type="_TQzrAAxSEeK_iMlKBWzZbA"/>
+            <ownedParameter xmi:id="_TTkrMAxSEeK_iMlKBWzZbA" name="params" type="_TSz2IQxSEeK_iMlKBWzZbA">
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TTkrMQxSEeK_iMlKBWzZbA" value="*"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_TTkrMgxSEeK_iMlKBWzZbA" type="_TSz2IQxSEeK_iMlKBWzZbA" direction="return">
+              <name xsi:nil="true"/>
+            </ownedParameter>
+            <language>java</language>
+            <body>return &quot;This is the result from HostA!&quot;;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_TTkrMwxSEeK_iMlKBWzZbA" name="caseHostB" specification="_TTSXQwxSEeK_iMlKBWzZbA">
+            <ownedParameter xmi:id="_TTkrNAxSEeK_iMlKBWzZbA" name="host" type="_TQ_4QAxSEeK_iMlKBWzZbA"/>
+            <ownedParameter xmi:id="_TTkrNQxSEeK_iMlKBWzZbA" name="params" type="_TSz2IQxSEeK_iMlKBWzZbA">
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TTkrNgxSEeK_iMlKBWzZbA" value="*"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_TTkrNwxSEeK_iMlKBWzZbA" type="_TSz2IQxSEeK_iMlKBWzZbA" direction="return">
+              <name xsi:nil="true"/>
+            </ownedParameter>
+            <language>java</language>
+            <body>return &quot;This is the result from HostB!&quot;;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_TTkrOAxSEeK_iMlKBWzZbA" name="caseHostC" specification="_TTSXTAxSEeK_iMlKBWzZbA">
+            <ownedParameter xmi:id="_TTkrOQxSEeK_iMlKBWzZbA" name="host" type="_TRF-4AxSEeK_iMlKBWzZbA"/>
+            <ownedParameter xmi:id="_TTkrOgxSEeK_iMlKBWzZbA" name="params" type="_TSz2IQxSEeK_iMlKBWzZbA">
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TTkrOwxSEeK_iMlKBWzZbA" value="*"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_TTkrPAxSEeK_iMlKBWzZbA" type="_TSz2IQxSEeK_iMlKBWzZbA" direction="return">
+              <name xsi:nil="true"/>
+            </ownedParameter>
+            <language>java</language>
+            <body>return &quot;This is the result from HostC!&quot;;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedOperation xmi:id="_TTMQqgxSEeK_iMlKBWzZbA" name="caseHostA" method="_TTkrLgxSEeK_iMlKBWzZbA">
+            <ownedParameter xmi:id="_TTMQqwxSEeK_iMlKBWzZbA" name="host" type="_TQzrAAxSEeK_iMlKBWzZbA"/>
+            <ownedParameter xmi:id="_TTMQrAxSEeK_iMlKBWzZbA" name="params" type="_TSz2IQxSEeK_iMlKBWzZbA">
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TTMQrwxSEeK_iMlKBWzZbA" value="*"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_TTMQrQxSEeK_iMlKBWzZbA" type="_TSz2IQxSEeK_iMlKBWzZbA" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_TTSXQwxSEeK_iMlKBWzZbA" name="caseHostB" method="_TTkrMwxSEeK_iMlKBWzZbA">
+            <ownedParameter xmi:id="_TTSXRAxSEeK_iMlKBWzZbA" name="host" type="_TQ_4QAxSEeK_iMlKBWzZbA"/>
+            <ownedParameter xmi:id="_TTSXRQxSEeK_iMlKBWzZbA" name="params" type="_TSz2IQxSEeK_iMlKBWzZbA">
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TTSXSAxSEeK_iMlKBWzZbA" value="*"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_TTSXRgxSEeK_iMlKBWzZbA" type="_TSz2IQxSEeK_iMlKBWzZbA" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_TTSXTAxSEeK_iMlKBWzZbA" name="caseHostC" method="_TTkrOAxSEeK_iMlKBWzZbA">
+            <ownedParameter xmi:id="_TTSXTQxSEeK_iMlKBWzZbA" name="host" type="_TRF-4AxSEeK_iMlKBWzZbA"/>
+            <ownedParameter xmi:id="_TTYd4AxSEeK_iMlKBWzZbA" name="params" type="_TSz2IQxSEeK_iMlKBWzZbA">
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TTYd4wxSEeK_iMlKBWzZbA" value="*"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_TTYd4QxSEeK_iMlKBWzZbA" type="_TSz2IQxSEeK_iMlKBWzZbA" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_TRkgAAxSEeK_iMlKBWzZbA" clientDependency="_TStvgwxSEeK_iMlKBWzZbA" name="Visitor2">
+          <ownedComment xmi:id="_TTqxwAxSEeK_iMlKBWzZbA">
+            <body>A visitor that sets the paint cmd in the VisitorDemoModel to a cmd that draws various shapes.&#xD;
+The params is assumed to be a single value, a reference to the VisitorDemoModel.&#xD;
+When the host is a HostA, the installed IPaintCmd draws a blue oval on the screen.&#xD;
+When the host is a HostB, the installed IPaintCmd draws a red rectangle on the screen.    &#xD;
+When the host is a HostC, the installed IPaintCmd draws a green rounded rectangle on the screen.  &#xD;
+Returns a string saying what it did.&#xD;
+@author swong&#xD;
+ *</body>
+          </ownedComment>
+          <interfaceRealization xmi:id="_TStvgwxSEeK_iMlKBWzZbA" client="_TRkgAAxSEeK_iMlKBWzZbA" supplier="_TRMFgQxSEeK_iMlKBWzZbA" contract="_TRMFgQxSEeK_iMlKBWzZbA"/>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_TTkrPQxSEeK_iMlKBWzZbA" name="caseHostA" specification="_TTYd5wxSEeK_iMlKBWzZbA">
+            <ownedParameter xmi:id="_TTkrPgxSEeK_iMlKBWzZbA" name="host" type="_TQzrAAxSEeK_iMlKBWzZbA"/>
+            <ownedParameter xmi:id="_TTkrPwxSEeK_iMlKBWzZbA" name="params" type="_TSz2IQxSEeK_iMlKBWzZbA">
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TTkrQAxSEeK_iMlKBWzZbA" value="*"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_TTkrQQxSEeK_iMlKBWzZbA" type="_TSz2IQxSEeK_iMlKBWzZbA" direction="return">
+              <name xsi:nil="true"/>
+            </ownedParameter>
+            <language>java</language>
+            <body>((VisitorDemoModel) params[0]).setPaintCmd(new IPaintCmd() {&#xD;
+			@Override&#xD;
+			public void apply(Graphics g) {&#xD;
+				g.setColor(Color.BLUE);&#xD;
+				g.fillOval(50, 50, 30, 15);&#xD;
+			}&#xD;
+		});&#xD;
+		return &quot;Blue oval made.&quot;;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_TTkrQgxSEeK_iMlKBWzZbA" name="caseHostB" specification="_TTekgAxSEeK_iMlKBWzZbA">
+            <ownedParameter xmi:id="_TTkrQwxSEeK_iMlKBWzZbA" name="host" type="_TQ_4QAxSEeK_iMlKBWzZbA"/>
+            <ownedParameter xmi:id="_TTkrRAxSEeK_iMlKBWzZbA" name="params" type="_TSz2IQxSEeK_iMlKBWzZbA">
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TTkrRQxSEeK_iMlKBWzZbA" value="*"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_TTkrRgxSEeK_iMlKBWzZbA" type="_TSz2IQxSEeK_iMlKBWzZbA" direction="return">
+              <name xsi:nil="true"/>
+            </ownedParameter>
+            <language>java</language>
+            <body>((VisitorDemoModel) params[0]).setPaintCmd(new IPaintCmd() {&#xD;
+			@Override&#xD;
+			public void apply(Graphics g) {&#xD;
+				g.setColor(Color.RED);&#xD;
+				g.fillRect(50, 50, 30, 15);&#xD;
+			}&#xD;
+		});&#xD;
+		return &quot;Red rectangle made&quot;;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_TTkrRwxSEeK_iMlKBWzZbA" name="caseHostC" specification="_TTekiQxSEeK_iMlKBWzZbA">
+            <ownedParameter xmi:id="_TTkrSAxSEeK_iMlKBWzZbA" name="host" type="_TRF-4AxSEeK_iMlKBWzZbA"/>
+            <ownedParameter xmi:id="_TTkrSQxSEeK_iMlKBWzZbA" name="params" type="_TSz2IQxSEeK_iMlKBWzZbA">
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TTkrSgxSEeK_iMlKBWzZbA" value="*"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_TTkrSwxSEeK_iMlKBWzZbA" type="_TSz2IQxSEeK_iMlKBWzZbA" direction="return">
+              <name xsi:nil="true"/>
+            </ownedParameter>
+            <language>java</language>
+            <body>((VisitorDemoModel) params[0]).setPaintCmd(new IPaintCmd() {&#xD;
+			@Override&#xD;
+			public void apply(Graphics g) {&#xD;
+				g.setColor(Color.GREEN);&#xD;
+				g.fillRoundRect(50, 50, 30, 15, 5, 5);&#xD;
+			}&#xD;
+		});&#xD;
+		return &quot;Green rounded rectangle made&quot;;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedOperation xmi:id="_TTYd5wxSEeK_iMlKBWzZbA" name="caseHostA" method="_TTkrPQxSEeK_iMlKBWzZbA">
+            <ownedParameter xmi:id="_TTYd6AxSEeK_iMlKBWzZbA" name="host" type="_TQzrAAxSEeK_iMlKBWzZbA"/>
+            <ownedParameter xmi:id="_TTYd6QxSEeK_iMlKBWzZbA" name="params" type="_TSz2IQxSEeK_iMlKBWzZbA">
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TTYd7AxSEeK_iMlKBWzZbA" value="*"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_TTYd6gxSEeK_iMlKBWzZbA" type="_TSz2IQxSEeK_iMlKBWzZbA" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_TTekgAxSEeK_iMlKBWzZbA" name="caseHostB" method="_TTkrQgxSEeK_iMlKBWzZbA">
+            <ownedParameter xmi:id="_TTekgQxSEeK_iMlKBWzZbA" name="host" type="_TQ_4QAxSEeK_iMlKBWzZbA"/>
+            <ownedParameter xmi:id="_TTekggxSEeK_iMlKBWzZbA" name="params" type="_TSz2IQxSEeK_iMlKBWzZbA">
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TTekhQxSEeK_iMlKBWzZbA" value="*"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_TTekgwxSEeK_iMlKBWzZbA" type="_TSz2IQxSEeK_iMlKBWzZbA" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_TTekiQxSEeK_iMlKBWzZbA" name="caseHostC" method="_TTkrRwxSEeK_iMlKBWzZbA">
+            <ownedParameter xmi:id="_TTekigxSEeK_iMlKBWzZbA" name="host" type="_TRF-4AxSEeK_iMlKBWzZbA"/>
+            <ownedParameter xmi:id="_TTekiwxSEeK_iMlKBWzZbA" name="params" type="_TSz2IQxSEeK_iMlKBWzZbA">
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TTekjgxSEeK_iMlKBWzZbA" value="*"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_TTekjAxSEeK_iMlKBWzZbA" type="_TSz2IQxSEeK_iMlKBWzZbA" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_TQzrAAxSEeK_iMlKBWzZbA" clientDependency="_TSVVAAxSEeK_iMlKBWzZbA" name="HostA">
+        <ownedComment xmi:id="_TTkrTAxSEeK_iMlKBWzZbA">
+          <body>A concrete host type&#xD;
+@author swong&#xD;
+ *</body>
+        </ownedComment>
+        <interfaceRealization xmi:id="_TSVVAAxSEeK_iMlKBWzZbA" client="_TQzrAAxSEeK_iMlKBWzZbA" supplier="_TRMFgAxSEeK_iMlKBWzZbA" contract="_TRMFgAxSEeK_iMlKBWzZbA"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_TTekkgxSEeK_iMlKBWzZbA" name="execute" specification="_TS58wQxSEeK_iMlKBWzZbA">
+          <ownedParameter xmi:id="_TTekkwxSEeK_iMlKBWzZbA" name="algo" type="_TRMFgQxSEeK_iMlKBWzZbA"/>
+          <ownedParameter xmi:id="_TTeklAxSEeK_iMlKBWzZbA" name="params" type="_TSz2IQxSEeK_iMlKBWzZbA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TTeklQxSEeK_iMlKBWzZbA" value="*"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_TTeklgxSEeK_iMlKBWzZbA" type="_TSz2IQxSEeK_iMlKBWzZbA" direction="return">
+            <name xsi:nil="true"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>return algo.caseHostA(this, params);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_TTeklwxSEeK_iMlKBWzZbA" name="toString" specification="_TQ5xoAxSEeK_iMlKBWzZbA">
+          <ownedParameter xmi:id="_TTekmAxSEeK_iMlKBWzZbA" direction="return">
+            <name xsi:nil="true"/>
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>return &quot;HostA&quot;;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_TQ5xoAxSEeK_iMlKBWzZbA" name="toString" method="_TTeklwxSEeK_iMlKBWzZbA">
+          <ownedParameter xmi:id="_TQ5xoQxSEeK_iMlKBWzZbA" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_TS58wQxSEeK_iMlKBWzZbA" name="execute" method="_TTekkgxSEeK_iMlKBWzZbA">
+          <ownedParameter xmi:id="_TS58wgxSEeK_iMlKBWzZbA" name="algo" type="_TRMFgQxSEeK_iMlKBWzZbA"/>
+          <ownedParameter xmi:id="_TS58wwxSEeK_iMlKBWzZbA" name="params" type="_TSz2IQxSEeK_iMlKBWzZbA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TS58xgxSEeK_iMlKBWzZbA" value="*"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_TS58xAxSEeK_iMlKBWzZbA" type="_TSz2IQxSEeK_iMlKBWzZbA" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_TQ_4QAxSEeK_iMlKBWzZbA" clientDependency="_TSbboAxSEeK_iMlKBWzZbA" name="HostB">
+        <ownedComment xmi:id="_TTkrTQxSEeK_iMlKBWzZbA">
+          <body>A concrete host type&#xD;
+@author swong&#xD;
+ *</body>
+        </ownedComment>
+        <interfaceRealization xmi:id="_TSbboAxSEeK_iMlKBWzZbA" client="_TQ_4QAxSEeK_iMlKBWzZbA" supplier="_TRMFgAxSEeK_iMlKBWzZbA" contract="_TRMFgAxSEeK_iMlKBWzZbA"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_TTkrIAxSEeK_iMlKBWzZbA" name="execute" specification="_TS58ygxSEeK_iMlKBWzZbA">
+          <ownedParameter xmi:id="_TTkrIQxSEeK_iMlKBWzZbA" name="algo" type="_TRMFgQxSEeK_iMlKBWzZbA"/>
+          <ownedParameter xmi:id="_TTkrIgxSEeK_iMlKBWzZbA" name="params" type="_TSz2IQxSEeK_iMlKBWzZbA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TTkrIwxSEeK_iMlKBWzZbA" value="*"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_TTkrJAxSEeK_iMlKBWzZbA" type="_TSz2IQxSEeK_iMlKBWzZbA" direction="return">
+            <name xsi:nil="true"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>return algo.caseHostB(this, params);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_TTkrJQxSEeK_iMlKBWzZbA" name="toString" specification="_TQ_4QQxSEeK_iMlKBWzZbA">
+          <ownedParameter xmi:id="_TTkrJgxSEeK_iMlKBWzZbA" direction="return">
+            <name xsi:nil="true"/>
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>return &quot;HostB&quot;;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_TQ_4QQxSEeK_iMlKBWzZbA" name="toString" method="_TTkrJQxSEeK_iMlKBWzZbA">
+          <ownedParameter xmi:id="_TQ_4QgxSEeK_iMlKBWzZbA" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_TS58ygxSEeK_iMlKBWzZbA" name="execute" method="_TTkrIAxSEeK_iMlKBWzZbA">
+          <ownedParameter xmi:id="_TS58ywxSEeK_iMlKBWzZbA" name="algo" type="_TRMFgQxSEeK_iMlKBWzZbA"/>
+          <ownedParameter xmi:id="_TTADYAxSEeK_iMlKBWzZbA" name="params" type="_TSz2IQxSEeK_iMlKBWzZbA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TTADYwxSEeK_iMlKBWzZbA" value="*"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_TTADYQxSEeK_iMlKBWzZbA" type="_TSz2IQxSEeK_iMlKBWzZbA" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_TRF-4AxSEeK_iMlKBWzZbA" clientDependency="_TSbboQxSEeK_iMlKBWzZbA" name="HostC">
+        <ownedComment xmi:id="_TTkrTgxSEeK_iMlKBWzZbA">
+          <body>A concrete host type&#xD;
+@author swong&#xD;
+ *</body>
+        </ownedComment>
+        <interfaceRealization xmi:id="_TSbboQxSEeK_iMlKBWzZbA" client="_TRF-4AxSEeK_iMlKBWzZbA" supplier="_TRMFgAxSEeK_iMlKBWzZbA" contract="_TRMFgAxSEeK_iMlKBWzZbA"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_TTkrJwxSEeK_iMlKBWzZbA" name="execute" specification="_TTADZwxSEeK_iMlKBWzZbA">
+          <ownedParameter xmi:id="_TTkrKAxSEeK_iMlKBWzZbA" name="algo" type="_TRMFgQxSEeK_iMlKBWzZbA"/>
+          <ownedParameter xmi:id="_TTkrKQxSEeK_iMlKBWzZbA" name="params" type="_TSz2IQxSEeK_iMlKBWzZbA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TTkrKgxSEeK_iMlKBWzZbA" value="*"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_TTkrKwxSEeK_iMlKBWzZbA" type="_TSz2IQxSEeK_iMlKBWzZbA" direction="return">
+            <name xsi:nil="true"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>return algo.caseHostC(this, params);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_TTkrLAxSEeK_iMlKBWzZbA" name="toString" specification="_TRF-4QxSEeK_iMlKBWzZbA">
+          <ownedParameter xmi:id="_TTkrLQxSEeK_iMlKBWzZbA" direction="return">
+            <name xsi:nil="true"/>
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>return &quot;HostC&quot;;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_TRF-4QxSEeK_iMlKBWzZbA" name="toString" method="_TTkrLAxSEeK_iMlKBWzZbA">
+          <ownedParameter xmi:id="_TRF-4gxSEeK_iMlKBWzZbA" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_TTADZwxSEeK_iMlKBWzZbA" name="execute" method="_TTkrJwxSEeK_iMlKBWzZbA">
+          <ownedParameter xmi:id="_TTADaAxSEeK_iMlKBWzZbA" name="algo" type="_TRMFgQxSEeK_iMlKBWzZbA"/>
+          <ownedParameter xmi:id="_TTADaQxSEeK_iMlKBWzZbA" name="params" type="_TSz2IQxSEeK_iMlKBWzZbA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TTADbAxSEeK_iMlKBWzZbA" value="*"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_TTADagxSEeK_iMlKBWzZbA" type="_TSz2IQxSEeK_iMlKBWzZbA" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_TRMFgAxSEeK_iMlKBWzZbA" name="IHost">
+        <ownedComment xmi:id="_TTkrTwxSEeK_iMlKBWzZbA">
+          <body>Interface that represents the abstract host type&#xD;
+@author swong&#xD;
+ *</body>
+        </ownedComment>
+        <ownedOperation xmi:id="_TTGKAgxSEeK_iMlKBWzZbA" name="execute">
+          <ownedParameter xmi:id="_TTGKAwxSEeK_iMlKBWzZbA" name="algo" type="_TRMFgQxSEeK_iMlKBWzZbA"/>
+          <ownedParameter xmi:id="_TTGKBAxSEeK_iMlKBWzZbA" name="params" type="_TSz2IQxSEeK_iMlKBWzZbA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TTGKBwxSEeK_iMlKBWzZbA" value="*"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_TTGKBQxSEeK_iMlKBWzZbA" type="_TSz2IQxSEeK_iMlKBWzZbA" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_TRMFgQxSEeK_iMlKBWzZbA" name="IVisitor">
+        <ownedComment xmi:id="_TTkrUAxSEeK_iMlKBWzZbA">
+          <body>An abstract visitor to an IHost object.  Provides cases for each IHost subclass type.&#xD;
+@author swong&#xD;
+ *</body>
+        </ownedComment>
+        <ownedAttribute xmi:id="_TRSMIAxSEeK_iMlKBWzZbA" name="NULL_VISITOR" isLeaf="true" isStatic="true" type="_TRMFgQxSEeK_iMlKBWzZbA" isReadOnly="true" association="_TTqxwQxSEeK_iMlKBWzZbA">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_TRSMIQxSEeK_iMlKBWzZbA" value="new IVisitor() {&#xD;&#xA;&#xD;&#xA;&#x9;&#x9;@Override&#xD;&#xA;&#x9;&#x9;public Object caseHostA(HostA host, Object... params) {&#xD;&#xA;&#x9;&#x9;&#x9;return &quot;NULL_VISITOR.caseHostA&quot;;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#xD;&#xA;&#x9;&#x9;@Override&#xD;&#xA;&#x9;&#x9;public Object caseHostB(HostB host, Object... params) {&#xD;&#xA;&#x9;&#x9;&#x9;return &quot;NULL_VISITOR.caseHostB&quot;;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#xD;&#xA;&#x9;&#x9;@Override&#xD;&#xA;&#x9;&#x9;public Object caseHostC(HostC host, Object... params) {&#xD;&#xA;&#x9;&#x9;&#x9;return &quot;NULL_VISITOR.caseHostC&quot;;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#xD;&#xA;&#x9;}"/>
+        </ownedAttribute>
+        <ownedOperation xmi:id="_TTGKCQxSEeK_iMlKBWzZbA" name="caseHostA">
+          <ownedParameter xmi:id="_TTGKCgxSEeK_iMlKBWzZbA" name="host" type="_TQzrAAxSEeK_iMlKBWzZbA"/>
+          <ownedParameter xmi:id="_TTGKCwxSEeK_iMlKBWzZbA" name="params" type="_TSz2IQxSEeK_iMlKBWzZbA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TTGKDgxSEeK_iMlKBWzZbA" value="*"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_TTGKDAxSEeK_iMlKBWzZbA" type="_TSz2IQxSEeK_iMlKBWzZbA" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_TTGKEAxSEeK_iMlKBWzZbA" name="caseHostB">
+          <ownedParameter xmi:id="_TTGKEQxSEeK_iMlKBWzZbA" name="host" type="_TQ_4QAxSEeK_iMlKBWzZbA"/>
+          <ownedParameter xmi:id="_TTGKEgxSEeK_iMlKBWzZbA" name="params" type="_TSz2IQxSEeK_iMlKBWzZbA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TTMQoQxSEeK_iMlKBWzZbA" value="*"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_TTGKEwxSEeK_iMlKBWzZbA" type="_TSz2IQxSEeK_iMlKBWzZbA" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_TTMQowxSEeK_iMlKBWzZbA" name="caseHostC">
+          <ownedParameter xmi:id="_TTMQpAxSEeK_iMlKBWzZbA" name="host" type="_TRF-4AxSEeK_iMlKBWzZbA"/>
+          <ownedParameter xmi:id="_TTMQpQxSEeK_iMlKBWzZbA" name="params" type="_TSz2IQxSEeK_iMlKBWzZbA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TTMQqAxSEeK_iMlKBWzZbA" value="*"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_TTMQpgxSEeK_iMlKBWzZbA" type="_TSz2IQxSEeK_iMlKBWzZbA" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_TTqxwQxSEeK_iMlKBWzZbA" name="" memberEnd="_TTqxwgxSEeK_iMlKBWzZbA _TRSMIAxSEeK_iMlKBWzZbA">
+        <ownedEnd xmi:id="_TTqxwgxSEeK_iMlKBWzZbA" name="" type="_TRMFgQxSEeK_iMlKBWzZbA" association="_TTqxwQxSEeK_iMlKBWzZbA"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_TQVJ4AxSEeK_iMlKBWzZbA" name="java">
+      <packagedElement xmi:type="uml:Package" xmi:id="_TQVJ4QxSEeK_iMlKBWzZbA" name="awt">
+        <packagedElement xmi:type="uml:Class" xmi:id="_TSno4QxSEeK_iMlKBWzZbA" name="Color"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_TStvgQxSEeK_iMlKBWzZbA" name="Graphics"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_TSz2IAxSEeK_iMlKBWzZbA" name="lang">
+        <packagedElement xmi:type="uml:Class" xmi:id="_TSz2IQxSEeK_iMlKBWzZbA" name="Object"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_TQVJ4gxSEeK_iMlKBWzZbA" name="model"/>
+    <profileApplication xmi:id="_TQzrAQxSEeK_iMlKBWzZbA">
+      <eAnnotations xmi:id="_TQzrAgxSEeK_iMlKBWzZbA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile"/>
+    </profileApplication>
+  </uml:Model>
+  <UMLLabProfile:Reference xmi:id="_TStvgAxSEeK_iMlKBWzZbA" base_Element="_TSno4QxSEeK_iMlKBWzZbA"/>
+  <UMLLabProfile:Reference xmi:id="_TStvggxSEeK_iMlKBWzZbA" base_Element="_TStvgQxSEeK_iMlKBWzZbA"/>
+  <UMLLabProfile:Reference xmi:id="_TS58wAxSEeK_iMlKBWzZbA" base_Element="_TSz2IQxSEeK_iMlKBWzZbA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_TS58xQxSEeK_iMlKBWzZbA" base_Element="_TS58wQxSEeK_iMlKBWzZbA"/>
+  <UMLLabProfile:Array xmi:id="_TS58xwxSEeK_iMlKBWzZbA" base_Element="_TS58wwxSEeK_iMlKBWzZbA"/>
+  <UMLLabProfile:Annotations xmi:id="_TS58yAxSEeK_iMlKBWzZbA" base_Element="_TS58wQxSEeK_iMlKBWzZbA">
+    <annotations xmi:id="_TS58yQxSEeK_iMlKBWzZbA" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_TTADYgxSEeK_iMlKBWzZbA" base_Element="_TS58ygxSEeK_iMlKBWzZbA"/>
+  <UMLLabProfile:Array xmi:id="_TTADZAxSEeK_iMlKBWzZbA" base_Element="_TTADYAxSEeK_iMlKBWzZbA"/>
+  <UMLLabProfile:Annotations xmi:id="_TTADZQxSEeK_iMlKBWzZbA" base_Element="_TS58ygxSEeK_iMlKBWzZbA">
+    <annotations xmi:id="_TTADZgxSEeK_iMlKBWzZbA" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_TTADawxSEeK_iMlKBWzZbA" base_Element="_TTADZwxSEeK_iMlKBWzZbA"/>
+  <UMLLabProfile:Array xmi:id="_TTADbQxSEeK_iMlKBWzZbA" base_Element="_TTADaQxSEeK_iMlKBWzZbA"/>
+  <UMLLabProfile:Annotations xmi:id="_TTGKAAxSEeK_iMlKBWzZbA" base_Element="_TTADZwxSEeK_iMlKBWzZbA">
+    <annotations xmi:id="_TTGKAQxSEeK_iMlKBWzZbA" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_TTGKBgxSEeK_iMlKBWzZbA" base_Element="_TTGKAgxSEeK_iMlKBWzZbA"/>
+  <UMLLabProfile:Array xmi:id="_TTGKCAxSEeK_iMlKBWzZbA" base_Element="_TTGKBAxSEeK_iMlKBWzZbA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_TTGKDQxSEeK_iMlKBWzZbA" base_Element="_TTGKCQxSEeK_iMlKBWzZbA"/>
+  <UMLLabProfile:Array xmi:id="_TTGKDwxSEeK_iMlKBWzZbA" base_Element="_TTGKCwxSEeK_iMlKBWzZbA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_TTMQoAxSEeK_iMlKBWzZbA" base_Element="_TTGKEAxSEeK_iMlKBWzZbA"/>
+  <UMLLabProfile:Array xmi:id="_TTMQogxSEeK_iMlKBWzZbA" base_Element="_TTGKEgxSEeK_iMlKBWzZbA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_TTMQpwxSEeK_iMlKBWzZbA" base_Element="_TTMQowxSEeK_iMlKBWzZbA"/>
+  <UMLLabProfile:Array xmi:id="_TTMQqQxSEeK_iMlKBWzZbA" base_Element="_TTMQpQxSEeK_iMlKBWzZbA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_TTMQrgxSEeK_iMlKBWzZbA" base_Element="_TTMQqgxSEeK_iMlKBWzZbA"/>
+  <UMLLabProfile:Array xmi:id="_TTSXQAxSEeK_iMlKBWzZbA" base_Element="_TTMQrAxSEeK_iMlKBWzZbA"/>
+  <UMLLabProfile:Annotations xmi:id="_TTSXQQxSEeK_iMlKBWzZbA" base_Element="_TTMQqgxSEeK_iMlKBWzZbA">
+    <annotations xmi:id="_TTSXQgxSEeK_iMlKBWzZbA" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_TTSXRwxSEeK_iMlKBWzZbA" base_Element="_TTSXQwxSEeK_iMlKBWzZbA"/>
+  <UMLLabProfile:Array xmi:id="_TTSXSQxSEeK_iMlKBWzZbA" base_Element="_TTSXRQxSEeK_iMlKBWzZbA"/>
+  <UMLLabProfile:Annotations xmi:id="_TTSXSgxSEeK_iMlKBWzZbA" base_Element="_TTSXQwxSEeK_iMlKBWzZbA">
+    <annotations xmi:id="_TTSXSwxSEeK_iMlKBWzZbA" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_TTYd4gxSEeK_iMlKBWzZbA" base_Element="_TTSXTAxSEeK_iMlKBWzZbA"/>
+  <UMLLabProfile:Array xmi:id="_TTYd5AxSEeK_iMlKBWzZbA" base_Element="_TTYd4AxSEeK_iMlKBWzZbA"/>
+  <UMLLabProfile:Annotations xmi:id="_TTYd5QxSEeK_iMlKBWzZbA" base_Element="_TTSXTAxSEeK_iMlKBWzZbA">
+    <annotations xmi:id="_TTYd5gxSEeK_iMlKBWzZbA" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_TTYd6wxSEeK_iMlKBWzZbA" base_Element="_TTYd5wxSEeK_iMlKBWzZbA"/>
+  <UMLLabProfile:Array xmi:id="_TTYd7QxSEeK_iMlKBWzZbA" base_Element="_TTYd6QxSEeK_iMlKBWzZbA"/>
+  <UMLLabProfile:Annotations xmi:id="_TTYd7gxSEeK_iMlKBWzZbA" base_Element="_TTYd5wxSEeK_iMlKBWzZbA">
+    <annotations xmi:id="_TTYd7wxSEeK_iMlKBWzZbA" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_TTekhAxSEeK_iMlKBWzZbA" base_Element="_TTekgAxSEeK_iMlKBWzZbA"/>
+  <UMLLabProfile:Array xmi:id="_TTekhgxSEeK_iMlKBWzZbA" base_Element="_TTekggxSEeK_iMlKBWzZbA"/>
+  <UMLLabProfile:Annotations xmi:id="_TTekhwxSEeK_iMlKBWzZbA" base_Element="_TTekgAxSEeK_iMlKBWzZbA">
+    <annotations xmi:id="_TTekiAxSEeK_iMlKBWzZbA" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_TTekjQxSEeK_iMlKBWzZbA" base_Element="_TTekiQxSEeK_iMlKBWzZbA"/>
+  <UMLLabProfile:Array xmi:id="_TTekjwxSEeK_iMlKBWzZbA" base_Element="_TTekiwxSEeK_iMlKBWzZbA"/>
+  <UMLLabProfile:Annotations xmi:id="_TTekkAxSEeK_iMlKBWzZbA" base_Element="_TTekiQxSEeK_iMlKBWzZbA">
+    <annotations xmi:id="_TTekkQxSEeK_iMlKBWzZbA" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Reference xmi:id="_TTqxwwxSEeK_iMlKBWzZbA" base_Element="_TTqxwQxSEeK_iMlKBWzZbA"/>
+</xmi:XMI>

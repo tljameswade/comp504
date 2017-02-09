@@ -1,0 +1,18 @@
+package model.paint.shape;
+
+import java.awt.Shape;
+
+/**
+ * @author Suozhi Qi, Zhou Liu
+ *
+ */
+public interface IShapeFactory {
+	/**
+	 * @param x
+	 * @param y
+	 * @param xScale
+	 * @param yScale
+	 * @return Shape
+	 */
+	public Shape makeShape(double x, double y, double xScale, double yScale);
+}

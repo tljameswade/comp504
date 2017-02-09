@@ -1,0 +1,39 @@
+package model.Strategy;
+
+import java.awt.Color;
+
+import model.Ball;
+import util.Randomizer;
+
+/**
+ * this class will create a AngryShakingball on the basis of a default one
+ * @author SuozhiQi,HongyangZhang
+ *
+ */
+public class AngryShakingStrategy implements IUpdateStrategy {
+
+	/**
+	 * The count used to slower the speed of changing radius of the ball
+	 */
+	int count = 0;
+
+	/**
+	 * In this update method, the velocity in the x-axis is set to randomize
+	 * from -5 to 5 and the velocity in the y-axis is set to 0 to mimic shaking.
+	 * The color of the ball is set to red to mimic angry face.
+	 * When the count goes up to 100, the radius will automatically increase by 3.
+	 */
+	@Override
+	public void updateSTATE(Ball ball) {
+		ball.getVelocity().x = Randomizer.Singleton.randomInt(-5, 5);
+		ball.getVelocity().y = 0;
+		ball.setColor(Color.red);
+
+		count++;
+		if (count == 100) {
+			ball.setRadius(3 + ball.getRadius());
+			count = 0;
+		}
+	}
+
+}

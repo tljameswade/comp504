@@ -1,0 +1,19 @@
+package model.visitor;
+
+import provided.music.APhraseVisitor;
+import provided.music.IPhrase;
+import provided.music.IPhraseVisitorCmd;
+import provided.music.Note;
+import provided.player.SequencePlayer;
+
+public class PlayMusicVisitor extends APhraseVisitor{
+
+	public PlayMusicVisitor() {
+		this.addCmd(Note.ID, new IPhraseVisitorCmd() {
+			public Object apply(String id, IPhrase host, Object... params) {
+				SequencePlayer musicPlayer = (SequencePlayer)params[0];
+				return musicPlayer.addNote((Note)host, (int)params[1]);
+			}
+		});
+	}
+}

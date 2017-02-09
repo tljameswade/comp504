@@ -1,0 +1,18 @@
+package model.Strategy;
+
+import model.Ball;
+
+/**
+ * interface with updateSTATE function
+ * @author SuozhiQi,HongyangZhang
+ *
+ */
+public interface IUpdateStrategy {
+	/**
+	 * this function will be implemented by Strategy class
+	 * and will update the default ball state, as a result
+	 * various balls can be made
+	 * @param ball  Ball object
+	 */
+	public void updateSTATE(Ball ball);
+}

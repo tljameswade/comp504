@@ -1,0 +1,20 @@
+This is a chat app that will initiate a mini-MVC as chatrooms
+
+
+ChatAPP gui:
+1 Create User name button: hit this button to initiate a user name
+
+2 Create chatroom button: this will initiate a chatroom
+
+3 Add friend: enter the IP address of a friend and hit add friend will connect with that user and get the users' chatrooms
+
+4 Join: choose a chatroom and join the chatroom will open up a new window for chatroom
+
+ChatRoom gui:
+1 Refresh: will refresh the chatroom and update the members in the room
+
+2 Send: will send text message in the input
+
+3 Send image: this has not been implemented yet
+
+4 Members panel: will display the user names of all users in the panel

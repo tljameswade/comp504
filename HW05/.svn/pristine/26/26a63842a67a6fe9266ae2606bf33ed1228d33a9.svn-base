@@ -1,0 +1,28 @@
+package model.Strategy;
+
+import model.Ball;
+import model.IUpdateStrategy;
+import util.Dispatcher;
+
+/**
+ * this class will create a curve ball
+ * the updateState function will change the velocity of a default ball
+ * @author SuozhiQi,HongyangZhang
+ *
+ */
+public class CurveStrategy implements IUpdateStrategy {
+
+	/**
+	 * This method will make the ball turn by changing its velocity
+	 * in x-axis and y-axis
+	 */
+
+	@Override
+	public void updateState(Ball ball, Dispatcher dispatcher) {
+		int Vx = ball.getVelocity().x;
+		int Vy = ball.getVelocity().y;
+		ball.getVelocity().x = (int) Math.round((Math.cos(Math.PI / 20) * Vx - Math.sin(Math.PI / 20) * Vy));
+		ball.getVelocity().y = (int) Math.round(Math.cos(Math.PI / 20) * Vy + Math.sin(Math.PI / 20) * Vx);
+	}
+
+}

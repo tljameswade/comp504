@@ -1,0 +1,57 @@
+package model.paint;
+
+import java.awt.Graphics;
+import java.awt.geom.AffineTransform;
+
+import model.Ball;
+
+/**
+ * Concrete paint strategy that cycles through a sequence of paint strategies, 
+ * painting one per paint update. Note: This paint strategy cannot be directly instantiated 
+ * by the BallWorld system because it does not have a no-parameter constructor.
+ * @author Suozhi Qi, Zhou Liu
+ *
+ */
+public class AnimatePaintStrategy extends APaintStrategy {
+
+	/**
+	 * The counter that keeps track of which paint strategy to use next.
+	 */
+	private int count;
+
+	/**
+	 * The paint strategies to cycle through
+	 */
+	private APaintStrategy[] paintStrats;
+
+	/**
+	 * Constructor that uses the supplied AffineTransform for internal use.
+	 * @param at The supplied AffineTransform instance
+	 * @param pstrats the supplied paintstrategy
+	 */
+	public AnimatePaintStrategy(AffineTransform at, APaintStrategy... pstrats) {
+		super(at);
+		this.paintStrats = pstrats;
+	}
+
+	/**
+	 * Constructor that instantiates an AffineTransform for internal use.
+	 * @param pstrats the supplied paintstrategy
+	 */
+	public AnimatePaintStrategy(APaintStrategy... pstrats) {
+		this(new AffineTransform(), pstrats);
+	}
+
+	/**
+	 * Paints the currently indexed paint strategy on 
+	 * the given Graphics context using the supplied AffineTransform.
+	 */
+	@Override
+	public void paintXfrm(Graphics g, Ball host, AffineTransform at) {
+		paintStrats[count++].paintXfrm(g, host, at);
+		if (count == paintStrats.length) {
+			count = 0;
+		}
+	}
+
+}

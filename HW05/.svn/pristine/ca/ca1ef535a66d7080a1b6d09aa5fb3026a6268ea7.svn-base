@@ -1,0 +1,25 @@
+package model.Strategy;
+
+import model.Ball;
+import model.IUpdateStrategy;
+import util.Dispatcher;
+import util.Randomizer;
+
+/**
+ * this class implements IUpdateStrategy and create a wander ball
+ * @author SuozhiQi,HongyangZhang
+ *
+ */
+public class WanderStrategy implements IUpdateStrategy {
+
+	/**
+	 * Update the state of the ball to have randomized the velocity
+	 * at the x-axis and y-axis to mimic wandering
+	 */
+	@Override
+	public void updateState(Ball ball, Dispatcher dispatcher) {
+		ball.getVelocity().x = Randomizer.Singleton.randomInt(-10, 10);
+		ball.getVelocity().y = Randomizer.Singleton.randomInt(-10, 10);
+	}
+
+}

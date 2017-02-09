@@ -1,0 +1,11 @@
+package model.paint.strategy;
+
+import model.paint.UprightImagePaintStrategy;
+
+public class SaturnPaintStrategy extends UprightImagePaintStrategy{
+
+	public SaturnPaintStrategy() {
+		super("images/Saturn.png", 0.8);
+	}
+
+}
